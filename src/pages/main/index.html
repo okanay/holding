@@ -1990,7 +1990,7 @@
       </div>
     </header>
     <main>
-      <!-- Hero Section -->
+      <!-- Hero  -->
       <section class="relative">
         <!-- Hero Image - Desktop -->
         <div class="relative hidden h-screen w-full md:block">
@@ -2280,18 +2280,18 @@
           </div>
         </div>
       </section>
-      <!-- Feature Section - CLAUDE HERE -->
+      <!-- Feature -->
       <section class="relative space-y-12 overflow-hidden px-4 py-12">
         <!-- Section Header -->
         <div class="wheel-container relative">
           <button
-            class="wheel-btn-left disabled absolute left-0 top-[125%] z-[45] flex items-center justify-center rounded-sm border border-gray-800 bg-gray-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 md:hidden"
+            class="wheel-btn-left disabled absolute left-0 top-[125%] z-[45] hidden items-center justify-center rounded-sm border border-gray-800 bg-gray-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 md:hidden"
             disabled="true"
           >
             <i data-lucide="chevron-left" class="size-4"></i>
           </button>
           <button
-            class="wheel-btn-right absolute right-0 top-[125%] z-[45] flex items-center justify-center rounded-sm border border-gray-800 bg-gray-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 md:hidden"
+            class="wheel-btn-right absolute right-0 top-[125%] z-[45] hidden items-center justify-center rounded-sm border border-gray-800 bg-gray-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 md:hidden"
           >
             <i data-lucide="chevron-right" class="size-4"></i>
           </button>
@@ -2953,8 +2953,8 @@
           </div>
         </div>
       </section>
-      <!-- Now Section -->
-      <section class="bg-gray-950 py-16" data-wheel-scroll="koc-stats">
+      <!-- Stats  -->
+      <section class="bg-gray-950 py-16">
         <div class="mx-auto max-w-7xl px-4">
           <!-- Section Header -->
           <div class="flex flex-col gap-6 text-center">
@@ -3268,20 +3268,20 @@
             </div>
 
             <button
-              class="wheel-btn-left disabled absolute left-0 top-[45%] z-[40] flex translate-y-[-50%] items-center justify-center rounded-sm border border-gray-200 bg-gray-50 p-2 text-gray-950 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 xl:-left-8"
+              class="wheel-btn-left disabled absolute left-0 top-[45%] z-[40] flex translate-y-[-50%] items-center justify-center rounded-sm border border-gray-800 bg-gray-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 xl:-left-8"
               disabled="true"
             >
               <i data-lucide="chevron-left" class="size-4"></i>
             </button>
             <button
-              class="wheel-btn-right absolute right-0 top-[45%] z-[40] flex translate-y-[-50%] items-center justify-center rounded-sm border border-gray-200 bg-gray-50 p-2 text-gray-950 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 xl:-right-8"
+              class="wheel-btn-right absolute right-0 top-[45%] z-[40] flex translate-y-[-50%] items-center justify-center rounded-sm border border-gray-800 bg-gray-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 xl:-right-8"
             >
               <i data-lucide="chevron-right" class="size-4"></i>
             </button>
           </div>
         </div>
       </section>
-      <!-- Investor Relations Section -->
+      <!-- Investor Relations  -->
       <section class="bg-white py-16">
         <div class="mx-auto max-w-7xl">
           <!-- Main Header -->
@@ -3371,7 +3371,7 @@
 
               <!-- Announcements Slider -->
               <div
-                class="wheel-container relative flex h-[calc(100%_-_4rem)] flex-col justify-between"
+                class="wheel-container relative flex flex-col justify-between sm:h-[calc(100%_-_4rem)]"
               >
                 <div class="overflow-x-hidden">
                   <ul
@@ -3480,7 +3480,7 @@
                 </div>
 
                 <!-- Navigation Buttons -->
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-2 pt-8 lg:pt-0">
                   <button
                     class="wheel-btn-left disabled left-0 top-[45%] z-[40] flex translate-y-[-50%] items-center justify-center rounded-sm border border-gray-200 bg-gray-50 p-2 text-gray-950 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 xl:-left-8"
                     disabled="true"
@@ -3498,7 +3498,7 @@
           </div>
         </div>
       </section>
-      <!-- Life In Koç Section -->
+      <!-- Life In  -->
       <section class="relative h-full bg-gray-950 lg:mt-32 lg:h-[640px]">
         <!-- Desktop Layout (İki sütunlu düzen) -->
         <div class="relative mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
@@ -3565,8 +3565,8 @@
           </div>
         </div>
       </section>
-      <!-- Media Center Section -->
-      <section class="bg-white py-16">
+      <!-- Media -->
+      <section class="relative overflow-hidden bg-white py-16">
         <div class="mx-auto max-w-7xl px-4">
           <!-- Main Header -->
           <div class="mb-14 text-center">
@@ -3781,7 +3781,9 @@
 
           <!-- Categories Section -->
           <div class="mt-16 border-t border-gray-200 pt-12">
-            <div class="flex items-end justify-between gap-6">
+            <div
+              class="flex flex-col items-center justify-between gap-6 sm:flex-row sm:items-end"
+            >
               <!-- News Category -->
               <a
                 href="#"
@@ -3901,37 +3903,48 @@
         </div>
       </section>
     </main>
-    <footer class="bg-white py-16 text-gray-950">
+    <footer class="bg-white py-10 text-gray-950 sm:py-16">
       <!-- Ana konteyner -->
       <div class="container mx-auto max-w-6xl px-4">
         <!-- Üst kısım: Logo ve iletişim bilgileri -->
         <div
-          class="mb-12 grid grid-cols-1 items-center gap-10 border-b border-gray-200 pb-10 md:grid-cols-2"
+          class="mb-8 grid grid-cols-1 items-center gap-6 border-b border-gray-200 pb-10 sm:mb-12 md:grid-cols-2"
         >
           <!-- Sol bölüm - Logo ve açıklama -->
           <div class="flex w-full flex-col items-start justify-start gap-y-8">
             <img
               src="/assets/images/brand/dark.svg"
               alt="Şirket Logo"
-              class="h-16 w-auto"
+              class="h-12 w-auto sm:h-16"
             />
             <p class="text-gray-600">
               Rüyalarımızın, kültürümüzün ve insanlarımızın gücüyle dünya için
               sürdürülebilir değer yaratıyoruz.
             </p>
-            <div class="flex items-center space-x-4">
-              <div
-                class="rounded-sm bg-gray-950 p-3 transition-colors duration-300 hover:bg-primary-600"
+
+            <!-- Bültene Abone Olma Formu -->
+            <div class="flex w-full flex-col gap-2 sm:max-w-sm">
+              <label for="email" class="text-sm font-semibold"
+                >Bültenimize Abone Olun</label
               >
-                <i data-lucide="mail" class="size-5 text-gray-50"></i>
-              </div>
-              <div>
-                <h4 class="text-sm font-semibold">Bize e-posta gönderin</h4>
-                <a
-                  href="mailto:info@sirket.com"
-                  class="text-gray-600 transition-colors hover:text-primary-400"
-                  >iletisim@sirket.com</a
+              <div class="flex">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="E-posta adresiniz"
+                  style="
+                    -webkit-appearance: none;
+                    -webkit-border-radius: 0;
+                    border-radius: 0 0 0 0;
+                  "
+                  class="focu:ring-1 w-full rounded-l-sm border border-r-0 border-gray-950 bg-gray-950 px-4 py-2 text-gray-100 placeholder-gray-100/50 ring-transparent focus:border-primary-500 focus:outline-none focus:ring-primary-200"
+                />
+                <button
+                  class="rounded-r-sm bg-primary-600 px-4 py-2 transition-colors hover:bg-primary-700"
                 >
+                  <i data-lucide="send" class="size-5 text-gray-50"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -3946,12 +3959,12 @@
             </h3>
 
             <!-- Adres ve İletişim Bilgileri -->
-            <div class="space-y-4">
+            <div class="grid w-full grid-cols-1 gap-4">
               <div class="flex items-center gap-2">
                 <div class="mt-1 rounded-sm bg-gray-950 p-2">
                   <i data-lucide="map-pin" class="size-5 text-primary-500"></i>
                 </div>
-                <p class="text-sm text-gray-600 hover:underline">
+                <p class="text-balance text-sm text-gray-800 hover:underline">
                   Nakkaştepe, Azizbey Sokak, No:1, Kuzguncuk 34674, İstanbul /
                   Türkiye
                 </p>
@@ -3963,7 +3976,7 @@
                 </div>
                 <a
                   href="tel:+902165310000"
-                  class="text-sm text-gray-600 hover:underline"
+                  class="text-sm text-gray-800 hover:underline"
                   >+90 216 531 00 00</a
                 >
               </div>
@@ -3972,39 +3985,33 @@
                 <div class="rounded-sm bg-gray-950 p-2">
                   <i data-lucide="printer" class="size-5 text-primary-500"></i>
                 </div>
-                <span class="text-sm text-gray-600 hover:underline"
+                <span class="text-sm text-gray-800 hover:underline"
                   >+90 216 531 00 99</span
                 >
               </div>
-            </div>
 
-            <!-- Bültene Abone Olma Formu -->
-            <div class="mt-6 flex flex-col gap-2">
-              <label for="email" class="text-sm font-semibold"
-                >Bültenimize Abone Olun</label
-              >
-              <div class="flex">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="E-posta adresiniz"
-                  class="w-full rounded-l-sm border border-r-0 border-gray-200 bg-gray-950 px-4 py-2 text-gray-100 placeholder-gray-100/50 ring-1 ring-transparent focus:border-primary-500 focus:outline-none focus:ring-primary-200"
-                />
-                <button
-                  class="rounded-r-sm bg-primary-600 px-4 py-2 transition-colors hover:bg-primary-700"
-                >
-                  <i data-lucide="send" class="size-5 text-gray-50"></i>
-                </button>
+              <div class="flex items-center gap-2">
+                <div class="rounded-sm bg-gray-950 p-2">
+                  <i data-lucide="mail" class="size-5 text-primary-500"></i>
+                </div>
+                <div>
+                  <a
+                    href="mailto:info@sirket.com"
+                    class="text-sm text-gray-800 hover:underline"
+                    >iletisim@sirket.com</a
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Alt kısım: Sosyal medya ve telif hakkı -->
-        <div class="flex flex-col items-center justify-between md:flex-row">
+        <div
+          class="flex flex-col items-start justify-between gap-y-4 sm:items-center md:flex-row"
+        >
           <!-- Telif hakkı metni -->
-          <div class="mb-4 md:mb-0">
+          <div>
             <p class="text-sm text-gray-500">
               &copy; 2025 Şirket A.Ş. Tüm hakları saklıdır.
             </p>
@@ -4045,7 +4052,7 @@
           </div>
 
           <!-- Yasal bağlantılar -->
-          <div class="mt-4 md:mt-0">
+          <div>
             <ul class="flex flex-wrap gap-4 text-sm">
               <li>
                 <a
