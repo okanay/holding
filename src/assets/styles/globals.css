@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --primary-50: 251 246 245;
-  --primary-100: 248 234 232;
-  --primary-200: 242 217 214;
-  --primary-300: 233 189 184;
-  --primary-400: 218 151 143;
-  --primary-500: 201 116 106;
-  --primary-600: 186 104 94;
-  --primary-700: 150 72 63;
-  --primary-800: 125 63 55;
-  --primary-900: 105 57 51;
-  --primary-950: 56 27 23;
+  --primary-50: 242 247 242;
+  --primary-100: 226 234 225;
+  --primary-200: 196 214 196;
+  --primary-300: 156 185 157;
+  --primary-400: 113 150 117;
+  --primary-500: 92 138 98;
+  --primary-600: 60 95 65;
+  --primary-700: 48 76 53;
+  --primary-800: 40 61 44;
+  --primary-900: 33 51 36;
+  --primary-950: 18 28 21;
 
   --gray-50: 246 246 246;
   --gray-100: 231 231 231;
