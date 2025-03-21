@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  src: url('bold.woff2') format('woff2');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  src: url('semibold.woff2') format('woff2');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('medium.woff2') format('woff2');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('regular.woff2') format('woff2');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: url('light.woff2') format('woff2');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  src: url('thin.woff2') format('woff2');
+  font-display: fallback;
+}
+
+.font-custom-sans {
+  font-family: 'Roboto', 'Helvetica Neue', 'IBM Plex Sans', 'sans-serif';
+}

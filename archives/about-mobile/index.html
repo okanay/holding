@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="tr" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Örnek Product Sayfası</title>
+
+    <!-- Project Fonts -->
+    <link rel="stylesheet" href="/assets/fonts/custom/font.css" />
+
+    <!-- Important Preload Fonts -->
+    <link
+      rel="preload"
+      href="/assets/fonts/custom/extra-bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="preload"
+      href="/assets/fonts/custom/bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="preload"
+      href="/assets/fonts/custom/semibold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="preload"
+      href="/assets/fonts/custom/medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="preload"
+      href="/assets/fonts/custom/regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <!-- Images -->
+    <link
+      rel="preload"
+      href="/assets/images/brand-images/logo.svg"
+      as="image"
+    />
+
+    <link rel="stylesheet" href="/assets/styles/globals-out.css" />
+    <script type="module" src="/assets/scripts/deps/lucide-icons.js"></script>
+    <script type="module" src="/assets/scripts/layout.js"></script>
+    <script type="module" src="/assets/scripts/about-mobile.js"></script>
+
+    <script>
+      ;(function () {
+        const urlParams = new URLSearchParams(window.location.search)
+        const modalParam = urlParams.get('view')
+
+        if (modalParam) {
+          document.documentElement.classList.add('group/query')
+          document.documentElement.setAttribute('data-query', modalParam)
+        } else {
+          document.documentElement.classList.add('group/query')
+          document.documentElement.setAttribute('data-query', 'about')
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+          document.documentElement.removeAttribute('data-query')
+        })
+      })()
+    </script>
+  </head>
+  <body class="bg-white">
+    <main>
+      <section>
+        <div
+          class="relative z-10 h-64 w-full bg-gray-100 after:absolute after:inset-0 after:z-20 after:bg-gradient-to-br after:from-gray-600/50 after:to-transparent"
+        >
+          <div
+            class="absolute left-[50%] top-0 z-[61] flex h-full w-full max-w-5xl -translate-x-1/2 flex-col items-start justify-center px-3.5 lg:px-4"
+          >
+            <h1 class="max-w-[360px] py-6 text-4xl font-bold text-gray-50">
+              Türkiye’nin Dubai’ye Açılan Kapısı
+            </h1>
+          </div>
+
+          <img
+            src="https://images.project-test.info/22.webp"
+            alt="Dubai'de Balayı Tatili"
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </section>
+
+      <!-- About -->
+      <article id="about-content">
+        <!-- Navigation Tabs -->
+        <header
+          id="about-nav"
+          class="mx-auto flex h-12 w-full max-w-5xl items-center justify-between bg-white pt-1.5"
+        >
+          <nav
+            class="flex h-12 w-full items-center justify-between border-b bg-white pt-1.5"
+          >
+            <div
+              class="flex h-full w-3/4 items-start justify-start gap-8 px-3.5 lg:gap-16 lg:px-0"
+            >
+              <button
+                id="about-btn"
+                data-state="closed"
+                class="h-full text-nowrap border-primary-500 text-sm font-bold data-[state=open]:translate-y-[4%] data-[state=open]:border-b-4 group-data-[query=about]/query:!translate-y-[4%] group-data-[query=about]/query:!border-b-4 lg:text-base"
+              >
+                Biz Kimiz?
+              </button>
+              <button
+                id="visions-btn"
+                data-state="closed"
+                class="h-full text-nowrap border-primary-500 text-sm font-bold data-[state=open]:translate-y-[4%] data-[state=open]:border-b-4 group-data-[query=visions]/query:!translate-y-[4%] group-data-[query=visions]/query:!border-b-4 lg:text-base"
+              >
+                Misyonumuz-Vizyonumuz
+              </button>
+            </div>
+          </nav>
+        </header>
+        <section
+          id="about"
+          data-state="closed"
+          class="mb-12 mt-9 hidden data-[state=open]:block group-data-[query=about]/query:!block lg:mt-10"
+        >
+          <div class="mx-auto max-w-5xl px-3.5 py-8 lg:px-4">
+            <div class="mx-auto max-w-3xl">
+              <div class="relative mx-auto h-auto max-w-6xl lg:min-h-[400px]">
+                <!-- Image Card (Background) -->
+                <div
+                  class="absolute -top-[10%] right-[-0%] h-full w-4/5 overflow-hidden rounded-2xl lg:w-3/5 rtl:left-[-0%] rtl:right-auto"
+                >
+                  <img
+                    src="https://images.project-test.info/22.webp"
+                    alt="Dubai Tourism"
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+
+                <!-- Text Card (Foreground) -->
+                <div
+                  class="relative z-10 w-4/5 rounded-2xl bg-primary-500/80 p-8 text-white shadow-lg sm:bg-primary-500 lg:w-3/5"
+                >
+                  <div class="space-y-4">
+                    <p class="text-xs lg:text-sm">Biz Kimiz?</p>
+
+                    <h1 class="text-xl font-bold lg:text-4xl">MBD Travel</h1>
+
+                    <div class="h-1 w-12 bg-white"></div>
+
+                    <p class="text-sm leading-relaxed lg:text-base">
+                      Dubai hükümeti Ekonomik Kalkınma Departmanı (DED)
+                      tarafından lisanslanan bir turizm şirketidir. Dubai'de
+                      faaliyet gösteren turizm şirketimiz, modernizmin ve
+                      geleneklerin buluştuğu bu eşsiz şehirde unutulmaz
+                      deneyimler sunmaya adamış bir kuruluştur.
+                    </p>
+
+                    <p class="text-sm leading-relaxed lg:text-base">
+                      Misafirlerimize, bu ışıltılı metropolün görkemli
+                      gökdelenleri, tarihi yapıları ve lüks otelleriyle
+                      süslenmiş siluetini keşfetme fırsatı sunuyoruz.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="mx-auto flex max-w-5xl flex-col px-3.5 py-8 lg:px-4">
+            <div class="mb-4 space-y-4">
+              <h2 class="text-2xl font-bold text-gray-900 lg:text-4xl">
+                Neden MBD Travel?
+              </h2>
+              <div class="h-1 w-16 bg-primary-500"></div>
+            </div>
+            <ul
+              class="flex flex-col gap-4 leading-5 tracking-wide text-gray-800"
+            >
+              <li>
+                MBD Travel, seyahatlerinizi unutulmaz kılmak için yanınızda.
+                Kişiye özel hizmet anlayışımızla Dubai, Zanzibar ve Abu Dhabi
+                gibi popüler yerlerde uzmanız. Vize işlemlerinden otel
+                rezervasyonlarına, şehir turlarından özel etkinliklere kadar her
+                detayı sizin için planlıyoruz. Her yolculuk bir hikaye, biz de
+                sizin hikayenizi en güzel şekilde yazmanıza yardımcı oluyoruz.
+                MBD Travel ile seyahat, sadece bir tatil değil, unutulmaz bir
+                deneyimdir.
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="mx-auto grid max-w-5xl grid-cols-1 gap-8 min-[360px]:grid-cols-2 md:grid-cols-2 lg:grid-cols-4"
+          >
+            <!-- Feature 1 -->
+            <div
+              class="flex flex-col items-start gap-2 text-pretty p-4 text-start"
+            >
+              <img
+                src="/assets/images/about-icons/1.svg"
+                alt="Otel & Uçuş"
+                class="size-14"
+              />
+              <h3 class="text-lg font-semibold text-gray-800">
+                Otel & Uçuş Bir Arada
+              </h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                Konforlu otel konaklamaları ve ulaşım hizmetlerini tek bir
+                pakette sunuyoruz.
+              </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div
+              class="flex flex-col items-start gap-2 text-pretty p-4 text-start"
+            >
+              <img
+                src="/assets/images/about-icons/2.svg"
+                alt="Keyifli Tatil"
+                class="size-14"
+              />
+              <h3 class="text-lg font-semibold text-gray-800">
+                Her Yerde Keyifli Tatil
+              </h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                Dünyanın dört bir yanında hayalinizdeki tatili yaşamanız için
+                buradayız.
+              </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div
+              class="flex flex-col items-start gap-2 text-pretty p-4 text-start"
+            >
+              <img
+                src="/assets/images/about-icons/3.svg"
+                alt="Avantaj"
+                class="size-14"
+              />
+              <h3 class="text-lg font-semibold text-gray-800">
+                Daha Fazla Avantaj
+              </h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                Paketlerimizle özel indirimler ve ekstra ayrıcalıklar kazanın.
+              </p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div
+              class="flex flex-col items-start gap-2 text-pretty p-4 text-start"
+            >
+              <img
+                src="/assets/images/about-icons/4.svg"
+                alt="Hizmet"
+                class="size-14"
+              />
+              <h3 class="text-lg font-semibold text-gray-800">
+                Ayrıcalıklı Hizmet
+              </h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                Nerede olursanız olun, seyahatinizin her aşamasında
+                yanınızdayız.
+              </p>
+            </div>
+
+            <!-- Feature 5 -->
+            <div
+              class="flex flex-col items-start gap-2 text-pretty p-4 text-start"
+            >
+              <img
+                src="/assets/images/about-icons/5.svg"
+                alt="İptal"
+                class="size-14"
+              />
+              <h3 class="text-lg font-semibold text-gray-800">
+                İptal Garantisi
+              </h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                Planlarınız değişirse üzülmeyin, kolay iptal ve değişiklik
+                imkanı sunuyoruz.
+              </p>
+            </div>
+
+            <!-- Feature 6 -->
+            <div
+              class="flex flex-col items-start gap-2 text-pretty p-4 text-start"
+            >
+              <img
+                src="/assets/images/about-icons/6.svg"
+                alt="Keşif"
+                class="size-14"
+              />
+              <h3 class="text-lg font-semibold text-gray-800">
+                Keşiflere Açılı
+              </h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                Dünyanın en özel noktalarında benzersiz seyahat deneyimleri
+                yaşayın.
+              </p>
+            </div>
+
+            <!-- Feature 7 -->
+            <div
+              class="flex flex-col items-start gap-2 text-pretty p-4 text-start"
+            >
+              <img
+                src="/assets/images/about-icons/7.svg"
+                alt="Güven"
+                class="size-14"
+              />
+              <h3 class="text-lg font-semibold text-gray-800">
+                Hizmette Güven
+              </h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                Yılların tecrübesiyle, kusursuz bir tatil için sizi bekliyoruz.
+              </p>
+            </div>
+
+            <!-- Feature 8 -->
+            <div
+              class="flex flex-col items-start gap-2 text-pretty p-4 text-start"
+            >
+              <img
+                src="/assets/images/about-icons/8.svg"
+                alt="Gizli Maliyet"
+                class="size-14"
+              />
+              <h3 class="text-lg font-semibold text-gray-800">
+                Gizli Maliyet Yok
+              </h3>
+              <p class="text-sm leading-relaxed text-gray-600">
+                Sadece kullandığınız hizmetler için ödeme yapın, sürpriz
+                masraflarla karşılaşmayın.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="visions"
+          data-state="closed"
+          class="mb-8 hidden data-[state=open]:block group-data-[query=visions]/query:!block"
+        >
+          <div class="mx-auto mb-20 max-w-5xl px-3.5 py-8 md:mb-12 lg:px-4">
+            <div
+              class="relative h-[400px] rounded-2xl md:h-[300px] lg:h-[400px]"
+            >
+              <!-- Background image -->
+              <img
+                src="https://images.project-test.info/22.webp"
+                alt="Luxury Pool View"
+                class="h-full w-full rounded object-cover"
+              />
+              <!-- Text box -->
+              <div
+                class="absolute bottom-[-80px] left-4 right-4 min-h-[320px] rounded-lg bg-primary-500/80 p-6 sm:min-h-0 sm:bg-primary-500 md:bottom-[-50px] md:left-8 md:w-[80%] md:p-8 lg:bottom-[-60px] lg:left-14 lg:w-[600px] lg:p-12"
+              >
+                <div class="space-y-4 text-white md:space-y-6">
+                  <p class="text-sm leading-relaxed md:text-base lg:text-base">
+                    Kişiye özel tur planlamalarından VIP ulaşım hizmetlerine,
+                    konaklama ve aktivite seçeneklerine kadar tatilinizin her
+                    aşamasında yanınızdayız. Tatilinizi sizin ihtiyaçlarınıza ve
+                    beklentilerinize göre planlıyor, her detayın kusursuz olması
+                    için özenle çalışıyoruz. Alanında uzman ekibimiz, size
+                    sadece keyif alacağınız bir tatil deneyimi yaşatmayı değil,
+                    aynı zamanda unutulmaz anılar biriktirmenizi de hedefliyor.
+                  </p>
+                  <p class="text-sm font-medium md:text-base lg:text-base">
+                    MBD Travel, sıradan tatillerin ötesinde, size özel bir
+                    yolculuk ve benzersiz bir deneyim sunuyor.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="mx-auto flex max-w-5xl flex-col px-3.5 py-8 lg:px-4">
+            <div class="mb-4 space-y-4">
+              <h2 class="text-2xl font-bold text-gray-900 lg:text-4xl">
+                MBD Travel ile Tatilde Ayrıcalık Yaşayın
+              </h2>
+              <div class="h-1 w-16 bg-primary-500"></div>
+            </div>
+            <ul
+              class="flex flex-col gap-4 leading-5 tracking-wide text-gray-800"
+            >
+              <li>
+                MBD Travel olarak tatilinizi planlarken her detayı sizin için
+                düşünüyoruz. Tüm tatil sürecinizi sorunsuz hale getirmek için
+                kişiye özel hizmetler sunuyor, en iyi deneyimi yaşamanız için
+                size özel çözümler üretiyoruz. Global iş birliklerimiz ve yerel
+                uzmanlarımız sayesinde tatiliniz boyunca her an yanınızdayız.
+                Hayalinizdeki tatili gerçeğe dönüştürmek için buradayız.
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
