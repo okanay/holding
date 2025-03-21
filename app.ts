@@ -83,7 +83,7 @@ app.post('/github-push-event', async c => {
 
 function runBuildProcess(): void {
   exec(
-    'git pull && bun run build && sudo systemctl restart holding.service',
+    'git pull && bun run build && sudo systemctl restart holding-mbd.service',
     { cwd: '/root/holding' },
     (error: Error | null, stdout: string, stderr: string) => {
       if (error) {
