@@ -663,7 +663,7 @@
           ></button>
 
           <div
-            class="relative mx-auto grid h-full grid-rows-[1fr] overflow-hidden bg-primary-700 opacity-0 transition-all duration-300 group-data-[active=open]:grid-rows-[1fr] group-data-[active=open]:opacity-100 lg:h-auto lg:grid-rows-[0fr]"
+            class="relative mx-auto grid h-full grid-rows-[1fr] overflow-hidden bg-gradient-to-r from-primary-500 via-primary-700 to-primary-500 opacity-0 transition-all duration-300 group-data-[active=open]:grid-rows-[1fr] group-data-[active=open]:opacity-100 lg:h-auto lg:grid-rows-[0fr]"
           >
             <div class="sidebar overflow-y-auto pb-12 pt-12">
               <div class="mx-auto flex w-full max-w-2xl flex-col">
@@ -2004,7 +2004,7 @@
             <!-- CTA Button -->
             <a
               href="#"
-              class="flex h-16 w-fit flex-col justify-center rounded-sm bg-primary-700 px-12 text-center text-sm font-medium text-white transition-colors duration-300 ease-in-out hover:bg-primary-800"
+              class="flex h-16 w-fit flex-col justify-center rounded-sm bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 px-12 text-center text-sm font-medium text-white transition-opacity duration-300 ease-in-out hover:opacity-75"
             >
               Lead. Together at a glance
             </a>
@@ -2027,7 +2027,7 @@
             >
               <!-- Slider Item 1 -->
               <div
-                class="slider-item flex w-full flex-shrink-0 justify-end bg-primary-700 pb-4 pl-4"
+                class="slider-item flex w-full flex-shrink-0 justify-end bg-gradient-to-l from-primary-500 via-primary-700 to-primary-600 pb-4 pl-4"
               >
                 <div class="flex h-[200px] w-fit justify-end">
                   <!-- Content Section -->
@@ -2076,7 +2076,7 @@
 
               <!-- Slider Item 2 -->
               <div
-                class="slider-item flex w-full flex-shrink-0 justify-end bg-primary-700 pb-4 pl-4"
+                class="slider-item flex w-full flex-shrink-0 justify-end bg-gradient-to-l from-primary-500 via-primary-700 to-primary-600 pb-4 pl-4"
               >
                 <div class="flex h-[200px] w-fit justify-end">
                   <!-- Content Section -->
@@ -2125,7 +2125,7 @@
 
               <!-- Slider Item 3 -->
               <div
-                class="slider-item flex w-full flex-shrink-0 justify-end bg-primary-700 pb-4 pl-4"
+                class="slider-item flex w-full flex-shrink-0 justify-end bg-gradient-to-l from-primary-500 via-primary-700 to-primary-600 pb-4 pl-4"
               >
                 <div class="flex h-[200px] w-fit justify-end">
                   <!-- Content Section -->
@@ -2174,7 +2174,7 @@
 
               <!-- Slider Item 4 -->
               <div
-                class="slider-item flex w-full flex-shrink-0 justify-end bg-primary-700 pb-4 pl-4"
+                class="slider-item flex w-full flex-shrink-0 justify-end bg-gradient-to-l from-primary-500 via-primary-700 to-primary-600 pb-4 pl-4"
               >
                 <div class="flex h-[200px] w-fit justify-end">
                   <!-- Content Section -->
@@ -2254,6 +2254,7 @@
           </div>
         </div>
       </section>
+
       <!-- Feature -->
       <section class="relative space-y-12 overflow-hidden px-4 py-12">
         <!-- Section Header -->
@@ -2950,12 +2951,13 @@
           </div>
         </div>
       </section>
+
       <!-- Stats  -->
       <section class="bg-primary-950 py-16">
         <div class="mx-auto max-w-7xl px-4">
           <!-- Section Header -->
           <div class="flex flex-col gap-6 text-center">
-            <h2 class="text-5xl font-bold text-primary-400">Koç Now</h2>
+            <h2 class="text-5xl font-bold text-primary-600">Koç Now</h2>
             <p
               class="mx-auto max-w-3xl text-balance text-lg tracking-wide text-primary-50 md:text-xl"
             >
@@ -2967,7 +2969,7 @@
 
           <!-- Vertical Line Divider -->
           <div class="my-8 flex justify-center sm:mb-12 sm:mt-10">
-            <div class="h-14 w-[2px] bg-primary-400"></div>
+            <div class="h-14 w-[2px] bg-primary-600"></div>
           </div>
 
           <!-- Stats Container -->
@@ -2980,7 +2982,7 @@
               >
                 <!-- Stat Card 1 -->
                 <li
-                  class="w-full flex-shrink-0 px-4 lg:w-2/4 lg:translate-x-0 xl:w-1/4"
+                  class="relative w-full flex-shrink-0 px-4 min-[440px]:w-2/4 md:w-1/3 lg:translate-x-0 xl:w-1/4"
                 >
                   <div
                     class="group flex h-full w-full flex-col justify-between gap-y-6 rounded-lg bg-gray-50 p-6 text-center shadow-lg transition-all duration-300 hover:shadow-xl"
@@ -2988,18 +2990,21 @@
                     <!-- İkon ve Sayı Bölümü - Modern Düzen -->
                     <div class="relative mx-auto flex flex-col items-center">
                       <!-- İkon -->
-                      <i data-lucide="heart" class="size-8 text-sky-400"></i>
+                      <i
+                        data-lucide="heart"
+                        class="size-8 text-primary-400"
+                      ></i>
 
                       <!-- Sayı -->
                       <span
-                        class="relative mt-4 text-5xl font-bold text-gray-950 transition-all duration-300 group-hover:text-sky-600"
+                        class="relative mt-4 text-5xl font-bold text-gray-950 transition-all duration-300 group-hover:text-primary-600"
                         >95</span
                       >
                     </div>
 
                     <!-- Çizgi Ayracı -->
                     <div
-                      class="mx-auto h-px w-16 bg-gradient-to-r from-transparent via-sky-300 to-transparent"
+                      class="mx-auto h-px w-16 bg-gradient-to-r from-transparent via-primary-300 to-transparent"
                     ></div>
 
                     <!-- Açıklama Metni -->
@@ -3009,14 +3014,14 @@
 
                     <!-- Alt Kenar Dekorasyonu -->
                     <div
-                      class="absolute bottom-0 left-0 right-0 mx-auto h-1 w-[calc(100%_-2rem)] rounded-b-sm bg-sky-400 transition-all duration-300 group-hover:h-2"
+                      class="absolute bottom-0 left-0 right-0 mx-auto h-1 w-[calc(100%_-2rem)] rounded-b-sm bg-primary-400 transition-all duration-300 group-hover:h-2"
                     ></div>
                   </div>
                 </li>
 
                 <!-- Stat Card 2 -->
                 <li
-                  class="w-full flex-shrink-0 px-4 lg:w-2/4 lg:translate-x-0 xl:w-1/4"
+                  class="relative w-full flex-shrink-0 px-4 min-[440px]:w-2/4 md:w-1/3 lg:translate-x-0 xl:w-1/4"
                 >
                   <div
                     class="group flex h-full w-full flex-col justify-between gap-y-6 rounded-lg bg-gray-50 p-6 text-center shadow-lg transition-all duration-300 hover:shadow-xl"
@@ -3052,7 +3057,7 @@
 
                 <!-- Stat Card 3 -->
                 <li
-                  class="w-full flex-shrink-0 px-4 lg:w-2/4 lg:translate-x-0 xl:w-1/4"
+                  class="relative w-full flex-shrink-0 px-4 min-[440px]:w-2/4 md:w-1/3 lg:translate-x-0 xl:w-1/4"
                 >
                   <div
                     class="group flex h-full w-full flex-col justify-between gap-y-6 rounded-lg bg-gray-50 p-6 text-center shadow-lg transition-all duration-300 hover:shadow-xl"
@@ -3088,7 +3093,7 @@
 
                 <!-- Stat Card 4 -->
                 <li
-                  class="w-full flex-shrink-0 px-4 lg:w-2/4 lg:translate-x-0 xl:w-1/4"
+                  class="relative w-full flex-shrink-0 px-4 min-[440px]:w-2/4 md:w-1/3 lg:translate-x-0 xl:w-1/4"
                 >
                   <div
                     class="group flex h-full w-full flex-col justify-between gap-y-6 rounded-lg bg-gray-50 p-6 text-center shadow-lg transition-all duration-300 hover:shadow-xl"
@@ -3124,7 +3129,7 @@
 
                 <!-- Stat Card 1 -->
                 <li
-                  class="w-full flex-shrink-0 px-4 lg:w-2/4 lg:translate-x-0 xl:w-1/4"
+                  class="relative w-full flex-shrink-0 px-4 min-[440px]:w-2/4 md:w-1/3 lg:translate-x-0 xl:w-1/4"
                 >
                   <div
                     class="group flex h-full w-full flex-col justify-between gap-y-6 rounded-lg bg-gray-50 p-6 text-center shadow-lg transition-all duration-300 hover:shadow-xl"
@@ -3160,7 +3165,7 @@
 
                 <!-- Stat Card 2 -->
                 <li
-                  class="w-full flex-shrink-0 px-4 lg:w-2/4 lg:translate-x-0 xl:w-1/4"
+                  class="relative w-full flex-shrink-0 px-4 min-[440px]:w-2/4 md:w-1/3 lg:translate-x-0 xl:w-1/4"
                 >
                   <div
                     class="group flex h-full w-full flex-col justify-between gap-y-6 rounded-lg bg-gray-50 p-6 text-center shadow-lg transition-all duration-300 hover:shadow-xl"
@@ -3196,7 +3201,7 @@
 
                 <!-- Stat Card 3 -->
                 <li
-                  class="w-full flex-shrink-0 px-4 lg:w-2/4 lg:translate-x-0 xl:w-1/4"
+                  class="relative w-full flex-shrink-0 px-4 min-[440px]:w-2/4 md:w-1/3 lg:translate-x-0 xl:w-1/4"
                 >
                   <div
                     class="group flex h-full w-full flex-col justify-between gap-y-6 rounded-lg bg-gray-50 p-6 text-center shadow-lg transition-all duration-300 hover:shadow-xl"
@@ -3232,7 +3237,7 @@
 
                 <!-- Stat Card 4 -->
                 <li
-                  class="w-full flex-shrink-0 px-4 lg:w-2/4 lg:translate-x-0 xl:w-1/4"
+                  class="relative w-full flex-shrink-0 px-4 min-[440px]:w-2/4 md:w-1/3 lg:translate-x-0 xl:w-1/4"
                 >
                   <div
                     class="group flex h-full w-full flex-col justify-between gap-y-6 rounded-lg bg-gray-50 p-6 text-center shadow-lg transition-all duration-300 hover:shadow-xl"
@@ -3282,6 +3287,7 @@
           </div>
         </div>
       </section>
+
       <!-- Investor Relations  -->
       <section class="bg-white py-16">
         <div class="mx-auto max-w-7xl">
@@ -3323,7 +3329,7 @@
               <!-- CTA Button -->
               <a
                 href="#"
-                class="mx-auto mb-10 flex w-full items-center justify-center bg-primary-700 px-12 py-4 font-medium text-white transition hover:bg-primary-800 sm:w-fit lg:mx-0"
+                class="mx-auto mb-10 flex w-full items-center justify-center bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 px-12 py-4 font-medium text-white transition-opacity duration-300 hover:opacity-75 sm:w-fit lg:mx-0"
               >
                 More information
               </a>
@@ -3483,7 +3489,7 @@
                 </div>
 
                 <!-- Navigation Buttons -->
-                <div class="flex items-center gap-2 pt-8 lg:pt-0">
+                <div class="flex items-center gap-4 pt-16 lg:pt-0">
                   <button
                     class="wheel-btn-left disabled left-0 top-[45%] z-[40] flex translate-y-[-50%] items-center justify-center rounded-sm border border-gray-200 bg-gray-50 p-2 text-gray-950 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 xl:-left-8"
                     disabled="true"
@@ -3501,6 +3507,7 @@
           </div>
         </div>
       </section>
+
       <!-- Life In  -->
       <section class="relative h-full bg-primary-950 lg:mt-32 lg:h-[640px]">
         <!-- Desktop Layout (İki sütunlu düzen) -->
@@ -3517,7 +3524,7 @@
               </p>
               <a
                 href="#"
-                class="flex w-full items-center justify-center bg-gray-50 py-4 font-medium text-gray-950 transition-all hover:bg-gray-100 lg:w-fit lg:px-8"
+                class="flex w-full items-center justify-center bg-gray-50 py-4 font-medium text-gray-950 transition-opacity duration-300 hover:opacity-75 lg:w-fit lg:px-8"
               >
                 More information
               </a>
@@ -3568,6 +3575,7 @@
           </div>
         </div>
       </section>
+
       <!-- Media -->
       <section class="relative overflow-hidden bg-white py-16">
         <div class="mx-auto max-w-7xl px-4">
@@ -3796,7 +3804,7 @@
               <!-- News Category -->
               <a
                 href="#"
-                class="transition-color flex h-16 w-full items-center justify-center bg-primary-700 text-white duration-300 hover:bg-primary-800 sm:w-[240px]"
+                class="transition-color flex h-16 w-full items-center justify-center bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 text-white transition-opacity duration-300 hover:opacity-75 sm:w-[240px]"
               >
                 <h3 class="text-center font-bold">News</h3>
               </a>
@@ -3834,7 +3842,7 @@
                       data-lucide="file-text"
                       class="size-4 text-amber-500"
                     ></i>
-                    <h3 class="text-xs font-medium text-gray-900">
+                    <h3 class="text-sm font-medium text-gray-900">
                       Guidelines
                     </h3>
                   </div>
@@ -3848,8 +3856,11 @@
           </div>
         </div>
       </section>
+
       <!-- Related Pages Section -->
-      <section class="bg-primary-700 py-10 sm:py-16">
+      <section
+        class="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 py-10 sm:py-16"
+      >
         <div class="mx-auto max-w-7xl px-4">
           <h2 class="mb-10 text-center text-3xl font-bold text-white">
             Related Pages
@@ -3914,6 +3925,7 @@
         </div>
       </section>
     </main>
+
     <footer class="bg-white py-10 text-gray-950 sm:py-16">
       <!-- Ana konteyner -->
       <div class="container mx-auto max-w-6xl px-4">
@@ -3941,7 +3953,7 @@
               >
                 Abone Olun
                 <span
-                  class="absolute -bottom-2 left-0 h-1 w-12 bg-primary-700"
+                  class="absolute -bottom-2 left-0 h-1 w-12 bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600"
                 ></span>
               </label>
 
@@ -3959,7 +3971,7 @@
                   class="focu:ring-1 w-full rounded-l-sm border border-r-0 border-gray-950 bg-primary-950 px-4 py-2 text-gray-100 placeholder-gray-100/50 ring-transparent focus:border-primary-700 focus:outline-none focus:ring-primary-200"
                 />
                 <button
-                  class="rounded-r-sm bg-primary-700 px-4 py-2 transition-colors hover:bg-primary-800"
+                  class="rounded-r-sm bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 px-4 py-2 transition-opacity duration-300 hover:opacity-75"
                 >
                   <i data-lucide="send" class="size-5 text-gray-50"></i>
                 </button>
@@ -3972,7 +3984,7 @@
             <h3 class="relative mb-6 inline-block font-bold sm:text-lg">
               Bize Ulaşın
               <span
-                class="absolute -bottom-2 left-0 h-1 w-12 bg-primary-700"
+                class="absolute -bottom-2 left-0 h-1 w-12 bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600"
               ></span>
             </h3>
 
@@ -4100,7 +4112,7 @@
     </footer>
     <!-- Bottom Accent Line -->
     <div
-      class="h-4 w-full bg-gradient-to-r from-primary-400 via-primary-700 to-primary-600"
+      class="h-4 w-full bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600"
     ></div>
   </body>
 </html>
