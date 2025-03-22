@@ -2352,7 +2352,7 @@
             <div class="relative">
               <!-- Navigation Buttons - Minimal design -->
               <button
-                class="wheel-btn-left disabled absolute -left-4 top-[50%] z-[40] flex items-center justify-center rounded-sm border border-gray-800 bg-primary-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 md:hidden"
+                class="wheel-btn-left absolute -left-4 top-[50%] z-[40] flex items-center justify-center rounded-sm border border-gray-800 bg-primary-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 md:hidden"
                 disabled="true"
               >
                 <i data-lucide="chevron-left" class="size-4"></i>
@@ -2365,99 +2365,145 @@
 
               <!-- Card scrolling container with scroll snap -->
               <div
-                class="wheel-scroll overflow-x-auto scroll-smooth pb-8 md:overflow-visible"
+                data-child-count="3"
+                class="wheel-scroll mx-auto flex max-w-4xl gap-8 overflow-x-auto scroll-smooth pb-8 md:grid md:grid-cols-2 md:gap-10 md:overflow-visible data-[child-count='1']:md:grid-cols-1 data-[child-count='2']:md:grid-cols-2 data-[child-count='3']:md:grid-cols-3"
               >
+                <!-- Card 1 - Refined minimal design with subtle hover effects -->
                 <div
-                  data-child-count="2"
-                  class="mx-auto flex max-w-4xl snap-x snap-mandatory gap-8 md:grid md:grid-cols-2 md:gap-10 data-[child-count='1']:md:grid-cols-1 data-[child-count='3']:md:grid-cols-3"
+                  class="group w-full flex-shrink-0 md:w-auto md:flex-shrink"
                 >
-                  <!-- Card 1 - Refined minimal design with subtle hover effects -->
-                  <div class="group min-w-[85%] snap-start md:min-w-0">
-                    <a
-                      href="#"
-                      class="flex h-full flex-col overflow-hidden rounded-sm border border-gray-100 bg-white transition-[opacity_color] duration-300 hover:bg-gray-50 hover:opacity-75"
-                    >
-                      <div class="relative overflow-hidden">
-                        <div
-                          class="absolute inset-0 bg-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-5"
-                        ></div>
-                        <img
-                          src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/05surdurulebilirlik/dijital-donusum/01.jpg?ext=.jpg"
-                          alt="Koç Digital & Koç Digital Academy"
-                          class="h-auto w-full object-cover"
-                        />
-                      </div>
-                      <div class="flex flex-grow flex-col p-5">
-                        <div
-                          class="mb-4 h-1 w-12 bg-primary-700 opacity-80"
-                        ></div>
-                        <h3 class="mb-4 text-xl font-semibold text-gray-950">
-                          Koç Digital & Koç Digital Academy
-                        </h3>
-                        <p
-                          class="mb-5 flex-grow text-sm leading-relaxed text-gray-800"
+                  <a
+                    href="#"
+                    class="flex h-full flex-col overflow-hidden rounded-sm border border-gray-100 bg-white transition-[opacity_color] duration-300 hover:bg-gray-50 hover:opacity-75"
+                  >
+                    <div class="relative overflow-hidden">
+                      <div
+                        class="absolute inset-0 bg-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-5"
+                      ></div>
+                      <img
+                        src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/05surdurulebilirlik/dijital-donusum/01.jpg?ext=.jpg"
+                        alt="Koç Digital & Koç Digital Academy"
+                        class="h-auto w-full object-cover"
+                      />
+                    </div>
+                    <div class="flex flex-grow flex-col p-5">
+                      <div
+                        class="mb-4 h-1 w-12 bg-primary-700 opacity-80"
+                      ></div>
+                      <h3 class="mb-4 text-xl font-semibold text-gray-950">
+                        Koç Digital & Koç Digital Academy
+                      </h3>
+                      <p
+                        class="mb-5 flex-grow text-sm leading-relaxed text-gray-800"
+                      >
+                        KoçDigital established by KoçSistem in partnership with
+                        Boston Consulting Group (BCG) is focused on Advanced
+                        Analytics and the Internet of Things (IoT) to innovate
+                        sustainable solutions for businesses.
+                      </p>
+                      <span class="mt-auto inline-flex items-center">
+                        <span class="text-sm font-medium text-primary-700"
+                          >More Information</span
                         >
-                          KoçDigital established by KoçSistem in partnership
-                          with Boston Consulting Group (BCG) is focused on
-                          Advanced Analytics and the Internet of Things (IoT) to
-                          innovate sustainable solutions for businesses.
-                        </p>
-                        <span class="mt-auto inline-flex items-center">
-                          <span class="text-sm font-medium text-primary-700"
-                            >More Information</span
-                          >
-                          <span
-                            class="ml-2 text-primary-700 transition-transform duration-200 group-hover:translate-x-0.5"
-                            >→</span
-                          >
-                        </span>
-                      </div>
-                    </a>
-                  </div>
+                        <span
+                          class="ml-2 text-primary-700 transition-transform duration-200 group-hover:translate-x-0.5"
+                          >→</span
+                        >
+                      </span>
+                    </div>
+                  </a>
+                </div>
 
-                  <!-- Card 2 - Refined minimal design with subtle hover effects -->
-                  <div class="group min-w-[85%] snap-start md:min-w-0">
-                    <a
-                      href="#"
-                      class="flex h-full flex-col overflow-hidden rounded-sm border border-gray-100 bg-white transition-[opacity_color] duration-300 hover:bg-gray-50 hover:opacity-75"
-                    >
-                      <div class="relative overflow-hidden">
-                        <div
-                          class="absolute inset-0 bg-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-5"
-                        ></div>
-                        <img
-                          src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/05surdurulebilirlik/dijital-donusum/01.jpg?ext=.jpg"
-                          alt="Koç Digital & Koç Digital Academy"
-                          class="h-auto w-full object-cover"
-                        />
-                      </div>
-                      <div class="flex flex-grow flex-col p-5">
-                        <div
-                          class="mb-4 h-1 w-12 bg-primary-700 opacity-80"
-                        ></div>
-                        <h3 class="mb-4 text-xl font-semibold text-gray-950">
-                          Koç Digital & Koç Digital Academy
-                        </h3>
-                        <p
-                          class="mb-5 flex-grow text-sm leading-relaxed text-gray-800"
+                <!-- Card 1 - Refined minimal design with subtle hover effects -->
+                <div
+                  class="group w-full flex-shrink-0 md:w-auto md:flex-shrink"
+                >
+                  <a
+                    href="#"
+                    class="flex h-full flex-col overflow-hidden rounded-sm border border-gray-100 bg-white transition-[opacity_color] duration-300 hover:bg-gray-50 hover:opacity-75"
+                  >
+                    <div class="relative overflow-hidden">
+                      <div
+                        class="absolute inset-0 bg-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-5"
+                      ></div>
+                      <img
+                        src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/05surdurulebilirlik/dijital-donusum/01.jpg?ext=.jpg"
+                        alt="Koç Digital & Koç Digital Academy"
+                        class="h-auto w-full object-cover"
+                      />
+                    </div>
+                    <div class="flex flex-grow flex-col p-5">
+                      <div
+                        class="mb-4 h-1 w-12 bg-primary-700 opacity-80"
+                      ></div>
+                      <h3 class="mb-4 text-xl font-semibold text-gray-950">
+                        Koç Digital & Koç Digital Academy
+                      </h3>
+                      <p
+                        class="mb-5 flex-grow text-sm leading-relaxed text-gray-800"
+                      >
+                        KoçDigital established by KoçSistem in partnership with
+                        Boston Consulting Group (BCG) is focused on Advanced
+                        Analytics and the Internet of Things (IoT) to innovate
+                        sustainable solutions for businesses.
+                      </p>
+                      <span class="mt-auto inline-flex items-center">
+                        <span class="text-sm font-medium text-primary-700"
+                          >More Information</span
                         >
-                          KoçDigital established by KoçSistem in partnership
-                          with Boston Consulting Group (BCG) is focused on
-                          Advanced Analytics and the Internet of Things (IoT) to
-                          innovate sustainable solutions for businesses.
-                        </p>
-                        <span class="mt-auto inline-flex items-center">
-                          <span class="text-sm font-medium text-primary-700"
-                            >More Information</span
-                          >
-                          <span
-                            class="ml-2 text-primary-700 transition-transform duration-200 group-hover:translate-x-0.5"
-                            >→</span
-                          >
-                        </span>
-                      </div>
-                    </a>
-                  </div>
+                        <span
+                          class="ml-2 text-primary-700 transition-transform duration-200 group-hover:translate-x-0.5"
+                          >→</span
+                        >
+                      </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Card 1 - Refined minimal design with subtle hover effects -->
+                <div
+                  class="group w-full flex-shrink-0 md:w-auto md:flex-shrink"
+                >
+                  <a
+                    href="#"
+                    class="flex h-full flex-col overflow-hidden rounded-sm border border-gray-100 bg-white transition-[opacity_color] duration-300 hover:bg-gray-50 hover:opacity-75"
+                  >
+                    <div class="relative overflow-hidden">
+                      <div
+                        class="absolute inset-0 bg-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-5"
+                      ></div>
+                      <img
+                        src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/05surdurulebilirlik/dijital-donusum/01.jpg?ext=.jpg"
+                        alt="Koç Digital & Koç Digital Academy"
+                        class="h-auto w-full object-cover"
+                      />
+                    </div>
+                    <div class="flex flex-grow flex-col p-5">
+                      <div
+                        class="mb-4 h-1 w-12 bg-primary-700 opacity-80"
+                      ></div>
+                      <h3 class="mb-4 text-xl font-semibold text-gray-950">
+                        Koç Digital & Koç Digital Academy
+                      </h3>
+                      <p
+                        class="mb-5 flex-grow text-sm leading-relaxed text-gray-800"
+                      >
+                        KoçDigital established by KoçSistem in partnership with
+                        Boston Consulting Group (BCG) is focused on Advanced
+                        Analytics and the Internet of Things (IoT) to innovate
+                        sustainable solutions for businesses.
+                      </p>
+                      <span class="mt-auto inline-flex items-center">
+                        <span class="text-sm font-medium text-primary-700"
+                          >More Information</span
+                        >
+                        <span
+                          class="ml-2 text-primary-700 transition-transform duration-200 group-hover:translate-x-0.5"
+                          >→</span
+                        >
+                      </span>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -2495,7 +2541,7 @@
             <div class="relative">
               <!-- Navigation Buttons - Minimal design -->
               <button
-                class="wheel-btn-left disabled absolute -left-4 top-[50%] z-[40] flex items-center justify-center rounded-sm border border-gray-800 bg-primary-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 md:hidden"
+                class="wheel-btn-left absolute -left-4 top-[50%] z-[40] flex items-center justify-center rounded-sm border border-gray-800 bg-primary-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 md:hidden"
                 disabled="true"
               >
                 <i data-lucide="chevron-left" class="size-4"></i>
@@ -2508,143 +2554,99 @@
 
               <!-- Card scrolling container with scroll snap -->
               <div
-                class="wheel-scroll overflow-x-auto scroll-smooth pb-8 md:overflow-visible"
+                data-child-count="2"
+                class="wheel-scroll mx-auto flex max-w-4xl gap-8 overflow-x-auto scroll-smooth pb-8 md:grid md:grid-cols-2 md:gap-10 md:overflow-visible data-[child-count='1']:md:grid-cols-1 data-[child-count='2']:md:grid-cols-2 data-[child-count='3']:md:grid-cols-3"
               >
+                <!-- Card 1 - Refined minimal design with subtle hover effects -->
                 <div
-                  data-child-count="3"
-                  class="mx-auto flex max-w-4xl snap-x snap-mandatory gap-8 md:grid md:grid-cols-2 md:gap-10 data-[child-count='1']:md:grid-cols-1 data-[child-count='3']:md:grid-cols-3"
+                  class="group w-full flex-shrink-0 md:w-auto md:flex-shrink"
                 >
-                  <!-- Card 1 - Refined minimal design with subtle hover effects -->
-                  <div class="group min-w-[85%] snap-start md:min-w-0">
-                    <a
-                      href="#"
-                      class="flex h-full flex-col overflow-hidden rounded-sm border border-gray-100 bg-white transition-[opacity_color] duration-300 hover:bg-gray-50 hover:opacity-75"
-                    >
-                      <div class="relative overflow-hidden">
-                        <div
-                          class="absolute inset-0 bg-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-5"
-                        ></div>
-                        <img
-                          src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/05surdurulebilirlik/dijital-donusum/01.jpg?ext=.jpg"
-                          alt="Koç Digital & Koç Digital Academy"
-                          class="h-auto w-full object-cover"
-                        />
-                      </div>
-                      <div class="flex flex-grow flex-col p-5">
-                        <div
-                          class="mb-4 h-1 w-12 bg-primary-700 opacity-80"
-                        ></div>
-                        <h3 class="mb-4 text-xl font-semibold text-gray-950">
-                          Koç Digital & Koç Digital Academy
-                        </h3>
-                        <p
-                          class="mb-5 flex-grow text-sm leading-relaxed text-gray-800"
+                  <a
+                    href="#"
+                    class="flex h-full flex-col overflow-hidden rounded-sm border border-gray-100 bg-white transition-[opacity_color] duration-300 hover:bg-gray-50 hover:opacity-75"
+                  >
+                    <div class="relative overflow-hidden">
+                      <div
+                        class="absolute inset-0 bg-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-5"
+                      ></div>
+                      <img
+                        src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/05surdurulebilirlik/dijital-donusum/01.jpg?ext=.jpg"
+                        alt="Koç Digital & Koç Digital Academy"
+                        class="h-auto w-full object-cover"
+                      />
+                    </div>
+                    <div class="flex flex-grow flex-col p-5">
+                      <div
+                        class="mb-4 h-1 w-12 bg-primary-700 opacity-80"
+                      ></div>
+                      <h3 class="mb-4 text-xl font-semibold text-gray-950">
+                        Koç Digital & Koç Digital Academy
+                      </h3>
+                      <p
+                        class="mb-5 flex-grow text-sm leading-relaxed text-gray-800"
+                      >
+                        KoçDigital established by KoçSistem in partnership with
+                        Boston Consulting Group (BCG) is focused on Advanced
+                        Analytics and the Internet of Things (IoT) to innovate
+                        sustainable solutions for businesses.
+                      </p>
+                      <span class="mt-auto inline-flex items-center">
+                        <span class="text-sm font-medium text-primary-700"
+                          >More Information</span
                         >
-                          KoçDigital established by KoçSistem in partnership
-                          with Boston Consulting Group (BCG) is focused on
-                          Advanced Analytics and the Internet of Things (IoT) to
-                          innovate sustainable solutions for businesses.
-                        </p>
-                        <span class="mt-auto inline-flex items-center">
-                          <span class="text-sm font-medium text-primary-700"
-                            >More Information</span
-                          >
-                          <span
-                            class="ml-2 text-primary-700 transition-transform duration-200 group-hover:translate-x-0.5"
-                            >→</span
-                          >
-                        </span>
-                      </div>
-                    </a>
-                  </div>
+                        <span
+                          class="ml-2 text-primary-700 transition-transform duration-200 group-hover:translate-x-0.5"
+                          >→</span
+                        >
+                      </span>
+                    </div>
+                  </a>
+                </div>
 
-                  <!-- Card 2 - Refined minimal design with subtle hover effects -->
-                  <div class="group min-w-[85%] snap-start md:min-w-0">
-                    <a
-                      href="#"
-                      class="flex h-full flex-col overflow-hidden rounded-sm border border-gray-100 bg-white transition-[opacity_color] duration-300 hover:bg-gray-50 hover:opacity-75"
-                    >
-                      <div class="relative overflow-hidden">
-                        <div
-                          class="absolute inset-0 bg-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-5"
-                        ></div>
-                        <img
-                          src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/05surdurulebilirlik/dijital-donusum/01.jpg?ext=.jpg"
-                          alt="Koç Digital & Koç Digital Academy"
-                          class="h-auto w-full object-cover"
-                        />
-                      </div>
-                      <div class="flex flex-grow flex-col p-5">
-                        <div
-                          class="mb-4 h-1 w-12 bg-primary-700 opacity-80"
-                        ></div>
-                        <h3 class="mb-4 text-xl font-semibold text-gray-950">
-                          Koç Digital & Koç Digital Academy
-                        </h3>
-                        <p
-                          class="mb-5 flex-grow text-sm leading-relaxed text-gray-800"
+                <!-- Card 1 - Refined minimal design with subtle hover effects -->
+                <div
+                  class="group w-full flex-shrink-0 md:w-auto md:flex-shrink"
+                >
+                  <a
+                    href="#"
+                    class="flex h-full flex-col overflow-hidden rounded-sm border border-gray-100 bg-white transition-[opacity_color] duration-300 hover:bg-gray-50 hover:opacity-75"
+                  >
+                    <div class="relative overflow-hidden">
+                      <div
+                        class="absolute inset-0 bg-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-5"
+                      ></div>
+                      <img
+                        src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/05surdurulebilirlik/dijital-donusum/01.jpg?ext=.jpg"
+                        alt="Koç Digital & Koç Digital Academy"
+                        class="h-auto w-full object-cover"
+                      />
+                    </div>
+                    <div class="flex flex-grow flex-col p-5">
+                      <div
+                        class="mb-4 h-1 w-12 bg-primary-700 opacity-80"
+                      ></div>
+                      <h3 class="mb-4 text-xl font-semibold text-gray-950">
+                        Koç Digital & Koç Digital Academy
+                      </h3>
+                      <p
+                        class="mb-5 flex-grow text-sm leading-relaxed text-gray-800"
+                      >
+                        KoçDigital established by KoçSistem in partnership with
+                        Boston Consulting Group (BCG) is focused on Advanced
+                        Analytics and the Internet of Things (IoT) to innovate
+                        sustainable solutions for businesses.
+                      </p>
+                      <span class="mt-auto inline-flex items-center">
+                        <span class="text-sm font-medium text-primary-700"
+                          >More Information</span
                         >
-                          KoçDigital established by KoçSistem in partnership
-                          with Boston Consulting Group (BCG) is focused on
-                          Advanced Analytics and the Internet of Things (IoT) to
-                          innovate sustainable solutions for businesses.
-                        </p>
-                        <span class="mt-auto inline-flex items-center">
-                          <span class="text-sm font-medium text-primary-700"
-                            >More Information</span
-                          >
-                          <span
-                            class="ml-2 text-primary-700 transition-transform duration-200 group-hover:translate-x-0.5"
-                            >→</span
-                          >
-                        </span>
-                      </div>
-                    </a>
-                  </div>
-
-                  <!-- Card 3 - Refined minimal design with subtle hover effects -->
-                  <div class="group min-w-[85%] snap-start md:min-w-0">
-                    <a
-                      href="#"
-                      class="flex h-full flex-col overflow-hidden rounded-sm border border-gray-100 bg-white transition-[opacity_color] duration-300 hover:bg-gray-50 hover:opacity-75"
-                    >
-                      <div class="relative overflow-hidden">
-                        <div
-                          class="absolute inset-0 bg-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-5"
-                        ></div>
-                        <img
-                          src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/05surdurulebilirlik/dijital-donusum/01.jpg?ext=.jpg"
-                          alt="Koç Digital & Koç Digital Academy"
-                          class="h-auto w-full object-cover"
-                        />
-                      </div>
-                      <div class="flex flex-grow flex-col p-5">
-                        <div
-                          class="mb-4 h-1 w-12 bg-primary-700 opacity-80"
-                        ></div>
-                        <h3 class="mb-4 text-xl font-semibold text-gray-950">
-                          Koç Digital & Koç Digital Academy
-                        </h3>
-                        <p
-                          class="mb-5 flex-grow text-sm leading-relaxed text-gray-800"
+                        <span
+                          class="ml-2 text-primary-700 transition-transform duration-200 group-hover:translate-x-0.5"
+                          >→</span
                         >
-                          KoçDigital established by KoçSistem in partnership
-                          with Boston Consulting Group (BCG) is focused on
-                          Advanced Analytics and the Internet of Things (IoT) to
-                          innovate sustainable solutions for businesses.
-                        </p>
-                        <span class="mt-auto inline-flex items-center">
-                          <span class="text-sm font-medium text-primary-700"
-                            >More Information</span
-                          >
-                          <span
-                            class="ml-2 text-primary-700 transition-transform duration-200 group-hover:translate-x-0.5"
-                            >→</span
-                          >
-                        </span>
-                      </div>
-                    </a>
-                  </div>
+                      </span>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -2682,12 +2684,14 @@
             <div class="relative">
               <!-- Navigation Buttons - Minimal design -->
               <button
-                class="wheel-btn-left disabled absolute -left-4 top-[50%] z-[40] flex items-center justify-center rounded-sm border border-gray-800 bg-primary-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 md:hidden"
+                style="display: none"
+                class="wheel-btn-left absolute -left-4 top-[50%] z-[40] flex items-center justify-center rounded-sm border border-gray-800 bg-primary-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 md:hidden"
                 disabled="true"
               >
                 <i data-lucide="chevron-left" class="size-4"></i>
               </button>
               <button
+                style="display: none"
                 class="wheel-btn-right absolute right-0 top-[50%] z-[40] flex items-center justify-center rounded-sm border border-gray-800 bg-primary-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 md:hidden"
               >
                 <i data-lucide="chevron-right" class="size-4"></i>
@@ -2695,55 +2699,53 @@
 
               <!-- Card scrolling container with scroll snap -->
               <div
-                class="wheel-scroll overflow-x-auto scroll-smooth pb-8 md:overflow-visible"
+                data-child-count="1"
+                class="wheel-scroll mx-auto flex max-w-4xl gap-8 overflow-x-auto scroll-smooth pb-8 md:grid md:grid-cols-2 md:gap-10 md:overflow-visible data-[child-count='1']:md:grid-cols-1 data-[child-count='2']:md:grid-cols-2 data-[child-count='3']:md:grid-cols-3"
               >
+                <!-- Card 1 - Refined minimal design with subtle hover effects -->
                 <div
-                  data-child-count="1"
-                  class="mx-auto flex max-w-4xl snap-x snap-mandatory gap-8 md:grid md:grid-cols-2 md:gap-10 data-[child-count='1']:md:grid-cols-1 data-[child-count='3']:md:grid-cols-3"
+                  class="group w-full flex-shrink-0 md:w-auto md:flex-shrink"
                 >
-                  <!-- Card 1 - Refined minimal design with subtle hover effects -->
-                  <div class="group min-w-[85%] snap-start md:min-w-0">
-                    <a
-                      href="#"
-                      class="flex h-full flex-col overflow-hidden rounded-sm border border-gray-100 bg-white transition-[opacity_color] duration-300 hover:bg-gray-50 hover:opacity-75"
-                    >
-                      <div class="relative overflow-hidden">
-                        <div
-                          class="absolute inset-0 bg-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-5"
-                        ></div>
-                        <img
-                          src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/05surdurulebilirlik/dijital-donusum/01.jpg?ext=.jpg"
-                          alt="Koç Digital & Koç Digital Academy"
-                          class="h-auto w-full object-cover"
-                        />
-                      </div>
-                      <div class="flex flex-grow flex-col p-5">
-                        <div
-                          class="mb-4 h-1 w-12 bg-primary-700 opacity-80"
-                        ></div>
-                        <h3 class="mb-4 text-xl font-semibold text-gray-950">
-                          Koç Digital & Koç Digital Academy
-                        </h3>
-                        <p
-                          class="mb-5 flex-grow text-sm leading-relaxed text-gray-800"
+                  <a
+                    href="#"
+                    class="flex h-full flex-col overflow-hidden rounded-sm border border-gray-100 bg-white transition-[opacity_color] duration-300 hover:bg-gray-50 hover:opacity-75"
+                  >
+                    <div class="relative overflow-hidden">
+                      <div
+                        class="absolute inset-0 bg-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-5"
+                      ></div>
+                      <img
+                        src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/05surdurulebilirlik/dijital-donusum/01.jpg?ext=.jpg"
+                        alt="Koç Digital & Koç Digital Academy"
+                        class="h-auto w-full object-cover"
+                      />
+                    </div>
+                    <div class="flex flex-grow flex-col p-5">
+                      <div
+                        class="mb-4 h-1 w-12 bg-primary-700 opacity-80"
+                      ></div>
+                      <h3 class="mb-4 text-xl font-semibold text-gray-950">
+                        Koç Digital & Koç Digital Academy
+                      </h3>
+                      <p
+                        class="mb-5 flex-grow text-sm leading-relaxed text-gray-800"
+                      >
+                        KoçDigital established by KoçSistem in partnership with
+                        Boston Consulting Group (BCG) is focused on Advanced
+                        Analytics and the Internet of Things (IoT) to innovate
+                        sustainable solutions for businesses.
+                      </p>
+                      <span class="mt-auto inline-flex items-center">
+                        <span class="text-sm font-medium text-primary-700"
+                          >More Information</span
                         >
-                          KoçDigital established by KoçSistem in partnership
-                          with Boston Consulting Group (BCG) is focused on
-                          Advanced Analytics and the Internet of Things (IoT) to
-                          innovate sustainable solutions for businesses.
-                        </p>
-                        <span class="mt-auto inline-flex items-center">
-                          <span class="text-sm font-medium text-primary-700"
-                            >More Information</span
-                          >
-                          <span
-                            class="ml-2 text-primary-700 transition-transform duration-200 group-hover:translate-x-0.5"
-                            >→</span
-                          >
-                        </span>
-                      </div>
-                    </a>
-                  </div>
+                        <span
+                          class="ml-2 text-primary-700 transition-transform duration-200 group-hover:translate-x-0.5"
+                          >→</span
+                        >
+                      </span>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -2781,12 +2783,14 @@
             <div class="relative">
               <!-- Navigation Buttons - Minimal design -->
               <button
-                class="wheel-btn-left disabled absolute -left-4 top-[50%] z-[40] flex items-center justify-center rounded-sm border border-gray-800 bg-primary-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 md:hidden"
+                style="display: none"
+                class="wheel-btn-left absolute -left-4 top-[50%] z-[40] flex items-center justify-center rounded-sm border border-gray-800 bg-primary-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 md:hidden"
                 disabled="true"
               >
                 <i data-lucide="chevron-left" class="size-4"></i>
               </button>
               <button
+                style="display: none"
                 class="wheel-btn-right absolute right-0 top-[50%] z-[40] flex items-center justify-center rounded-sm border border-gray-800 bg-primary-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 md:hidden"
               >
                 <i data-lucide="chevron-right" class="size-4"></i>
@@ -2794,55 +2798,53 @@
 
               <!-- Card scrolling container with scroll snap -->
               <div
-                class="wheel-scroll overflow-x-auto scroll-smooth pb-8 md:overflow-visible"
+                data-child-count="1"
+                class="wheel-scroll mx-auto flex max-w-4xl gap-8 overflow-x-auto scroll-smooth pb-8 md:grid md:grid-cols-2 md:gap-10 md:overflow-visible data-[child-count='1']:md:grid-cols-1 data-[child-count='2']:md:grid-cols-2 data-[child-count='3']:md:grid-cols-3"
               >
+                <!-- Card 1 - Refined minimal design with subtle hover effects -->
                 <div
-                  data-child-count="1"
-                  class="mx-auto flex max-w-4xl snap-x snap-mandatory gap-8 md:grid md:grid-cols-2 md:gap-10 data-[child-count='1']:md:grid-cols-1 data-[child-count='3']:md:grid-cols-3"
+                  class="group w-full flex-shrink-0 md:w-auto md:flex-shrink"
                 >
-                  <!-- Card 1 - Refined minimal design with subtle hover effects -->
-                  <div class="group min-w-[85%] snap-start md:min-w-0">
-                    <a
-                      href="#"
-                      class="flex h-full flex-col overflow-hidden rounded-sm border border-gray-100 bg-white transition-[opacity_color] duration-300 hover:bg-gray-50 hover:opacity-75"
-                    >
-                      <div class="relative overflow-hidden">
-                        <div
-                          class="absolute inset-0 bg-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-5"
-                        ></div>
-                        <img
-                          src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/05surdurulebilirlik/dijital-donusum/01.jpg?ext=.jpg"
-                          alt="Koç Digital & Koç Digital Academy"
-                          class="h-auto w-full object-cover"
-                        />
-                      </div>
-                      <div class="flex flex-grow flex-col p-5">
-                        <div
-                          class="mb-4 h-1 w-12 bg-primary-700 opacity-80"
-                        ></div>
-                        <h3 class="mb-4 text-xl font-semibold text-gray-950">
-                          Koç Digital & Koç Digital Academy
-                        </h3>
-                        <p
-                          class="mb-5 flex-grow text-sm leading-relaxed text-gray-800"
+                  <a
+                    href="#"
+                    class="flex h-full flex-col overflow-hidden rounded-sm border border-gray-100 bg-white transition-[opacity_color] duration-300 hover:bg-gray-50 hover:opacity-75"
+                  >
+                    <div class="relative overflow-hidden">
+                      <div
+                        class="absolute inset-0 bg-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-5"
+                      ></div>
+                      <img
+                        src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/05surdurulebilirlik/dijital-donusum/01.jpg?ext=.jpg"
+                        alt="Koç Digital & Koç Digital Academy"
+                        class="h-auto w-full object-cover"
+                      />
+                    </div>
+                    <div class="flex flex-grow flex-col p-5">
+                      <div
+                        class="mb-4 h-1 w-12 bg-primary-700 opacity-80"
+                      ></div>
+                      <h3 class="mb-4 text-xl font-semibold text-gray-950">
+                        Koç Digital & Koç Digital Academy
+                      </h3>
+                      <p
+                        class="mb-5 flex-grow text-sm leading-relaxed text-gray-800"
+                      >
+                        KoçDigital established by KoçSistem in partnership with
+                        Boston Consulting Group (BCG) is focused on Advanced
+                        Analytics and the Internet of Things (IoT) to innovate
+                        sustainable solutions for businesses.
+                      </p>
+                      <span class="mt-auto inline-flex items-center">
+                        <span class="text-sm font-medium text-primary-700"
+                          >More Information</span
                         >
-                          KoçDigital established by KoçSistem in partnership
-                          with Boston Consulting Group (BCG) is focused on
-                          Advanced Analytics and the Internet of Things (IoT) to
-                          innovate sustainable solutions for businesses.
-                        </p>
-                        <span class="mt-auto inline-flex items-center">
-                          <span class="text-sm font-medium text-primary-700"
-                            >More Information</span
-                          >
-                          <span
-                            class="ml-2 text-primary-700 transition-transform duration-200 group-hover:translate-x-0.5"
-                            >→</span
-                          >
-                        </span>
-                      </div>
-                    </a>
-                  </div>
+                        <span
+                          class="ml-2 text-primary-700 transition-transform duration-200 group-hover:translate-x-0.5"
+                          >→</span
+                        >
+                      </span>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -2880,12 +2882,14 @@
             <div class="relative">
               <!-- Navigation Buttons - Minimal design -->
               <button
-                class="wheel-btn-left disabled absolute -left-4 top-[50%] z-[40] flex items-center justify-center rounded-sm border border-gray-800 bg-primary-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 md:hidden"
+                style="display: none"
+                class="wheel-btn-left absolute -left-4 top-[50%] z-[40] flex items-center justify-center rounded-sm border border-gray-800 bg-primary-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 md:hidden"
                 disabled="true"
               >
                 <i data-lucide="chevron-left" class="size-4"></i>
               </button>
               <button
+                style="display: none"
                 class="wheel-btn-right absolute right-0 top-[50%] z-[40] flex items-center justify-center rounded-sm border border-gray-800 bg-primary-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 md:hidden"
               >
                 <i data-lucide="chevron-right" class="size-4"></i>
@@ -2893,55 +2897,53 @@
 
               <!-- Card scrolling container with scroll snap -->
               <div
-                class="wheel-scroll overflow-x-auto scroll-smooth pb-8 md:overflow-visible"
+                data-child-count="1"
+                class="wheel-scroll mx-auto flex max-w-4xl gap-8 overflow-x-auto scroll-smooth pb-8 md:grid md:grid-cols-2 md:gap-10 md:overflow-visible data-[child-count='1']:md:grid-cols-1 data-[child-count='2']:md:grid-cols-2 data-[child-count='3']:md:grid-cols-3"
               >
+                <!-- Card 1 - Refined minimal design with subtle hover effects -->
                 <div
-                  data-child-count="1"
-                  class="mx-auto flex max-w-4xl snap-x snap-mandatory gap-8 md:grid md:grid-cols-2 md:gap-10 data-[child-count='1']:md:grid-cols-1 data-[child-count='3']:md:grid-cols-3"
+                  class="group w-full flex-shrink-0 md:w-auto md:flex-shrink"
                 >
-                  <!-- Card 1 - Refined minimal design with subtle hover effects -->
-                  <div class="group min-w-[85%] snap-start md:min-w-0">
-                    <a
-                      href="#"
-                      class="flex h-full flex-col overflow-hidden rounded-sm border border-gray-100 bg-white transition-[opacity_color] duration-300 hover:bg-gray-50 hover:opacity-75"
-                    >
-                      <div class="relative overflow-hidden">
-                        <div
-                          class="absolute inset-0 bg-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-5"
-                        ></div>
-                        <img
-                          src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/05surdurulebilirlik/dijital-donusum/01.jpg?ext=.jpg"
-                          alt="Koç Digital & Koç Digital Academy"
-                          class="h-auto w-full object-cover"
-                        />
-                      </div>
-                      <div class="flex flex-grow flex-col p-5">
-                        <div
-                          class="mb-4 h-1 w-12 bg-primary-700 opacity-80"
-                        ></div>
-                        <h3 class="mb-4 text-xl font-semibold text-gray-950">
-                          Koç Digital & Koç Digital Academy
-                        </h3>
-                        <p
-                          class="mb-5 flex-grow text-sm leading-relaxed text-gray-800"
+                  <a
+                    href="#"
+                    class="flex h-full flex-col overflow-hidden rounded-sm border border-gray-100 bg-white transition-[opacity_color] duration-300 hover:bg-gray-50 hover:opacity-75"
+                  >
+                    <div class="relative overflow-hidden">
+                      <div
+                        class="absolute inset-0 bg-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-5"
+                      ></div>
+                      <img
+                        src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/05surdurulebilirlik/dijital-donusum/01.jpg?ext=.jpg"
+                        alt="Koç Digital & Koç Digital Academy"
+                        class="h-auto w-full object-cover"
+                      />
+                    </div>
+                    <div class="flex flex-grow flex-col p-5">
+                      <div
+                        class="mb-4 h-1 w-12 bg-primary-700 opacity-80"
+                      ></div>
+                      <h3 class="mb-4 text-xl font-semibold text-gray-950">
+                        Koç Digital & Koç Digital Academy
+                      </h3>
+                      <p
+                        class="mb-5 flex-grow text-sm leading-relaxed text-gray-800"
+                      >
+                        KoçDigital established by KoçSistem in partnership with
+                        Boston Consulting Group (BCG) is focused on Advanced
+                        Analytics and the Internet of Things (IoT) to innovate
+                        sustainable solutions for businesses.
+                      </p>
+                      <span class="mt-auto inline-flex items-center">
+                        <span class="text-sm font-medium text-primary-700"
+                          >More Information</span
                         >
-                          KoçDigital established by KoçSistem in partnership
-                          with Boston Consulting Group (BCG) is focused on
-                          Advanced Analytics and the Internet of Things (IoT) to
-                          innovate sustainable solutions for businesses.
-                        </p>
-                        <span class="mt-auto inline-flex items-center">
-                          <span class="text-sm font-medium text-primary-700"
-                            >More Information</span
-                          >
-                          <span
-                            class="ml-2 text-primary-700 transition-transform duration-200 group-hover:translate-x-0.5"
-                            >→</span
-                          >
-                        </span>
-                      </div>
-                    </a>
-                  </div>
+                        <span
+                          class="ml-2 text-primary-700 transition-transform duration-200 group-hover:translate-x-0.5"
+                          >→</span
+                        >
+                      </span>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
