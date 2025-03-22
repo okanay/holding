@@ -2971,7 +2971,11 @@
           <!-- Stats Container -->
           <div id="stats-slider" class="wheel-container relative">
             <div class="overflow-x-hidden pb-8 md:overflow-visible">
-              <ul class="wheel-scroll relative flex overflow-x-auto">
+              <ul
+                data-grab-scroll="true"
+                data-grabing="no"
+                class="prevent-select wheel-scroll relative flex overflow-x-auto data-[grabing=no]:cursor-grab data-[grabing=yes]:cursor-grabbing"
+              >
                 <!-- Stat Card 1 -->
                 <li
                   class="w-full flex-shrink-0 px-4 lg:w-2/4 lg:translate-x-0 xl:w-1/4"
@@ -3370,12 +3374,13 @@
               >
                 <div class="overflow-x-hidden">
                   <ul
-                    class="wheel-scroll relative flex flex-nowrap gap-6 overflow-x-auto pb-8"
+                    data-grab-scroll="true"
+                    data-grabing="no"
+                    class="wheel-scroll relative flex overflow-x-auto data-[grabing=no]:cursor-grab data-[grabing=yes]:cursor-grabbing"
                   >
                     <!-- Announcement Card 1 -->
                     <li class="w-full flex-shrink-0 md:w-1/2">
-                      <a
-                        href="#"
+                      <div
                         class="flex h-full min-h-[180px] flex-col justify-between bg-primary-950 transition-opacity duration-300 hover:opacity-50"
                       >
                         <!-- Date -->
@@ -3388,19 +3393,19 @@
                         </h3>
 
                         <!-- Download Link -->
-                        <div
+                        <a
+                          href="#"
                           class="mt-auto flex w-fit items-center border-b-2 border-primary-700 pb-1 text-xs text-primary-700"
                         >
                           <span class="font-medium">Download</span>
                           <i data-lucide="move-right" class="ml-2 size-4"></i>
-                        </div>
-                      </a>
+                        </a>
+                      </div>
                     </li>
 
                     <!-- Announcement Card 1 -->
                     <li class="w-full flex-shrink-0 md:w-1/2">
-                      <a
-                        href="#"
+                      <div
                         class="flex h-full min-h-[180px] flex-col justify-between bg-primary-950 transition-opacity duration-300 hover:opacity-50"
                       >
                         <!-- Date -->
@@ -3413,19 +3418,19 @@
                         </h3>
 
                         <!-- Download Link -->
-                        <div
+                        <a
+                          href="#"
                           class="mt-auto flex w-fit items-center border-b-2 border-primary-700 pb-1 text-xs text-primary-700"
                         >
                           <span class="font-medium">Download</span>
                           <i data-lucide="move-right" class="ml-2 size-4"></i>
-                        </div>
-                      </a>
+                        </a>
+                      </div>
                     </li>
 
                     <!-- Announcement Card 1 -->
                     <li class="w-full flex-shrink-0 md:w-1/2">
-                      <a
-                        href="#"
+                      <div
                         class="flex h-full min-h-[180px] flex-col justify-between bg-primary-950 transition-opacity duration-300 hover:opacity-50"
                       >
                         <!-- Date -->
@@ -3438,19 +3443,19 @@
                         </h3>
 
                         <!-- Download Link -->
-                        <div
+                        <a
+                          href="#"
                           class="mt-auto flex w-fit items-center border-b-2 border-primary-700 pb-1 text-xs text-primary-700"
                         >
                           <span class="font-medium">Download</span>
                           <i data-lucide="move-right" class="ml-2 size-4"></i>
-                        </div>
-                      </a>
+                        </a>
+                      </div>
                     </li>
 
                     <!-- Announcement Card 1 -->
                     <li class="w-full flex-shrink-0 md:w-1/2">
-                      <a
-                        href="#"
+                      <div
                         class="flex h-full min-h-[180px] flex-col justify-between bg-primary-950 transition-opacity duration-300 hover:opacity-50"
                       >
                         <!-- Date -->
@@ -3463,13 +3468,14 @@
                         </h3>
 
                         <!-- Download Link -->
-                        <div
+                        <a
+                          href="#"
                           class="mt-auto flex w-fit items-center border-b-2 border-primary-700 pb-1 text-xs text-primary-700"
                         >
                           <span class="font-medium">Download</span>
                           <i data-lucide="move-right" class="ml-2 size-4"></i>
-                        </div>
-                      </a>
+                        </a>
+                      </div>
                     </li>
                   </ul>
                 </div>

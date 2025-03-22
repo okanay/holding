@@ -31,6 +31,17 @@ class WheelScroll {
   private containerElementsCache: Map<HTMLElement, ContainerElements> =
     new Map()
 
+  // WheelScroll sınıfı içine eklenecek yeni üye değişken
+  private itemPositionsMap: Map<
+    HTMLElement,
+    Array<{
+      element: HTMLElement
+      left: number
+      width: number
+      right: number
+    }>
+  > = new Map()
+
   constructor(options: WheelScrollOptions = {}) {
     // Varsayılan değerlerle birleştir
     this.options = {
@@ -41,10 +52,13 @@ class WheelScroll {
 
     this.debugMode = this.options.debugMode
 
-    // Debounce ile resize olayını optimize etme (150ms)
     const debouncedResize = this.debounce(() => {
       this.checkMobileState()
       this.updateAllScrollInfo()
+      // Kart pozisyonlarını güncelle
+      this.containers.forEach(container => {
+        this.calculateItemPositions(container)
+      })
       this.updateAllButtonStates()
     }, 150)
 
@@ -75,6 +89,11 @@ class WheelScroll {
     // Wheel container'ları bul ve bilgilerini hesapla
     this.findWheelContainers()
 
+    // Tüm containerlar için kart pozisyonlarını hesapla
+    this.containers.forEach(container => {
+      this.calculateItemPositions(container)
+    })
+
     // Event'leri ekle
     this.setupEventListeners()
 
@@ -84,6 +103,17 @@ class WheelScroll {
     this.debug(
       `${this.containers.length} adet wheel-container bulundu. Mobil: ${this.isMobile ? 'Evet' : 'Hayır'}`,
     )
+  }
+
+  /**
+   * Tüm container'ların scroll bilgilerini günceller
+   */
+  private updateAllScrollInfo(): void {
+    this.containers.forEach(container => {
+      this.calculateScrollInfo(container)
+      // Kart pozisyonlarını da güncelle
+      this.calculateItemPositions(container)
+    })
   }
 
   /**
@@ -144,6 +174,187 @@ class WheelScroll {
         func(...args)
         rafId = null
       })
+    }
+  }
+
+  /**
+   * Container içindeki kartların pozisyonlarını hesaplar
+   */
+  private calculateItemPositions(container: HTMLElement): void {
+    const elements = this.containerElementsCache.get(container)
+    if (!elements) return
+
+    const { scrollElement } = elements
+
+    // Scroll içindeki doğrudan çocuk elemanlar (kartlar)
+    const items = Array.from(scrollElement.children) as HTMLElement[]
+
+    // Her kartın pozisyon ve genişliğini hesapla
+    const itemPositions = items.map(item => {
+      return {
+        element: item,
+        left: item.offsetLeft,
+        width: item.offsetWidth,
+        right: item.offsetLeft + item.offsetWidth,
+      }
+    })
+
+    // Hesaplanan pozisyonları container için sakla
+    this.itemPositionsMap.set(container, itemPositions)
+
+    this.debug(`Kart pozisyonları hesaplandı:`, {
+      containerId: container.dataset.wheelScroll,
+      kartSayisi: items.length,
+      positions: itemPositions.map(p => ({ left: p.left, width: p.width })),
+    })
+  }
+
+  /**
+   * Mevcut scroll pozisyonuna göre görünür kartları bulur
+   */
+  private getVisibleItems(container: HTMLElement): {
+    firstVisible: number
+    lastVisible: number
+    fullyVisible: number[]
+  } {
+    const elements = this.containerElementsCache.get(container)
+    if (!elements)
+      return { firstVisible: -1, lastVisible: -1, fullyVisible: [] }
+
+    const { scrollElement } = elements
+    const positions = this.itemPositionsMap.get(container) || []
+
+    // Görünür alanın başlangıç ve bitiş noktaları
+    const scrollLeft = scrollElement.scrollLeft
+    const visibleRight = scrollLeft + scrollElement.offsetWidth
+
+    // Kısmen görünen ilk kart
+    const firstVisible = positions.findIndex(item => item.right > scrollLeft)
+
+    // Kısmen görünen son kart
+    const lastVisible =
+      positions.length -
+      1 -
+      [...positions].reverse().findIndex(item => item.left < visibleRight)
+
+    // Tamamen görünen kartlar
+    const fullyVisible = positions
+      .map((item, index) => ({ item, index }))
+      .filter(
+        ({ item }) => item.left >= scrollLeft && item.right <= visibleRight,
+      )
+      .map(({ index }) => index)
+
+    return {
+      firstVisible: firstVisible !== -1 ? firstVisible : 0,
+      lastVisible: lastVisible !== -1 ? lastVisible : 0,
+      fullyVisible,
+    }
+  }
+
+  /**
+   * Akıllı kaydırma için hedef pozisyonu hesaplar
+   */
+  private calculateSmartScrollTarget(
+    container: HTMLElement,
+    direction: 'left' | 'right',
+  ): number {
+    const elements = this.containerElementsCache.get(container)
+    if (!elements) return 0
+
+    const { scrollElement } = elements
+    const positions = this.itemPositionsMap.get(container) || []
+
+    if (positions.length === 0) return 0
+
+    // Mevcut görünür kartları bul
+    const { firstVisible, lastVisible, fullyVisible } =
+      this.getVisibleItems(container)
+
+    // Kaydırma yönüne göre hedef pozisyonu hesapla
+    if (direction === 'right') {
+      // Eğer hiç tam görünür kart yoksa, ilk kartı tam göster
+      if (fullyVisible.length === 0) {
+        return positions[firstVisible].left
+      }
+
+      // Masaüstü: Son tam görünür karttan sonraki kartı göster
+      const targetIndex = this.isMobile
+        ? fullyVisible[0] + 1 // Mobil: Bir sonraki karta geç
+        : fullyVisible[fullyVisible.length - 1] + 1 // Masaüstü: Son görünürden sonrakine geç
+
+      // Eğer gösterilecek kart kalmadıysa, en sona git
+      if (targetIndex >= positions.length) {
+        return positions[positions.length - 1].left
+      }
+
+      return positions[targetIndex].left
+    } else {
+      // Sola kaydırma
+      // Eğer hiç tam görünür kart yoksa, bir önceki kartı göster
+      if (fullyVisible.length === 0) {
+        const prevIndex = Math.max(0, firstVisible - 1)
+        return positions[prevIndex].left
+      }
+
+      // Masaüstü vs. mobil için farklı stratejiler
+      const targetIndex = this.isMobile
+        ? Math.max(0, fullyVisible[0] - 1) // Mobil: Bir önceki karta git
+        : Math.max(0, fullyVisible[0] - fullyVisible.length) // Masaüstü: Bir ekran kadar geri git
+
+      return positions[targetIndex].left
+    }
+  }
+
+  /**
+   * İyileştirilmiş scroll işlevi - akıllı kaydırma kullanır
+   */
+  private scrollContainer(
+    container: HTMLElement,
+    direction: 'left' | 'right',
+  ): void {
+    const elements = this.containerElementsCache.get(container)
+    if (!elements) {
+      this.debug(`Container elementleri bulunamadı`)
+      return
+    }
+
+    const { scrollElement } = elements
+
+    this.debug(`Button click: ${direction}`, {
+      containerId: container.dataset.wheelScroll,
+      container: container.className,
+    })
+
+    // Önce kart pozisyonlarını güncelle (olası değişiklikler için)
+    this.calculateItemPositions(container)
+
+    // Akıllı kaydırma hedefini hesapla
+    let targetScrollLeft = this.calculateSmartScrollTarget(container, direction)
+
+    this.debug(
+      `Akıllı scroll hedefi: ${targetScrollLeft}, mevcut: ${scrollElement.scrollLeft}`,
+    )
+
+    // Mevcut kaydırma fonksiyonlarını kullan
+    if (this.isMobile) {
+      try {
+        scrollElement.scrollTo({
+          left: targetScrollLeft,
+          behavior: 'smooth',
+        })
+
+        const initialScrollLeft = scrollElement.scrollLeft
+        setTimeout(() => {
+          if (Math.abs(scrollElement.scrollLeft - initialScrollLeft) < 5) {
+            this.simpleMobileScroll(scrollElement, targetScrollLeft)
+          }
+        }, 50)
+      } catch (error) {
+        this.simpleMobileScroll(scrollElement, targetScrollLeft)
+      }
+    } else {
+      this.smoothScrollTo(scrollElement, targetScrollLeft)
     }
   }
 
@@ -381,15 +592,6 @@ class WheelScroll {
       contentWidth,
       viewportWidth,
       hiddenAreaWidth,
-    })
-  }
-
-  /**
-   * Tüm container'ların scroll bilgilerini günceller
-   */
-  private updateAllScrollInfo(): void {
-    this.containers.forEach(container => {
-      this.calculateScrollInfo(container)
     })
   }
 
@@ -632,81 +834,8 @@ class WheelScroll {
   }
 
   /**
-   * İyileştirilmiş scroll işlevi
-   * Mobil vs masaüstü ayrımı daha net yapılıyor
-   */
-  private scrollContainer(
-    container: HTMLElement,
-    direction: 'left' | 'right',
-  ): void {
-    const elements = this.containerElementsCache.get(container)
-    if (!elements) {
-      this.debug(`Container elementleri bulunamadı`)
-      return
-    }
-
-    const { scrollElement, scrollInfo } = elements
-
-    this.debug(`Button click: ${direction}`, {
-      containerId: container.dataset.wheelScroll,
-      container: container.className,
-    })
-
-    // Hedef scroll pozisyonu
-    let targetScrollLeft: number
-
-    if (direction === 'left') {
-      // Sol buton: scrollStep kadar veya başlangıca kadar kaydır
-      targetScrollLeft = Math.max(
-        0,
-        scrollElement.scrollLeft - this.options.scrollStep,
-      )
-    } else {
-      // Sağ buton: scrollStep kadar veya sona kadar kaydır
-      targetScrollLeft = Math.min(
-        scrollInfo.hiddenAreaWidth,
-        scrollElement.scrollLeft + this.options.scrollStep,
-      )
-    }
-
-    this.debug(
-      `Scroll hedefi: ${targetScrollLeft}, mevcut: ${scrollElement.scrollLeft}`,
-    )
-
-    // Hem mobil hem masaüstü için yumuşak scroll kullan
-    if (this.isMobile) {
-      try {
-        // İlk olarak native smooth scrollTo deneyin
-        scrollElement.scrollTo({
-          left: targetScrollLeft,
-          behavior: 'smooth',
-        })
-
-        // Eğer scrollTo işe yaramazsa, basit bir animasyon kullan
-        const initialScrollLeft = scrollElement.scrollLeft
-        setTimeout(() => {
-          // Eğer pozisyon değişmediyse, manuel fakat hafif bir animasyon uygula
-          if (Math.abs(scrollElement.scrollLeft - initialScrollLeft) < 5) {
-            this.simpleMobileScroll(scrollElement, targetScrollLeft)
-          }
-        }, 50)
-      } catch (error) {
-        // Herhangi bir hata durumunda basit animasyona geri dön
-        this.simpleMobileScroll(scrollElement, targetScrollLeft)
-      }
-    } else {
-      // Masaüstü için smooth scroll
-      this.smoothScrollTo(scrollElement, targetScrollLeft)
-    }
-  }
-
-  /**
    * Mobil cihazlar için daha uygun scroll animasyonu
    * Özellikle iOS için daha iyi çalışır
-   */
-  /**
-   * Mobil cihazlar için basit ve hafif bir scroll animasyonu
-   * Tarayıcının doğal davranışını bozmadan yumuşak bir geçiş sağlar
    */
   private simpleMobileScroll(
     element: HTMLElement,

@@ -253,3 +253,101 @@ document.addEventListener('DOMContentLoaded', function (): void {
 document.addEventListener('DOMContentLoaded', function (): void {
   new WheelScroll({ debugMode: false })
 })
+
+document.addEventListener('DOMContentLoaded', function (): void {
+  const elements: NodeListOf<HTMLElement> =
+    document.querySelectorAll('[data-grab-scroll]')
+
+  elements.forEach((item: HTMLElement) => {
+    let isDown: boolean = false
+    let startX: number = 0
+    let scrollLeft: number = 0
+    let velocity: number = 0
+    let lastX: number = 0
+    let animationId: number | null = null
+    let timestamp: number = 0
+
+    // Elastik etki için gerekli parametreler
+    const friction: number = 0.92 // Sürtünme katsayısı (0-1 arası)
+
+    item.addEventListener('mousedown', (e: MouseEvent) => {
+      isDown = true
+      item.dataset.grabing = 'yes'
+      startX = e.pageX - item.offsetLeft
+      scrollLeft = item.scrollLeft
+      lastX = e.pageX
+      timestamp = Date.now()
+      velocity = 0
+
+      // Aktif animasyonu durdur
+      if (animationId) {
+        cancelAnimationFrame(animationId)
+        animationId = null
+      }
+    })
+
+    item.addEventListener('mouseleave', () => {
+      if (isDown) {
+        isDown = false
+        item.dataset.grabing = 'no'
+        startInertiaScroll()
+      }
+    })
+
+    item.addEventListener('mouseup', () => {
+      if (isDown) {
+        isDown = false
+        item.dataset.grabing = 'no'
+        startInertiaScroll()
+      }
+    })
+
+    item.addEventListener('mousemove', (e: MouseEvent) => {
+      if (!isDown) return
+      e.preventDefault()
+
+      const x: number = e.pageX - item.offsetLeft
+      const walk: number = x - startX
+
+      // Hızı hesapla
+      const now: number = Date.now()
+      const dt: number = now - timestamp
+      if (dt > 0) {
+        const dx: number = e.pageX - lastX
+        velocity = (dx / dt) * 16 // 60fps için normalize et
+      }
+
+      lastX = e.pageX
+      timestamp = now
+      item.scrollLeft = scrollLeft - walk
+    })
+
+    function startInertiaScroll(): void {
+      // Çok düşük hız değerlerini yok say
+      if (Math.abs(velocity) < 0.5) return
+
+      // Animasyon başlat
+      function animate(): void {
+        // Velocity'i azalt (sürtünme etkisi)
+        velocity *= friction
+
+        // Hareket çok yavaşladıysa durdur
+        if (Math.abs(velocity) < 0.5) {
+          if (animationId !== null) {
+            cancelAnimationFrame(animationId)
+            animationId = null
+          }
+          return
+        }
+
+        // Scroll pozisyonunu güncelle
+        item.scrollLeft -= velocity
+
+        // Animasyonu devam ettir
+        animationId = requestAnimationFrame(animate)
+      }
+
+      animationId = requestAnimationFrame(animate)
+    }
+  })
+})
