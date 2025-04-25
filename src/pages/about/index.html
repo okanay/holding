@@ -1,0 +1,2436 @@
+<!doctype html>
+<html lang="tr" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Holding About Sayfası</title>
+
+    <!-- Project Fonts -->
+    <link rel="stylesheet" href="/assets/fonts/custom/font.css" />
+
+    <!-- Important Preload Fonts -->
+    <link
+      rel="preload"
+      href="/assets/fonts/custom/extra-bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="preload"
+      href="/assets/fonts/custom/bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="preload"
+      href="/assets/fonts/custom/semibold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="preload"
+      href="/assets/fonts/custom/medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="preload"
+      href="/assets/fonts/custom/regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="/assets/styles/globals-out.css" />
+    <script type="module" src="/assets/scripts/deps/lucide-icons.js"></script>
+    <script type="module" src="/assets/scripts/layout.js"></script>
+    <script type="module" src="/assets/scripts/main.js"></script>
+  </head>
+  <body>
+    <header
+      data-active="close"
+      data-scroll-passed="no"
+      data-scroll="top"
+      data-scroll-offset="5%"
+      data-scroll-target="body"
+      data-scroll-end="bottom"
+      data-scroll-start="top"
+      class="scroll-observer header group/header fixed z-50 w-full text-gray-50 transition-all duration-300 data-[scroll-passed=yes]:bg-white data-[active=open]:text-gray-950 data-[scroll-passed=yes]:text-gray-950"
+      id="header"
+    >
+      <div>
+        <nav
+          style="
+            transition-property: padding, color, opacity;
+            transition-duration: 500ms, 100ms, 100ms;
+            transition-delay: 0ms, 0ms;
+          "
+          class="flex w-full items-center justify-between border-b border-transparent px-4 pb-4 pt-8 group-data-[scroll-passed=yes]/header:border-gray-200 group-data-[active=open]/header:pt-6 group-data-[scroll-passed=yes]/header:pt-6 xl:px-8"
+        >
+          <!-- Logo Bölümü -->
+          <div class="relative z-[60] flex items-center">
+            <a href="/" class="relative mr-8 h-10 w-32">
+              <img
+                src="/assets/images/brand/white.svg"
+                alt="Koç Holding Logo"
+                class="absolute inset-0 top-0 opacity-0 transition-opacity group-data-[active=close]/header:opacity-100 group-data-[scroll-passed=no]/header:opacity-100"
+              />
+              <img
+                src="/assets/images/brand/dark.svg"
+                alt="Koç Holding Logo"
+                class="absolute inset-0 opacity-0 transition-opacity group-data-[active=open]/header:opacity-100 group-data-[scroll-passed=yes]/header:opacity-100"
+              />
+            </a>
+          </div>
+
+          <!-- Ana Menü - Masaüstü -->
+          <div
+            class="relative z-[60] hidden items-center group-data-[active=open]/header:!text-gray-950 lg:flex"
+          >
+            <ul class="flex gap-x-6 text-sm xl:gap-x-12 xl:text-base">
+              <li>
+                <button
+                  data-targets="header,side-menu-1"
+                  data-active="close"
+                  class="dialog group relative"
+                >
+                  <div class="flex cursor-pointer items-center">
+                    <span class="tracking-wide">About</span>
+                    <i
+                      data-lucide="chevron-down"
+                      class="ml-1 size-4 text-primary-700 transition-all duration-300 group-data-[active=open]:rotate-180"
+                    ></i>
+                  </div>
+                  <div
+                    class="absolute -bottom-1 -left-0.5 h-px w-full origin-left scale-x-0 bg-primary-700 transition-all duration-300 group-data-[active=open]:scale-x-100"
+                  ></div>
+                </button>
+              </li>
+              <li>
+                <button
+                  data-targets="header,side-menu-2"
+                  data-active="close"
+                  class="dialog group relative"
+                >
+                  <div class="flex cursor-pointer items-center">
+                    <span class="tracking-wide">Activity Fields</span>
+                    <i
+                      data-lucide="chevron-down"
+                      class="ml-1 size-4 text-primary-700 transition-all duration-300 group-data-[active=open]:rotate-180"
+                    ></i>
+                  </div>
+                  <div
+                    class="absolute -bottom-1 -left-0.5 h-px w-full origin-left scale-x-0 bg-primary-700 transition-all duration-300 group-data-[active=open]:scale-x-100"
+                  ></div>
+                </button>
+              </li>
+              <li>
+                <button
+                  data-targets="header,side-menu-3"
+                  data-active="close"
+                  class="dialog group relative"
+                >
+                  <div class="flex cursor-pointer items-center">
+                    <span class="tracking-wide">Investor Relations</span>
+                    <i
+                      data-lucide="chevron-down"
+                      class="ml-1 size-4 text-primary-700 transition-all duration-300 group-data-[active=open]:rotate-180"
+                    ></i>
+                  </div>
+                  <div
+                    class="absolute -bottom-1 -left-0.5 h-px w-full origin-left scale-x-0 bg-primary-700 transition-all duration-300 group-data-[active=open]:scale-x-100"
+                  ></div>
+                </button>
+              </li>
+              <li>
+                <button
+                  data-targets="header,side-menu-4"
+                  data-active="close"
+                  class="dialog group relative"
+                >
+                  <div class="flex cursor-pointer items-center">
+                    <span class="tracking-wide">Life In Koç</span>
+                    <i
+                      data-lucide="chevron-down"
+                      class="ml-1 size-4 text-primary-700 transition-all duration-300 group-data-[active=open]:rotate-180"
+                    ></i>
+                  </div>
+                  <div
+                    class="absolute -bottom-1 -left-0.5 h-px w-full origin-left scale-x-0 bg-primary-700 transition-all duration-300 group-data-[active=open]:scale-x-100"
+                  ></div>
+                </button>
+              </li>
+              <li>
+                <button
+                  data-targets="header,side-menu-5"
+                  data-active="close"
+                  class="dialog group relative"
+                >
+                  <div class="flex cursor-pointer items-center">
+                    <span class="tracking-wide">Sustainability</span>
+                    <i
+                      data-lucide="chevron-down"
+                      class="ml-1 size-4 text-primary-700 transition-all duration-300 group-data-[active=open]:rotate-180"
+                    ></i>
+                  </div>
+                  <div
+                    class="absolute -bottom-1 -left-0.5 h-px w-full origin-left scale-x-0 bg-primary-700 transition-all duration-300 group-data-[active=open]:scale-x-100"
+                  ></div>
+                </button>
+              </li>
+              <li>
+                <button
+                  data-targets="header,side-menu-6"
+                  data-active="close"
+                  class="dialog group relative"
+                >
+                  <div class="flex cursor-pointer items-center">
+                    <span class="tracking-wide">Media Center</span>
+                    <i
+                      data-lucide="chevron-down"
+                      class="ml-1 size-4 text-primary-700 transition-all duration-300 group-data-[active=open]:rotate-180"
+                    ></i>
+                  </div>
+                  <div
+                    class="absolute -bottom-1 -left-0.5 h-px w-full origin-left scale-x-0 bg-primary-700 transition-all duration-300 group-data-[active=open]:scale-x-100"
+                  ></div>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sağ Bölüm (Dil Seçimi ve Arama) -->
+          <div class="relative z-[60] hidden items-center gap-x-3 lg:flex">
+            <a href="/tr" class="text-sm">TUR</a>
+            <div class="h-8 w-px bg-gray-200"></div>
+            <button
+              data-targets="desktop-search-menu"
+              data-active="close"
+              class="text-primary-700"
+            >
+              <i data-lucide="search" class="size-6"></i>
+            </button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-toggle"
+            data-targets="header,mobile-menu"
+            data-active="close"
+            class="dialog group/mbtn relative z-[60] flex size-12 items-center justify-center rounded-sm bg-primary-700 group-data-[active=open]/header:bg-transparent group-data-[scroll-passed=yes]/header:bg-transparent lg:hidden"
+          >
+            <i
+              data-lucide="menu"
+              class="size-6 text-gray-50 group-data-[active=open]/header:text-gray-950 group-data-[scroll-passed=yes]/header:!text-gray-950"
+            ></i>
+          </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          data-active="close"
+          class="group/mobile pointer-events-none fixed inset-0 z-[60] flex data-[active=open]:pointer-events-auto lg:hidden"
+        >
+          <!-- Backdrop Blur + Overlay -->
+          <div
+            class="absolute inset-0 bg-gray-50/20 opacity-0 backdrop-blur-sm transition-all duration-300 group-data-[active=open]/mobile:opacity-100"
+            data-close-target="mobile-menu"
+          ></div>
+          <!-- Ana Menü Container - 440px genişliğinde -->
+          <div
+            class="sidebar relative z-[61] h-svh w-full max-w-[512px] -translate-x-full overflow-hidden overflow-y-auto bg-white pb-6 shadow-lg transition-all duration-300 group-data-[active=open]/mobile:translate-x-0"
+          >
+            <!-- Header -->
+            <div class="flex justify-between border-b border-gray-200 p-4">
+              <div class="relative z-[60] flex h-10 w-32 items-center">
+                <img
+                  src="/assets/images/brand/dark.svg"
+                  alt="Koç Holding Logo"
+                  class="absolute inset-0"
+                />
+              </div>
+              <div class="flex items-center justify-end gap-4 text-gray-800">
+                <button class="hover:text-gray-500">TUR</button>
+                <div class="h-full border-r border-gray-200"></div>
+                <button
+                  class="text-gray-500 hover:text-gray-800"
+                  data-close-target="mobile-menu"
+                >
+                  <i
+                    data-lucide="x"
+                    class="size-8 text-gray-950 hover:text-gray-500"
+                  ></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Arama Kutusu -->
+            <form class="relative border-b border-gray-200 p-4">
+              <i
+                data-lucide="search"
+                class="absolute left-8 top-[50%] flex translate-y-[-50%] items-center text-primary-700"
+              ></i>
+
+              <input
+                type="text"
+                placeholder="Search..."
+                class="peer w-full rounded-md border border-gray-200 bg-gray-50 px-12 py-4 text-gray-700 outline-none placeholder:text-gray-500 focus:border-primary-700 focus:ring-1 focus:ring-primary-200"
+                onfocus="document.querySelector('.mps').setAttribute('data-show', 'yes')"
+                onblur="document.querySelector('.mps').setAttribute('data-show', 'no')"
+              />
+              <button
+                class="absolute right-8 top-[50%] ml-2 flex translate-y-[-50%] items-center text-primary-700"
+              >
+                <span class="text-primary-700">SEARCH</span>
+                <i data-lucide="arrow-right" class="ml-1 inline size-5"></i>
+              </button>
+
+              <!-- Suggestions  -->
+              <div
+                class="absolute bottom-2 left-0 z-[60] hidden w-full translate-y-full px-4 peer-focus:block"
+              >
+                <div
+                  class="w-full rounded border border-gray-200 bg-gray-50 p-4 shadow-lg"
+                >
+                  <!-- Arama Önerileri Başlığı -->
+                  <div class="mb-3 border-b border-gray-200 pb-2">
+                    <h3 class="font-medium text-gray-700">Arama Sonuçları</h3>
+                  </div>
+
+                  <!-- Önerilen Kategoriler -->
+                  <div class="mb-4">
+                    <h4
+                      class="mb-2 text-xs font-medium uppercase text-gray-500"
+                    >
+                      Kategoriler
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                      <a
+                        href="#"
+                        class="rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs text-gray-700 transition-all hover:border-primary-700 hover:bg-primary-50"
+                        >Sürdürülebilirlik</a
+                      >
+                      <a
+                        href="#"
+                        class="rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs text-gray-700 transition-all hover:border-primary-700 hover:bg-primary-50"
+                        >Yatırımcı İlişkileri</a
+                      >
+                      <a
+                        href="#"
+                        class="rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs text-gray-700 transition-all hover:border-primary-700 hover:bg-primary-50"
+                        >Şirketler</a
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Önerilen Sonuçlar -->
+                  <div>
+                    <h4
+                      class="mb-2 text-xs font-medium uppercase text-gray-500"
+                    >
+                      Bulunan Sonuçlar
+                    </h4>
+                    <ul class="space-y-2">
+                      <li>
+                        <a
+                          href="#"
+                          class="group flex items-center justify-between rounded-md p-2 transition-all hover:bg-primary-50"
+                        >
+                          <div class="flex items-center">
+                            <div
+                              class="mr-3 flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-700"
+                            >
+                              <i data-lucide="file-text" class="size-4"></i>
+                            </div>
+                            <div>
+                              <p class="text-sm font-medium text-gray-800">
+                                Yıllık Faaliyet Raporu 2023
+                              </p>
+                              <p class="text-xs text-gray-500">
+                                Yatırımcı İlişkileri
+                              </p>
+                            </div>
+                          </div>
+                          <i
+                            data-lucide="arrow-right"
+                            class="size-4 text-primary-700 opacity-0 transition-opacity group-hover:opacity-100"
+                          ></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="group flex items-center justify-between rounded-md p-2 transition-all hover:bg-primary-50"
+                        >
+                          <div class="flex items-center">
+                            <div
+                              class="mr-3 flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-700"
+                            >
+                              <i data-lucide="file-text" class="size-4"></i>
+                            </div>
+                            <div>
+                              <p class="text-sm font-medium text-gray-800">
+                                Koç Holding Şirketleri
+                              </p>
+                              <p class="text-xs text-gray-500">
+                                Faaliyet Alanları
+                              </p>
+                            </div>
+                          </div>
+                          <i
+                            data-lucide="arrow-right"
+                            class="size-4 text-primary-700 opacity-0 transition-opacity group-hover:opacity-100"
+                          ></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="group flex items-center justify-between rounded-md p-2 transition-all hover:bg-primary-50"
+                        >
+                          <div class="flex items-center">
+                            <div
+                              class="mr-3 flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-700"
+                            >
+                              <i data-lucide="file-text" class="size-4"></i>
+                            </div>
+                            <div>
+                              <p class="text-sm font-medium text-gray-800">
+                                Sürdürülebilirlik Raporu
+                              </p>
+                              <p class="text-xs text-gray-500">
+                                Sürdürülebilirlik
+                              </p>
+                            </div>
+                          </div>
+                          <i
+                            data-lucide="arrow-right"
+                            class="size-4 text-primary-700 opacity-0 transition-opacity group-hover:opacity-100"
+                          ></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- 2. Yükleme Durumu -->
+                  <div
+                    class="search-results-container py-8"
+                    data-state="loading"
+                  >
+                    <div class="flex flex-col items-center justify-center">
+                      <!-- Yükleme animasyonu -->
+                      <div class="mb-4 flex items-center justify-center">
+                        <div
+                          class="h-8 w-8 animate-spin rounded-full border-b-2 border-t-2 border-primary-700"
+                        ></div>
+                      </div>
+                      <p class="text-center text-sm text-gray-600">
+                        Arama sonuçları yükleniyor...
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- 3. Sonuç Bulunamadı Durumu -->
+                  <div class="search-results-container py-8" data-state="empty">
+                    <div class="flex flex-col items-center justify-center">
+                      <div
+                        class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100"
+                      >
+                        <i
+                          data-lucide="search-x"
+                          class="size-8 text-gray-600"
+                        ></i>
+                      </div>
+                      <h3
+                        class="mb-1 text-center text-lg font-medium text-gray-700"
+                      >
+                        Sonuç Bulunamadı
+                      </h3>
+                      <p class="mb-4 text-center text-sm text-gray-500">
+                        Aramanızla eşleşen içerik bulunamadı.
+                      </p>
+                      <div class="space-y-2 text-center">
+                        <p class="text-xs text-gray-500">Öneriler:</p>
+                        <ul class="text-xs text-gray-600">
+                          <li>• Farklı arama terimleri deneyin</li>
+                          <li>• Daha genel arama terimleri kullanın</li>
+                          <li>• Yazım hatalarını kontrol edin</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tüm Sonuçları Görüntüle -->
+                  <div class="mt-4 border-t border-gray-200 pt-3 text-center">
+                    <a
+                      href="#"
+                      class="inline-flex items-center text-sm font-medium text-primary-700 hover:text-primary-600"
+                    >
+                      Tüm sonuçları görüntüle
+                      <i data-lucide="arrow-right" class="ml-1 size-4"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <!-- Popüler Aramalar -->
+            <div
+              data-show="no"
+              class="mps border-b border-gray-200 p-4 data-[show=yes]:block data-[show=no]:hidden"
+            >
+              <h2 class="mb-4 text-lg font-medium text-gray-900">
+                Popular searches:
+              </h2>
+              <div class="flex flex-wrap gap-2 uppercase">
+                <a
+                  href="#"
+                  class="flex items-center rounded-full border border-gray-200 px-4 py-2 text-xs text-gray-700 hover:border-primary-700"
+                >
+                  ANNUAL REPORTS
+                  <i
+                    data-lucide="arrow-right"
+                    class="ml-1 size-4 text-primary-700"
+                  ></i>
+                </a>
+                <a
+                  href="#"
+                  class="flex items-center rounded-full border border-gray-200 px-4 py-2 text-xs text-gray-700 hover:border-primary-700"
+                >
+                  SUSTAINABILITY
+                  <i
+                    data-lucide="arrow-right"
+                    class="ml-1 size-4 text-primary-700"
+                  ></i>
+                </a>
+                <a
+                  href="#"
+                  class="flex items-center rounded-full border border-gray-200 px-4 py-2 text-xs text-gray-700 hover:border-primary-700"
+                >
+                  COMPANIES
+                  <i
+                    data-lucide="arrow-right"
+                    class="ml-1 size-4 text-primary-700"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Menü Öğeleri -->
+            <ul
+              class="group/alt flex w-full flex-col items-start justify-start gap-y-2 px-4 pb-4 pt-2"
+            >
+              <li class="relative h-fit w-full">
+                <button
+                  data-targets="header,side-menu-1"
+                  data-active="close"
+                  class="dialog group/el flex w-full items-center justify-between py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                >
+                  <div class="flex w-full items-center justify-between">
+                    <h3 class="text-gray-950 lg:line-clamp-1">About</h3>
+                    <i
+                      data-lucide="chevron-right"
+                      class="size-5 text-primary-700"
+                    ></i>
+                  </div>
+                  <div
+                    class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                  ></div>
+                </button>
+              </li>
+              <li class="relative h-fit w-full">
+                <button
+                  data-targets="header,side-menu-2"
+                  data-active="close"
+                  class="dialog group/el flex w-full items-center justify-between py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                >
+                  <div class="flex w-full items-center justify-between">
+                    <h3 class="text-gray-950 lg:line-clamp-1">
+                      Activity Fields
+                    </h3>
+                    <i
+                      data-lucide="chevron-right"
+                      class="size-5 text-primary-700"
+                    ></i>
+                  </div>
+                  <div
+                    class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                  ></div>
+                </button>
+              </li>
+              <li class="relative h-fit w-full">
+                <button
+                  data-targets="header,side-menu-3"
+                  data-active="close"
+                  class="dialog group/el flex w-full items-center justify-between py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                >
+                  <div class="flex w-full items-center justify-between">
+                    <h3 class="text-gray-950 lg:line-clamp-1">
+                      Investor Relations
+                    </h3>
+                    <i
+                      data-lucide="chevron-right"
+                      class="size-5 text-primary-700"
+                    ></i>
+                  </div>
+                  <div
+                    class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                  ></div>
+                </button>
+              </li>
+              <li class="relative h-fit w-full">
+                <button
+                  data-targets="header,side-menu-4"
+                  data-active="close"
+                  class="dialog group/el flex w-full items-center justify-between py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                >
+                  <div class="flex w-full items-center justify-between">
+                    <h3 class="text-gray-950 lg:line-clamp-1">Life In Koç</h3>
+                    <i
+                      data-lucide="chevron-right"
+                      class="size-5 text-primary-700"
+                    ></i>
+                  </div>
+                  <div
+                    class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                  ></div>
+                </button>
+              </li>
+              <li class="relative h-fit w-full">
+                <button
+                  data-targets="header,side-menu-5"
+                  data-active="close"
+                  class="dialog group/el flex w-full items-center justify-between py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                >
+                  <div class="flex w-full items-center justify-between">
+                    <h3 class="text-gray-950 lg:line-clamp-1">
+                      Sustainability
+                    </h3>
+                    <i
+                      data-lucide="chevron-right"
+                      class="size-5 text-primary-700"
+                    ></i>
+                  </div>
+                  <div
+                    class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                  ></div>
+                </button>
+              </li>
+              <li class="relative h-fit w-full">
+                <button
+                  data-targets="header,side-menu-6"
+                  data-active="close"
+                  class="dialog group/el flex w-full items-center justify-between py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                >
+                  <div class="flex w-full items-center justify-between">
+                    <h3 class="text-gray-950 lg:line-clamp-1">Media Center</h3>
+                    <i
+                      data-lucide="chevron-right"
+                      class="size-5 text-primary-700"
+                    ></i>
+                  </div>
+                  <div
+                    class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                  ></div>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Desktop : Search Menu -->
+        <div
+          id="desktop-search-menu"
+          data-active="close"
+          class="group pointer-events-none fixed inset-0 z-[70] hidden data-[active=open]:pointer-events-auto lg:block"
+        >
+          <!-- Backdrop Blur Arka Planı -->
+          <button
+            data-close-target="desktop-search-menu"
+            class="absolute inset-0 cursor-default bg-primary-950/40 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-data-[active=open]:opacity-100"
+          ></button>
+
+          <div
+            class="relative mx-auto grid h-full grid-rows-[1fr] overflow-hidden bg-gradient-to-r from-primary-500 via-primary-700 to-primary-500 opacity-0 transition-all duration-300 group-data-[active=open]:grid-rows-[1fr] group-data-[active=open]:opacity-100 lg:h-auto lg:grid-rows-[0fr]"
+          >
+            <div class="sidebar overflow-y-auto pb-12 pt-12">
+              <div class="mx-auto flex w-full max-w-2xl flex-col">
+                <!-- Kapatma Butonu -->
+                <button
+                  data-close-target="desktop-search-menu"
+                  class="absolute right-20 top-5 flex items-center gap-2 text-white transition-colors hover:text-gray-200"
+                >
+                  <span class="font-medium">CLOSE</span>
+                  <i data-lucide="x" class="h-6 w-6"></i>
+                </button>
+                <!-- Arama Başlığı -->
+                <h2 class="mb-6 text-start text-4xl font-bold text-white">
+                  Type your search...
+                </h2>
+                <!-- Arama Formu -->
+                <div class="mb-16 w-full">
+                  <div
+                    class="flex overflow-hidden rounded-lg bg-white shadow-lg"
+                  >
+                    <div class="p-4">
+                      <i
+                        data-lucide="search"
+                        class="h-6 w-6 text-primary-700"
+                      ></i>
+                    </div>
+                    <input
+                      type="text"
+                      placeholder=""
+                      class="flex-grow px-2 py-4 text-lg text-gray-800 outline-none focus:ring-0"
+                    />
+                    <button
+                      class="flex items-center bg-white px-6 py-4 font-bold text-primary-700 transition-colors hover:bg-gray-50"
+                    >
+                      SEARCH
+                      <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- Popüler Aramalar -->
+                <h3 class="mb-6 text-2xl font-medium text-white">
+                  Popular searches:
+                </h3>
+                <div class="flex flex-wrap gap-4">
+                  <a
+                    href="#"
+                    class="group flex items-center rounded-full bg-white px-6 py-3 font-medium text-gray-800 transition-colors hover:bg-gray-50"
+                  >
+                    ANNUAL REPORTS
+                    <i
+                      data-lucide="arrow-right"
+                      class="ml-2 h-4 w-4 text-primary-700 transition-transform group-hover:translate-x-1"
+                    ></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="group flex items-center rounded-full bg-white px-6 py-3 font-medium text-gray-800 transition-colors hover:bg-gray-50"
+                  >
+                    SUSTAINABILITY
+                    <i
+                      data-lucide="arrow-right"
+                      class="ml-2 h-4 w-4 text-primary-700 transition-transform group-hover:translate-x-1"
+                    ></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="group flex items-center rounded-full bg-white px-6 py-3 font-medium text-gray-800 transition-colors hover:bg-gray-50"
+                  >
+                    COMPANIES
+                    <i
+                      data-lucide="arrow-right"
+                      class="ml-2 h-4 w-4 text-primary-700 transition-transform group-hover:translate-x-1"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Alt Menü : About -->
+        <div
+          id="side-menu-1"
+          data-active="close"
+          class="group pointer-events-none absolute left-0 top-0 z-[50] w-full max-w-[512px] data-[active=open]:pointer-events-auto lg:max-w-full"
+        >
+          <div
+            class="relative grid h-svh w-full translate-x-[-100%] grid-rows-[1fr] overflow-hidden bg-white pt-20 opacity-0 transition-all duration-300 group-data-[active=open]:translate-x-[0%] group-data-[active=open]:grid-rows-[1fr] group-data-[active=open]:opacity-100 lg:h-auto lg:translate-x-[0%] lg:grid-rows-[0fr] lg:pt-28"
+          >
+            <div class="sidebar overflow-y-auto pb-8">
+              <div class="flex w-full flex-col lg:flex-row">
+                <!-- Mobile Controls -->
+                <div
+                  class="flex justify-between border-t border-gray-200 px-4 py-4 lg:hidden"
+                >
+                  <button
+                    data-targets="header,mobile-menu"
+                    data-active="close"
+                    class="dialog text-gray-500 hover:text-gray-800"
+                  >
+                    <i data-lucide="move-left" class="size-5 text-gray-950"></i>
+                  </button>
+                  <button
+                    class="text-gray-500 hover:text-gray-800"
+                    data-close-target="side-menu-1"
+                  >
+                    <i
+                      data-lucide="x"
+                      class="size-6 -translate-x-[37.5%] text-gray-950"
+                    ></i>
+                  </button>
+                </div>
+                <!-- Sol taraf - Görsel ve Başlık -->
+                <div
+                  class="w-full flex-shrink-0 lg:h-[310px] lg:w-[600px] lg:pr-2"
+                >
+                  <a
+                    href="/about/activity-fields"
+                    class="group/left relative mb-6 block w-full overflow-hidden opacity-0 group-data-[active=open]:opacity-100"
+                    aria-label="Learn more about Activity Fields"
+                    title="Activity Fields"
+                    style="
+                      transition-property: opacity;
+                      transition-duration: 600ms;
+                      transition-delay: 200ms;
+                    "
+                  >
+                    <img
+                      src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/menu-img/hakkinda_2.jpg?ext=.jpg"
+                      alt="Activity Fields visual representation"
+                      class="h-full max-h-[240px] w-full bg-white object-cover group-hover/left:scale-105 lg:h-[310px] lg:max-h-full"
+                      width="600"
+                      height="310"
+                      loading="lazy"
+                      style="
+                        transition-property: transform;
+                        transition-duration: 500ms;
+                        transition-delay: 0ms;
+                      "
+                    />
+                    <!-- Metin Overlay -->
+                    <div
+                      class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent px-4 pb-8 lg:px-8"
+                      aria-hidden="false"
+                    >
+                      <h2
+                        class="mb-4 text-3xl font-semibold tracking-wider text-white lg:text-4xl"
+                        id="activity-fields-heading"
+                      >
+                        About
+                      </h2>
+                      <span
+                        class="w-fit border-b-2 border-primary-700 pb-1 text-xs font-medium tracking-wide text-white"
+                        aria-describedby="activity-fields-heading"
+                      >
+                        More Information
+                        <span class="sr-only">about Activity Fields</span>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Sağ Taraf - Linkler -->
+                <ul
+                  class="group/alt sidebar -mt-4 flex w-full flex-col items-start justify-start gap-x-6 gap-y-2 px-4 lg:max-h-[320px] lg:w-full lg:overflow-y-auto xl:h-fit xl:flex-row xl:flex-wrap xl:gap-y-8"
+                >
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Who Are We?
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">History</h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Board of Directors
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Organization Chart
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Code of Ethics and Compliance Policies
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Alt Menü : Activity Fields -->
+        <div
+          id="side-menu-2"
+          data-active="close"
+          class="group pointer-events-none absolute left-0 top-0 z-[50] w-full max-w-[512px] data-[active=open]:pointer-events-auto lg:max-w-full"
+        >
+          <div
+            class="relative grid h-svh w-full translate-x-[-100%] grid-rows-[1fr] overflow-hidden bg-white pt-20 opacity-0 transition-all duration-300 group-data-[active=open]:translate-x-[0%] group-data-[active=open]:grid-rows-[1fr] group-data-[active=open]:opacity-100 lg:h-auto lg:translate-x-[0%] lg:grid-rows-[0fr] lg:pt-28"
+          >
+            <div class="sidebar overflow-y-auto pb-8">
+              <div class="flex w-full flex-col lg:flex-row">
+                <!-- Mobile Controls -->
+                <div
+                  class="flex justify-between border-t border-gray-200 px-4 py-4 lg:hidden"
+                >
+                  <button
+                    data-targets="header,mobile-menu"
+                    data-active="close"
+                    class="dialog text-gray-500 hover:text-gray-800"
+                  >
+                    <i data-lucide="move-left" class="size-5 text-gray-950"></i>
+                  </button>
+                  <button
+                    class="text-gray-500 hover:text-gray-800"
+                    data-close-target="side-menu-2"
+                  >
+                    <i
+                      data-lucide="x"
+                      class="size-6 -translate-x-[37.5%] text-gray-950"
+                    ></i>
+                  </button>
+                </div>
+                <!-- Sol taraf - Görsel ve Başlık -->
+                <div
+                  class="w-full flex-shrink-0 lg:h-[310px] lg:w-[600px] lg:pr-2"
+                >
+                  <a
+                    href="/about/activity-fields"
+                    class="group/left relative mb-6 block w-full overflow-hidden opacity-0 group-data-[active=open]:opacity-100"
+                    aria-label="Learn more about Activity Fields"
+                    title="Activity Fields"
+                    style="
+                      transition-property: opacity;
+                      transition-duration: 600ms;
+                      transition-delay: 200ms;
+                    "
+                  >
+                    <img
+                      src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/menu-img/hakkinda_2.jpg?ext=.jpg"
+                      alt="Activity Fields visual representation"
+                      class="h-full max-h-[240px] w-full bg-white object-cover group-hover/left:scale-105 lg:h-[310px] lg:max-h-full"
+                      width="600"
+                      height="310"
+                      loading="lazy"
+                      style="
+                        transition-property: transform;
+                        transition-duration: 500ms;
+                        transition-delay: 0ms;
+                      "
+                    />
+                    <!-- Metin Overlay -->
+                    <div
+                      class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent px-4 pb-8 lg:px-8"
+                      aria-hidden="false"
+                    >
+                      <h2
+                        class="mb-4 text-3xl font-semibold tracking-wider text-white lg:text-4xl"
+                        id="activity-fields-heading"
+                      >
+                        Activity Fields
+                      </h2>
+                      <span
+                        class="w-fit border-b-2 border-primary-700 pb-1 text-xs font-medium tracking-wide text-white"
+                        aria-describedby="activity-fields-heading"
+                      >
+                        More Information
+                        <span class="sr-only">about Activity Fields</span>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Sağ Taraf - Linkler -->
+                <ul
+                  class="group/alt sidebar -mt-4 flex w-full flex-col items-start justify-start gap-x-6 gap-y-2 px-4 lg:max-h-[320px] lg:w-full lg:overflow-y-auto xl:h-fit xl:flex-row xl:flex-wrap xl:gap-y-8"
+                >
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Who Are We?
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">History</h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Board of Directors
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Organization Chart
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Code of Ethics and Compliance Policies
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Alt Menü : Investor Relations -->
+        <div
+          id="side-menu-3"
+          data-active="close"
+          class="group pointer-events-none absolute left-0 top-0 z-[50] w-full max-w-[512px] data-[active=open]:pointer-events-auto lg:max-w-full"
+        >
+          <div
+            class="relative grid h-svh w-full translate-x-[-100%] grid-rows-[1fr] overflow-hidden bg-white pt-20 opacity-0 transition-all duration-300 group-data-[active=open]:translate-x-[0%] group-data-[active=open]:grid-rows-[1fr] group-data-[active=open]:opacity-100 lg:h-auto lg:translate-x-[0%] lg:grid-rows-[0fr] lg:pt-28"
+          >
+            <div class="sidebar overflow-y-auto pb-8">
+              <div class="flex w-full flex-col lg:flex-row">
+                <!-- Mobile Controls -->
+                <div
+                  class="flex justify-between border-t border-gray-200 px-4 py-4 lg:hidden"
+                >
+                  <button
+                    data-targets="header,mobile-menu"
+                    data-active="close"
+                    class="dialog text-gray-500 hover:text-gray-800"
+                  >
+                    <i data-lucide="move-left" class="size-5 text-gray-950"></i>
+                  </button>
+                  <button
+                    class="text-gray-500 hover:text-gray-800"
+                    data-close-target="side-menu-3"
+                  >
+                    <i
+                      data-lucide="x"
+                      class="size-6 -translate-x-[37.5%] text-gray-950"
+                    ></i>
+                  </button>
+                </div>
+                <!-- Sol taraf - Görsel ve Başlık -->
+                <div
+                  class="w-full flex-shrink-0 lg:h-[310px] lg:w-[600px] lg:pr-2"
+                >
+                  <a
+                    href="/about/activity-fields"
+                    class="group/left relative mb-6 block w-full overflow-hidden opacity-0 group-data-[active=open]:opacity-100"
+                    aria-label="Learn more about Activity Fields"
+                    title="Activity Fields"
+                    style="
+                      transition-property: opacity;
+                      transition-duration: 600ms;
+                      transition-delay: 200ms;
+                    "
+                  >
+                    <img
+                      src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/menu-img/hakkinda_2.jpg?ext=.jpg"
+                      alt="Activity Fields visual representation"
+                      class="h-full max-h-[240px] w-full bg-white object-cover group-hover/left:scale-105 lg:h-[310px] lg:max-h-full"
+                      width="600"
+                      height="310"
+                      loading="lazy"
+                      style="
+                        transition-property: transform;
+                        transition-duration: 500ms;
+                        transition-delay: 0ms;
+                      "
+                    />
+                    <!-- Metin Overlay -->
+                    <div
+                      class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent px-4 pb-8 lg:px-8"
+                      aria-hidden="false"
+                    >
+                      <h2
+                        class="mb-4 text-3xl font-semibold tracking-wider text-white lg:text-4xl"
+                        id="activity-fields-heading"
+                      >
+                        Investor Relations
+                      </h2>
+                      <span
+                        class="w-fit border-b-2 border-primary-700 pb-1 text-xs font-medium tracking-wide text-white"
+                        aria-describedby="activity-fields-heading"
+                      >
+                        More Information
+                        <span class="sr-only">about Activity Fields</span>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Sağ Taraf - Linkler -->
+                <ul
+                  class="group/alt sidebar -mt-4 flex w-full flex-col items-start justify-start gap-x-6 gap-y-2 px-4 lg:max-h-[320px] lg:w-full lg:overflow-y-auto xl:h-fit xl:flex-row xl:flex-wrap xl:gap-y-8"
+                >
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Investor Relations Main Page
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Why Koç Holding?
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          About Koç Holding
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Stock Information & Investor Tools
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Presentations and Bulletins
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Financial Information
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Announcements and Publications
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">Reports</h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Investor Kit
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Corporate Governance
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">Calendar</h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">Contact</h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Alt Menü : Life In Koç -->
+        <div
+          id="side-menu-4"
+          data-active="close"
+          class="group pointer-events-none absolute left-0 top-0 z-[50] w-full max-w-[512px] data-[active=open]:pointer-events-auto lg:max-w-full"
+        >
+          <div
+            class="relative grid h-svh w-full translate-x-[-100%] grid-rows-[1fr] overflow-hidden bg-white pt-20 opacity-0 transition-all duration-300 group-data-[active=open]:translate-x-[0%] group-data-[active=open]:grid-rows-[1fr] group-data-[active=open]:opacity-100 lg:h-auto lg:translate-x-[0%] lg:grid-rows-[0fr] lg:pt-28"
+          >
+            <div class="sidebar overflow-y-auto pb-8">
+              <div class="flex w-full flex-col lg:flex-row">
+                <!-- Mobile Controls -->
+                <div
+                  class="flex justify-between border-t border-gray-200 px-4 py-4 lg:hidden"
+                >
+                  <button
+                    data-targets="header,mobile-menu"
+                    data-active="close"
+                    class="dialog text-gray-500 hover:text-gray-800"
+                  >
+                    <i data-lucide="move-left" class="size-5 text-gray-950"></i>
+                  </button>
+                  <button
+                    class="text-gray-500 hover:text-gray-800"
+                    data-close-target="side-menu-4"
+                  >
+                    <i
+                      data-lucide="x"
+                      class="size-6 -translate-x-[37.5%] text-gray-950"
+                    ></i>
+                  </button>
+                </div>
+                <!-- Sol taraf - Görsel ve Başlık -->
+                <div
+                  class="w-full flex-shrink-0 lg:h-[310px] lg:w-[600px] lg:pr-2"
+                >
+                  <a
+                    href="/about/activity-fields"
+                    class="group/left relative mb-6 block w-full overflow-hidden opacity-0 group-data-[active=open]:opacity-100"
+                    aria-label="Learn more about Activity Fields"
+                    title="Activity Fields"
+                    style="
+                      transition-property: opacity;
+                      transition-duration: 600ms;
+                      transition-delay: 200ms;
+                    "
+                  >
+                    <img
+                      src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/menu-img/hakkinda_2.jpg?ext=.jpg"
+                      alt="Activity Fields visual representation"
+                      class="h-full max-h-[240px] w-full bg-white object-cover group-hover/left:scale-105 lg:h-[310px] lg:max-h-full"
+                      width="600"
+                      height="310"
+                      loading="lazy"
+                      style="
+                        transition-property: transform;
+                        transition-duration: 500ms;
+                        transition-delay: 0ms;
+                      "
+                    />
+                    <!-- Metin Overlay -->
+                    <div
+                      class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent px-4 pb-8 lg:px-8"
+                      aria-hidden="false"
+                    >
+                      <h2
+                        class="mb-4 text-3xl font-semibold tracking-wider text-white lg:text-4xl"
+                        id="activity-fields-heading"
+                      >
+                        Life In Koç
+                      </h2>
+                      <span
+                        class="w-fit border-b-2 border-primary-700 pb-1 text-xs font-medium tracking-wide text-white"
+                        aria-describedby="activity-fields-heading"
+                      >
+                        More Information
+                        <span class="sr-only">about Activity Fields</span>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Sağ Taraf - Linkler -->
+                <ul
+                  class="group/alt sidebar -mt-4 flex w-full flex-col items-start justify-start gap-x-6 gap-y-2 px-4 lg:max-h-[320px] lg:w-full lg:overflow-y-auto xl:h-fit xl:flex-row xl:flex-wrap xl:gap-y-8"
+                >
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Koç Culture And Our Priorities
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Being A Part of Koç
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Industrial Relations
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Alt Menü : Sustainability -->
+        <div
+          id="side-menu-5"
+          data-active="close"
+          class="group pointer-events-none absolute left-0 top-0 z-[50] w-full max-w-[512px] data-[active=open]:pointer-events-auto lg:max-w-full"
+        >
+          <div
+            class="relative grid h-svh w-full translate-x-[-100%] grid-rows-[1fr] overflow-hidden bg-white pt-20 opacity-0 transition-all duration-300 group-data-[active=open]:translate-x-[0%] group-data-[active=open]:grid-rows-[1fr] group-data-[active=open]:opacity-100 lg:h-auto lg:translate-x-[0%] lg:grid-rows-[0fr] lg:pt-28"
+          >
+            <div class="sidebar overflow-y-auto pb-8">
+              <div class="flex w-full flex-col lg:flex-row">
+                <!-- Mobile Controls -->
+                <div
+                  class="flex justify-between border-t border-gray-200 px-4 py-4 lg:hidden"
+                >
+                  <button
+                    data-targets="header,mobile-menu"
+                    data-active="close"
+                    class="dialog text-gray-500 hover:text-gray-800"
+                  >
+                    <i data-lucide="move-left" class="size-5 text-gray-950"></i>
+                  </button>
+                  <button
+                    class="text-gray-500 hover:text-gray-800"
+                    data-close-target="side-menu-5"
+                  >
+                    <i
+                      data-lucide="x"
+                      class="size-6 -translate-x-[37.5%] text-gray-950"
+                    ></i>
+                  </button>
+                </div>
+                <!-- Sol taraf - Görsel ve Başlık -->
+                <div
+                  class="w-full flex-shrink-0 lg:h-[310px] lg:w-[600px] lg:pr-2"
+                >
+                  <a
+                    href="/about/activity-fields"
+                    class="group/left relative mb-6 block w-full overflow-hidden opacity-0 group-data-[active=open]:opacity-100"
+                    aria-label="Learn more about Activity Fields"
+                    title="Activity Fields"
+                    style="
+                      transition-property: opacity;
+                      transition-duration: 600ms;
+                      transition-delay: 200ms;
+                    "
+                  >
+                    <img
+                      src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/menu-img/hakkinda_2.jpg?ext=.jpg"
+                      alt="Activity Fields visual representation"
+                      class="h-full max-h-[240px] w-full bg-white object-cover group-hover/left:scale-105 lg:h-[310px] lg:max-h-full"
+                      width="600"
+                      height="310"
+                      loading="lazy"
+                      style="
+                        transition-property: transform;
+                        transition-duration: 500ms;
+                        transition-delay: 0ms;
+                      "
+                    />
+                    <!-- Metin Overlay -->
+                    <div
+                      class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent px-4 pb-8 lg:px-8"
+                      aria-hidden="false"
+                    >
+                      <h2
+                        class="mb-4 text-3xl font-semibold tracking-wider text-white lg:text-4xl"
+                        id="activity-fields-heading"
+                      >
+                        Sustainability
+                      </h2>
+                      <span
+                        class="w-fit border-b-2 border-primary-700 pb-1 text-xs font-medium tracking-wide text-white"
+                        aria-describedby="activity-fields-heading"
+                      >
+                        More Information
+                        <span class="sr-only">about Activity Fields</span>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Sağ Taraf - Linkler -->
+                <ul
+                  class="group/alt sidebar -mt-4 flex w-full flex-col items-start justify-start gap-x-6 gap-y-2 px-4 lg:max-h-[320px] lg:w-full lg:overflow-y-auto xl:h-fit xl:flex-row xl:flex-wrap xl:gap-y-8"
+                >
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Lead. Together
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Grow the business. Together
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Empower people. Together
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Act for the planet. Together
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Strengthen communities. Together
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Reports and Policies
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Vehbi Koç Foundation
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Rahmi M. Koç Museum
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Sponsorships
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Alt Menü : Media Center -->
+        <div
+          id="side-menu-6"
+          data-active="close"
+          class="group pointer-events-none absolute left-0 top-0 z-[50] w-full max-w-[512px] data-[active=open]:pointer-events-auto lg:max-w-full"
+        >
+          <div
+            class="relative grid h-svh w-full translate-x-[-100%] grid-rows-[1fr] overflow-hidden bg-white pt-20 opacity-0 transition-all duration-300 group-data-[active=open]:translate-x-[0%] group-data-[active=open]:grid-rows-[1fr] group-data-[active=open]:opacity-100 lg:h-auto lg:translate-x-[0%] lg:grid-rows-[0fr] lg:pt-28"
+          >
+            <div class="sidebar overflow-y-auto pb-8">
+              <div class="flex w-full flex-col lg:flex-row">
+                <!-- Mobile Controls -->
+                <div
+                  class="flex justify-between border-t border-gray-200 px-4 py-4 lg:hidden"
+                >
+                  <button
+                    data-targets="header,mobile-menu"
+                    data-active="close"
+                    class="dialog text-gray-500 hover:text-gray-800"
+                  >
+                    <i data-lucide="move-left" class="size-5 text-gray-950"></i>
+                  </button>
+                  <button
+                    class="text-gray-500 hover:text-gray-800"
+                    data-close-target="side-menu-6"
+                  >
+                    <i
+                      data-lucide="x"
+                      class="size-6 -translate-x-[37.5%] text-gray-950"
+                    ></i>
+                  </button>
+                </div>
+                <!-- Sol taraf - Görsel ve Başlık -->
+                <div
+                  class="w-full flex-shrink-0 lg:h-[310px] lg:w-[600px] lg:pr-2"
+                >
+                  <a
+                    href="/about/activity-fields"
+                    class="group/left relative mb-6 block w-full overflow-hidden opacity-0 group-data-[active=open]:opacity-100"
+                    aria-label="Learn more about Activity Fields"
+                    title="Activity Fields"
+                    style="
+                      transition-property: opacity;
+                      transition-duration: 600ms;
+                      transition-delay: 200ms;
+                    "
+                  >
+                    <img
+                      src="https://cdn.koc.com.tr/cmscontainer/kocholding/media/koc/menu-img/hakkinda_2.jpg?ext=.jpg"
+                      alt="Activity Fields visual representation"
+                      class="h-full max-h-[240px] w-full bg-white object-cover group-hover/left:scale-105 lg:h-[310px] lg:max-h-full"
+                      width="600"
+                      height="310"
+                      loading="lazy"
+                      style="
+                        transition-property: transform;
+                        transition-duration: 500ms;
+                        transition-delay: 0ms;
+                      "
+                    />
+                    <!-- Metin Overlay -->
+                    <div
+                      class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent px-4 pb-8 lg:px-8"
+                      aria-hidden="false"
+                    >
+                      <h2
+                        class="mb-4 text-3xl font-semibold tracking-wider text-white lg:text-4xl"
+                        id="activity-fields-heading"
+                      >
+                        Media Center
+                      </h2>
+                      <span
+                        class="w-fit border-b-2 border-primary-700 pb-1 text-xs font-medium tracking-wide text-white"
+                        aria-describedby="activity-fields-heading"
+                      >
+                        More Information
+                        <span class="sr-only">about Activity Fields</span>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Sağ Taraf - Linkler -->
+                <ul
+                  class="group/alt sidebar -mt-4 flex w-full flex-col items-start justify-start gap-x-6 gap-y-2 px-4 lg:max-h-[320px] lg:w-full lg:overflow-y-auto xl:h-fit xl:flex-row xl:flex-wrap xl:gap-y-8"
+                >
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">News</h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                  <li class="relative h-fit w-full xl:max-w-[312px]">
+                    <a
+                      href="#"
+                      class="group/el block py-4 transition-all duration-300 ease-in-out hover:text-red-600 hover:!opacity-100 group-hover/alt:[&:not(:hover)]:opacity-60"
+                    >
+                      <div class="flex items-center justify-between lg:w-auto">
+                        <h3 class="text-gray-950 lg:line-clamp-1">
+                          Press Releases
+                        </h3>
+                        <i
+                          data-lucide="chevron-right"
+                          class="size-5 text-primary-700"
+                        ></i>
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 h-px w-full bg-gray-200 transition-all duration-300 group-hover/el:h-[1.5px] group-hover/el:bg-primary-700"
+                      ></div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <main>
+      <!-- Page Hero Banner with Title -->
+      <div class="relative h-80 bg-gray-950">
+        <img
+          src="https://images.project-test.info/1.webp"
+          alt="About Us Banner"
+          class="absolute inset-0 h-full w-full object-cover opacity-60"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-slate-800/40 to-slate-800/40"
+        ></div>
+        <div
+          class="container relative mx-auto flex h-full flex-col items-center justify-center px-4 text-center"
+        >
+          <div class="text-white">
+            <p class="mb-2 text-base">About Us</p>
+            <h1 class="text-5xl font-bold md:text-6xl">Who are We?</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- Breadcrumb Navigation -->
+      <div
+        class="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 py-2"
+      >
+        <div class="container mx-auto px-4">
+          <div class="flex items-center justify-between">
+            <!-- Left side: Breadcrumb -->
+            <div class="flex items-center text-xs text-white">
+              <a href="/" class="hover:underline">Home Page</a>
+              <span class="mx-2">/</span>
+              <a href="/about" class="hover:underline">About</a>
+              <span class="mx-2">/</span>
+              <span>Who are We?</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Introduction Section -->
+      <section class="py-20 text-center">
+        <h2 class="mb-6 text-4xl font-bold text-gray-950 md:text-5xl">
+          Turkey's Leader, Global Player
+        </h2>
+        <div class="mx-auto max-w-4xl text-[17px] tracking-wide">
+          <p class="mb-6 text-gray-950">
+            Koç Holding, with its almost a century-long journey since 1926, has
+            differentiated itself from competitors by achieving numerous
+            breakthroughs in Turkey, from industrialization to globalization,
+            playing key roles with its leading positions. The Koç Group
+            established Turkey’s first joint stock company, created the
+            Republic’s first industrial endeavor and first international
+            partnership and realized the first public offering.
+          </p>
+          <p class="mb-6 text-gray-950">
+            Koç Holding is Turkey’s leading investment holding company and the
+            Koç Group is Turkey's largest industrial and services group in terms
+            of revenues, exports, number of employees and market capitalization
+            on Borsa Istanbul. The Group has been a driving force of the Turkish
+            economy with total revenues that correspond around 8% of Turkey’s
+            GDP and exports that comprise around 7% of Turkey’s total exports.
+          </p>
+          <p class="mb-6 text-gray-950">
+            Following $11.2 billion investments in the last five years, Koç
+            Holding is the only Turkish company in Fortune Global 500. Koç
+            Holding has leading positions with strong competitive advantages in
+            energy, automotive, consumer durables and finance sectors, which
+            offer strong long-term growth potential.
+          </p>
+          <p class="mb-6 text-gray-950">
+            The Koç Group manage activities according to international standards
+            of corporate governance, customer satisfaction, sustainability and
+            social responsibility. Today, as Turkey’s largest group of
+            companies, the Koç Group will continue to create value for all its
+            shareholders.
+          </p>
+        </div>
+
+        <!-- Vertical Line Divider -->
+        <div class="mt-10 flex justify-center">
+          <div class="h-14 w-[2px] bg-primary-700"></div>
+        </div>
+      </section>
+
+      <!-- Values Section -->
+      <section class="bg-gray-50 py-16">
+        <div class="mx-auto max-w-7xl px-4">
+          <!-- Values Wheel Scroll Container -->
+          <div class="wheel-container relative">
+            <!-- Navigation Buttons -->
+            <button
+              class="wheel-btn-left disabled absolute left-0 top-[50%] z-[45] flex translate-y-[-50%] items-center justify-center rounded-sm border border-gray-800 bg-primary-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-10 xl:-left-8"
+              disabled="true"
+            >
+              <i data-lucide="chevron-left" class="size-4"></i>
+            </button>
+            <button
+              class="wheel-btn-right absolute right-0 top-[50%] z-[45] flex translate-y-[-50%] items-center justify-center rounded-sm border border-gray-800 bg-primary-950 p-2 text-gray-50 shadow-sm transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-10 xl:-right-8"
+            >
+              <i data-lucide="chevron-right" class="size-4"></i>
+            </button>
+
+            <!-- Scrollable Values Container -->
+            <div class="overflow-x-hidden pb-8">
+              <ul class="wheel-scroll flex gap-6 overflow-x-auto">
+                <!-- Value 1 -->
+                <li class="w-[300px] flex-shrink-0">
+                  <div
+                    class="flex h-full flex-col rounded-sm border-b-2 border-primary-700 bg-white p-8 shadow-md"
+                  >
+                    <div
+                      class="mb-6 flex h-16 w-16 items-center justify-center rounded-sm bg-primary-100"
+                    >
+                      <i
+                        data-lucide="shield"
+                        class="size-8 text-primary-700"
+                      ></i>
+                    </div>
+                    <h3 class="mb-4 text-2xl font-bold text-gray-900">Güven</h3>
+                    <p class="text-gray-700">
+                      Müşterilerimiz, çalışanlarımız ve iş ortaklarımızla güvene
+                      dayalı ilişkiler kurarız.
+                    </p>
+                  </div>
+                </li>
+
+                <!-- Value 2 -->
+                <li class="w-[300px] flex-shrink-0">
+                  <div
+                    class="flex h-full flex-col rounded-sm border-b-2 border-primary-700 bg-white p-8 shadow-md"
+                  >
+                    <div
+                      class="mb-6 flex h-16 w-16 items-center justify-center rounded-sm bg-primary-100"
+                    >
+                      <i
+                        data-lucide="lightbulb"
+                        class="size-8 text-primary-700"
+                      ></i>
+                    </div>
+                    <h3 class="mb-4 text-2xl font-bold text-gray-900">
+                      İnovasyon
+                    </h3>
+                    <p class="text-gray-700">
+                      Sürekli yeniliği teşvik eder, yaratıcı çözümler
+                      geliştiririz.
+                    </p>
+                  </div>
+                </li>
+
+                <!-- Value 3 -->
+                <li class="w-[300px] flex-shrink-0">
+                  <div
+                    class="flex h-full flex-col rounded-sm border-b-2 border-primary-700 bg-white p-8 shadow-md"
+                  >
+                    <div
+                      class="mb-6 flex h-16 w-16 items-center justify-center rounded-sm bg-primary-100"
+                    >
+                      <i
+                        data-lucide="users"
+                        class="size-8 text-primary-700"
+                      ></i>
+                    </div>
+                    <h3 class="mb-4 text-2xl font-bold text-gray-900">
+                      İşbirliği
+                    </h3>
+                    <p class="text-gray-700">
+                      Ekip çalışmasına değer verir, birlikte daha güçlü
+                      olduğumuza inanırız.
+                    </p>
+                  </div>
+                </li>
+
+                <!-- Value 4 -->
+                <li class="w-[300px] flex-shrink-0">
+                  <div
+                    class="flex h-full flex-col rounded-sm border-b-2 border-primary-700 bg-white p-8 shadow-md"
+                  >
+                    <div
+                      class="mb-6 flex h-16 w-16 items-center justify-center rounded-sm bg-primary-100"
+                    >
+                      <i
+                        data-lucide="target"
+                        class="size-8 text-primary-700"
+                      ></i>
+                    </div>
+                    <h3 class="mb-4 text-2xl font-bold text-gray-900">
+                      Mükemmellik
+                    </h3>
+                    <p class="text-gray-700">
+                      En yüksek kalite standartlarını hedefler, sürekli
+                      gelişmeyi amaçlarız.
+                    </p>
+                  </div>
+                </li>
+
+                <!-- Value 5 -->
+                <li class="w-[300px] flex-shrink-0">
+                  <div
+                    class="flex h-full flex-col rounded-sm border-b-2 border-primary-700 bg-white p-8 shadow-md"
+                  >
+                    <div
+                      class="mb-6 flex h-16 w-16 items-center justify-center rounded-sm bg-primary-100"
+                    >
+                      <i
+                        data-lucide="heart"
+                        class="size-8 text-primary-700"
+                      ></i>
+                    </div>
+                    <h3 class="mb-4 text-2xl font-bold text-gray-900">
+                      Müşteri Odaklılık
+                    </h3>
+                    <p class="text-gray-700">
+                      Müşterilerimizin ihtiyaçlarını anlar, beklentilerini
+                      aşmaya çalışırız.
+                    </p>
+                  </div>
+                </li>
+
+                <!-- Value 6 -->
+                <li class="w-[300px] flex-shrink-0">
+                  <div
+                    class="flex h-full flex-col rounded-sm border-b-2 border-primary-700 bg-white p-8 shadow-md"
+                  >
+                    <div
+                      class="mb-6 flex h-16 w-16 items-center justify-center rounded-sm bg-primary-100"
+                    >
+                      <i data-lucide="leaf" class="size-8 text-primary-700"></i>
+                    </div>
+                    <h3 class="mb-4 text-2xl font-bold text-gray-900">
+                      Sürdürülebilirlik
+                    </h3>
+                    <p class="text-gray-700">
+                      Çevreye saygılı ve gelecek nesillere duyarlı iş modelleri
+                      geliştiririz.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact CTA Section -->
+      <section
+        class="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 py-10"
+      >
+        <div class="mx-auto max-w-7xl px-4">
+          <div
+            class="flex flex-col items-center justify-between gap-6 text-center lg:flex-row lg:text-left"
+          >
+            <div>
+              <h2 class="mb-2 text-3xl font-bold text-white">
+                Bizimle İletişime Geçin
+              </h2>
+              <p class="text-lg text-gray-100">
+                Sorularınız veya iş birliği teklifleriniz için ekibimiz size
+                yardımcı olmaya hazır.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="#"
+                class="flex min-w-[180px] items-center justify-center bg-white px-8 py-4 font-medium text-primary-700 transition-opacity duration-300 hover:opacity-75"
+              >
+                Bize Ulaşın
+              </a>
+              <a
+                href="#"
+                class="flex min-w-[180px] items-center justify-center border-2 border-white px-8 py-4 font-medium text-white transition-opacity duration-300 hover:opacity-75"
+              >
+                Ofislerimiz
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-white py-10 text-gray-950 sm:py-16">
+      <!-- Ana konteyner -->
+      <div class="container mx-auto max-w-6xl px-4">
+        <!-- Üst kısım: Logo ve iletişim bilgileri -->
+        <div
+          class="mb-8 grid grid-cols-1 items-center gap-6 border-b border-gray-200 pb-10 sm:mb-12 md:grid-cols-2"
+        >
+          <!-- Sol bölüm - Logo ve açıklama -->
+          <div class="flex w-full flex-col items-start justify-start gap-y-8">
+            <img
+              src="/assets/images/brand/dark.svg"
+              alt="Şirket Logo"
+              class="h-12 w-auto sm:h-16"
+            />
+            <p class="text-gray-600">
+              Rüyalarımızın, kültürümüzün ve insanlarımızın gücüyle dünya için
+              sürdürülebilir değer yaratıyoruz.
+            </p>
+
+            <!-- Bültene Abone Olma Formu -->
+            <div class="flex w-full flex-col gap-6 sm:max-w-sm">
+              <label
+                for="email"
+                class="relative inline-block font-bold sm:text-lg"
+              >
+                Abone Olun
+                <span
+                  class="absolute -bottom-2 left-0 h-1 w-12 bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600"
+                ></span>
+              </label>
+
+              <div class="flex">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="E-posta adresiniz"
+                  style="
+                    -webkit-appearance: none;
+                    -webkit-border-radius: 0;
+                    border-radius: 0 0 0 0;
+                  "
+                  class="focu:ring-1 w-full rounded-l-sm border border-r-0 border-gray-950 bg-primary-950 px-4 py-2 text-gray-100 placeholder-gray-100/50 ring-transparent focus:border-primary-700 focus:outline-none focus:ring-primary-200"
+                />
+                <button
+                  class="rounded-r-sm bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 px-4 py-2 transition-opacity duration-300 hover:opacity-75"
+                >
+                  <i data-lucide="send" class="size-5 text-gray-50"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sağ bölüm - İletişim -->
+          <div class="w-full md:order-2 lg:order-2">
+            <h3 class="relative mb-6 inline-block font-bold sm:text-lg">
+              Bize Ulaşın
+              <span
+                class="absolute -bottom-2 left-0 h-1 w-12 bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600"
+              ></span>
+            </h3>
+
+            <!-- Adres ve İletişim Bilgileri -->
+            <div class="grid w-full grid-cols-1 gap-4">
+              <div class="flex items-center gap-2">
+                <div class="mt-1 rounded-sm bg-primary-950 p-2">
+                  <i data-lucide="map-pin" class="size-5 text-gray-50"></i>
+                </div>
+                <p class="text-balance text-sm text-gray-800 hover:underline">
+                  Nakkaştepe, Azizbey Sokak, No:1, Kuzguncuk 34674, İstanbul /
+                  Türkiye
+                </p>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <div class="rounded-sm bg-primary-950 p-2">
+                  <i data-lucide="phone" class="size-5 text-gray-50"></i>
+                </div>
+                <a
+                  href="tel:+902165310000"
+                  class="text-sm text-gray-800 hover:underline"
+                  >+90 216 531 00 00</a
+                >
+              </div>
+
+              <div class="flex items-center gap-2">
+                <div class="rounded-sm bg-primary-950 p-2">
+                  <i data-lucide="printer" class="size-5 text-gray-50"></i>
+                </div>
+                <span class="text-sm text-gray-800 hover:underline"
+                  >+90 216 531 00 99</span
+                >
+              </div>
+
+              <div class="flex items-center gap-2">
+                <div class="rounded-sm bg-primary-950 p-2">
+                  <i data-lucide="mail" class="size-5 text-gray-50"></i>
+                </div>
+                <div>
+                  <a
+                    href="mailto:info@sirket.com"
+                    class="text-sm text-gray-800 hover:underline"
+                    >iletisim@sirket.com</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alt kısım: Sosyal medya ve telif hakkı -->
+        <div
+          class="flex flex-col items-start justify-between gap-y-4 sm:items-center md:flex-row"
+        >
+          <!-- Telif hakkı metni -->
+          <div>
+            <p class="text-sm text-gray-600">
+              &copy; 2025 Şirket A.Ş. Tüm hakları saklıdır.
+            </p>
+          </div>
+
+          <!-- Sosyal Medya Linkleri -->
+          <div class="flex space-x-3">
+            <a
+              href="#"
+              class="rounded-full bg-primary-950 p-2 transition-colors duration-300 hover:bg-primary-800"
+            >
+              <i data-lucide="facebook" class="size-5 text-gray-50"></i>
+            </a>
+            <a
+              href="#"
+              class="rounded-full bg-primary-950 p-2 transition-colors duration-300 hover:bg-primary-800"
+            >
+              <i data-lucide="instagram" class="size-5 text-gray-50"></i>
+            </a>
+            <a
+              href="#"
+              class="rounded-full bg-primary-950 p-2 transition-colors duration-300 hover:bg-primary-800"
+            >
+              <i data-lucide="linkedin" class="size-5 text-gray-50"></i>
+            </a>
+            <a
+              href="#"
+              class="rounded-full bg-primary-950 p-2 transition-colors duration-300 hover:bg-primary-800"
+            >
+              <i data-lucide="twitter" class="size-5 text-gray-50"></i>
+            </a>
+            <a
+              href="#"
+              class="rounded-full bg-primary-950 p-2 transition-colors duration-300 hover:bg-primary-800"
+            >
+              <i data-lucide="youtube" class="size-5 text-gray-50"></i>
+            </a>
+          </div>
+
+          <!-- Yasal bağlantılar -->
+          <div>
+            <ul class="flex flex-wrap gap-4 text-sm">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 transition-colors hover:underline"
+                  >Gizlilik Politikası</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 transition-colors hover:underline"
+                  >Çerez Ayarları</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 transition-colors hover:underline"
+                  >Yasal Bilgiler</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bottom Accent Line -->
+    <div
+      class="h-4 w-full bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600"
+    ></div>
+  </body>
+</html>

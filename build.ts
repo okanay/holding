@@ -40,8 +40,8 @@ const DIRECTORIES = {
 }
 
 const PAGES = {
-  scripts: ['layout', 'main'],
-  directories: ['layout', 'main'],
+  scripts: ['layout', 'main', 'about'],
+  directories: ['layout', 'main', 'about'],
 }
 
 // Build yapılandırması
