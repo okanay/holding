@@ -60,6 +60,52 @@
   padding: 0;
 }
 
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  font-size: 0 !important; /* Metin boyutunu sıfırla */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: 16px !important; /* İkon boyutunu ayarla */
+  width: 30px !important;
+  height: 30px !important;
+}
+
+/* Zoom kontrollerinin hover durumunda metin göstermesini engelle */
+.leaflet-control-zoom-in:hover,
+.leaflet-control-zoom-out:hover {
+  font-size: 0 !important;
+}
+
+/* Erişilebilirlik için ekran okuyucularına metin sağla */
+.leaflet-control-zoom-in::after {
+  content: 'Zoom In';
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.leaflet-control-zoom-out::after {
+  content: 'Zoom Out';
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .leaflet-container img.leaflet-tile {
   /* See: https://bugs.chromium.org/p/chromium/issues/detail?id=600120 */
   mix-blend-mode: plus-lighter;

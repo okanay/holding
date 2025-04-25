@@ -53,9 +53,16 @@
     />
 
     <link rel="stylesheet" href="/assets/styles/globals-out.css" />
+    <link rel="stylesheet" href="/assets/styles/leaflet.css" />
+
     <script type="module" src="/assets/scripts/deps/lucide-icons.js"></script>
     <script type="module" src="/assets/scripts/layout.js"></script>
-    <script type="module" src="/assets/scripts/main.js"></script>
+    <script type="module" src="/assets/scripts/about.js"></script>
+
+    <script
+      type="module"
+      src="/assets/scripts/packages/multi-marker-map.js"
+    ></script>
   </head>
   <body>
     <header
@@ -1967,9 +1974,9 @@
     <!-- About Hero Section -->
     <main>
       <!-- Page Hero Banner with Title -->
-      <div class="relative h-80 bg-gray-950">
+      <div class="relative h-96 bg-gray-950">
         <img
-          src="https://images.project-test.info/1.webp"
+          src="/assets/images/gallery/main/hero-d.jpg"
           alt="About Us Banner"
           class="absolute inset-0 h-full w-full object-cover opacity-60"
         />
@@ -1990,7 +1997,7 @@
       <div
         class="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 py-2"
       >
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto px-5">
           <div class="flex items-center justify-between">
             <!-- Left side: Breadcrumb -->
             <div class="flex items-center text-xs text-white">
@@ -2005,11 +2012,13 @@
       </div>
 
       <!-- Introduction Section -->
-      <section class="py-20 text-center">
-        <h2 class="mb-6 text-4xl font-bold text-gray-950 md:text-5xl">
+      <section class="px-5 py-10 text-start sm:py-20 sm:text-center">
+        <h2 class="mb-6 text-3xl font-bold text-gray-950 md:text-5xl">
           Turkey's Leader, Global Player
         </h2>
-        <div class="mx-auto max-w-4xl text-[17px] tracking-wide">
+        <div
+          class="mx-auto max-w-4xl text-[17px] text-sm tracking-wide sm:text-base"
+        >
           <p class="mb-6 text-gray-950">
             Koç Holding, with its almost a century-long journey since 1926, has
             differentiated itself from competitors by achieving numerous
@@ -2050,8 +2059,8 @@
       </section>
 
       <!-- Values Section -->
-      <section class="bg-gray-50 py-16">
-        <div class="mx-auto max-w-7xl px-4">
+      <section class="bg-gray-50 py-8 sm:py-16">
+        <div class="mx-auto max-w-7xl px-3.5">
           <!-- Values Wheel Scroll Container -->
           <div class="wheel-container relative">
             <!-- Navigation Buttons -->
@@ -2076,15 +2085,19 @@
                     class="flex h-full flex-col rounded-sm border-b-2 border-primary-700 bg-white p-8 shadow-md"
                   >
                     <div
-                      class="mb-6 flex h-16 w-16 items-center justify-center rounded-sm bg-primary-100"
+                      class="mb-6 flex size-12 items-center justify-center rounded-sm bg-primary-100 sm:size-16"
                     >
                       <i
                         data-lucide="shield"
-                        class="size-8 text-primary-700"
+                        class="size-6 text-primary-700 sm:size-8"
                       ></i>
                     </div>
-                    <h3 class="mb-4 text-2xl font-bold text-gray-900">Güven</h3>
-                    <p class="text-gray-700">
+                    <h3
+                      class="mb-4 text-xl font-bold text-gray-900 sm:text-2xl"
+                    >
+                      Güven
+                    </h3>
+                    <p class="text-sm text-gray-700 sm:text-base">
                       Müşterilerimiz, çalışanlarımız ve iş ortaklarımızla güvene
                       dayalı ilişkiler kurarız.
                     </p>
@@ -2097,17 +2110,19 @@
                     class="flex h-full flex-col rounded-sm border-b-2 border-primary-700 bg-white p-8 shadow-md"
                   >
                     <div
-                      class="mb-6 flex h-16 w-16 items-center justify-center rounded-sm bg-primary-100"
+                      class="mb-6 flex size-12 items-center justify-center rounded-sm bg-primary-100 sm:size-16"
                     >
                       <i
                         data-lucide="lightbulb"
-                        class="size-8 text-primary-700"
+                        class="size-6 text-primary-700 sm:size-8"
                       ></i>
                     </div>
-                    <h3 class="mb-4 text-2xl font-bold text-gray-900">
+                    <h3
+                      class="mb-4 text-xl font-bold text-gray-900 sm:text-2xl"
+                    >
                       İnovasyon
                     </h3>
-                    <p class="text-gray-700">
+                    <p class="text-sm text-gray-700 sm:text-base">
                       Sürekli yeniliği teşvik eder, yaratıcı çözümler
                       geliştiririz.
                     </p>
@@ -2120,17 +2135,19 @@
                     class="flex h-full flex-col rounded-sm border-b-2 border-primary-700 bg-white p-8 shadow-md"
                   >
                     <div
-                      class="mb-6 flex h-16 w-16 items-center justify-center rounded-sm bg-primary-100"
+                      class="mb-6 flex size-12 items-center justify-center rounded-sm bg-primary-100 sm:size-16"
                     >
                       <i
                         data-lucide="users"
-                        class="size-8 text-primary-700"
+                        class="size-6 text-primary-700 sm:size-8"
                       ></i>
                     </div>
-                    <h3 class="mb-4 text-2xl font-bold text-gray-900">
+                    <h3
+                      class="mb-4 text-xl font-bold text-gray-900 sm:text-2xl"
+                    >
                       İşbirliği
                     </h3>
-                    <p class="text-gray-700">
+                    <p class="text-sm text-gray-700 sm:text-base">
                       Ekip çalışmasına değer verir, birlikte daha güçlü
                       olduğumuza inanırız.
                     </p>
@@ -2143,17 +2160,19 @@
                     class="flex h-full flex-col rounded-sm border-b-2 border-primary-700 bg-white p-8 shadow-md"
                   >
                     <div
-                      class="mb-6 flex h-16 w-16 items-center justify-center rounded-sm bg-primary-100"
+                      class="mb-6 flex size-12 items-center justify-center rounded-sm bg-primary-100 sm:size-16"
                     >
                       <i
                         data-lucide="target"
-                        class="size-8 text-primary-700"
+                        class="size-6 text-primary-700 sm:size-8"
                       ></i>
                     </div>
-                    <h3 class="mb-4 text-2xl font-bold text-gray-900">
+                    <h3
+                      class="mb-4 text-xl font-bold text-gray-900 sm:text-2xl"
+                    >
                       Mükemmellik
                     </h3>
-                    <p class="text-gray-700">
+                    <p class="text-sm text-gray-700 sm:text-base">
                       En yüksek kalite standartlarını hedefler, sürekli
                       gelişmeyi amaçlarız.
                     </p>
@@ -2166,17 +2185,19 @@
                     class="flex h-full flex-col rounded-sm border-b-2 border-primary-700 bg-white p-8 shadow-md"
                   >
                     <div
-                      class="mb-6 flex h-16 w-16 items-center justify-center rounded-sm bg-primary-100"
+                      class="mb-6 flex size-12 items-center justify-center rounded-sm bg-primary-100 sm:size-16"
                     >
                       <i
                         data-lucide="heart"
-                        class="size-8 text-primary-700"
+                        class="size-6 text-primary-700 sm:size-8"
                       ></i>
                     </div>
-                    <h3 class="mb-4 text-2xl font-bold text-gray-900">
+                    <h3
+                      class="mb-4 text-xl font-bold text-gray-900 sm:text-2xl"
+                    >
                       Müşteri Odaklılık
                     </h3>
-                    <p class="text-gray-700">
+                    <p class="text-sm text-gray-700 sm:text-base">
                       Müşterilerimizin ihtiyaçlarını anlar, beklentilerini
                       aşmaya çalışırız.
                     </p>
@@ -2189,14 +2210,16 @@
                     class="flex h-full flex-col rounded-sm border-b-2 border-primary-700 bg-white p-8 shadow-md"
                   >
                     <div
-                      class="mb-6 flex h-16 w-16 items-center justify-center rounded-sm bg-primary-100"
+                      class="mb-6 flex size-12 items-center justify-center rounded-sm bg-primary-100 sm:size-16"
                     >
                       <i data-lucide="leaf" class="size-8 text-primary-700"></i>
                     </div>
-                    <h3 class="mb-4 text-2xl font-bold text-gray-900">
+                    <h3
+                      class="mb-4 text-xl font-bold text-gray-900 sm:text-2xl"
+                    >
                       Sürdürülebilirlik
                     </h3>
-                    <p class="text-gray-700">
+                    <p class="text-sm text-gray-700 sm:text-base">
                       Çevreye saygılı ve gelecek nesillere duyarlı iş modelleri
                       geliştiririz.
                     </p>
@@ -2207,6 +2230,118 @@
           </div>
         </div>
       </section>
+
+      <!-- Map -->
+      <div class="container mx-auto px-4 py-8">
+        <!-- Harita Container -->
+        <div
+          id="location-map"
+          class="relative mb-8 h-[320px] w-full overflow-hidden rounded-lg shadow-md sm:h-[480px]"
+          data-layer="Light"
+        >
+          <div class="map-container"></div>
+        </div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const locations = {
+              istanbul: {
+                coordinate: '41.0082, 28.9784',
+                popupContent: `
+                  <div class="p-1 w-64">
+                    <div class="overflow-hidden rounded-t-lg h-32 bg-gray-200">
+                      <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                           alt="Istanbul" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-3 bg-white rounded-b-lg shadow-sm">
+                      <h3 class="text-lg font-bold text-gray-900 mb-1">Istanbul Office</h3>
+                      <p class="text-sm text-gray-600 mb-2">Turkey's economic and cultural capital</p>
+                      <div class="flex items-center text-xs text-gray-500 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <span>Nakkaştepe, Azizbey St. No:1</span>
+                      </div>
+                      <a href="tel:+902165310000" class="flex items-center text-xs text-blue-600 hover:text-blue-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        <span>+90 216 531 00 00</span>
+                      </a>
+                      <div class="flex mt-3">
+                        <a href="https://maps.google.com/?q=41.0082,28.9784" target="_blank" class="text-xs bg-blue-600 hover:bg-blue-700 text-white py-1 px-3 rounded-full flex items-center">
+                          <span class="text-white">
+                          View on Google Maps
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                `,
+                tooltip: 'Istanbul Office',
+              },
+
+              dubai: {
+                coordinate: '25.276987, 55.296249',
+                popupContent: `
+                  <div class="p-1 w-64">
+                    <div class="overflow-hidden rounded-t-lg h-32 bg-gray-200">
+                      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                           alt="Dubai" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-3 bg-white rounded-b-lg shadow-sm">
+                      <h3 class="text-lg font-bold text-gray-900 mb-1">Dubai Office</h3>
+                      <p class="text-sm text-gray-600 mb-2">Our operations hub in the Middle East</p>
+                      <div class="flex items-center text-xs text-gray-500 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <span>Dubai Business Center, Sheikh Zayed Rd.</span>
+                      </div>
+                      <a href="tel:+971400000000" class="flex items-center text-xs text-blue-600 hover:text-blue-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        <span>+971 4 000 0000</span>
+                      </a>
+                      <div class="flex mt-3">
+                        <a href="https://maps.google.com/?q=25.276987,55.296249" target="_blank" class="text-xs bg-blue-600 hover:bg-blue-700 text-white py-1 px-3 rounded-full flex items-center">
+                          <span class="text-white">
+                          View on Google Maps
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                `,
+                tooltip: 'Dubai Office',
+              },
+            }
+
+            const mapConfig = {
+              containerId: 'location-map',
+              markers: [locations.istanbul, locations.dubai],
+              defaultIcon: {
+                iconUrl: '/assets/images/leaflet/marker.png',
+                iconSize: [24, 24],
+                iconAnchor: [12, 24],
+                shadowUrl: '/assets/images/leaflet/shadow.svg',
+                shadowSize: [41, 24],
+                shadowAnchor: [12, 22],
+              },
+              fitBounds: true,
+              zoomInIconUrl: '/assets/images/leaflet/plus.svg',
+              zoomOutIconUrl: '/assets/images/leaflet/minus.svg',
+              layerControlToggleIconUrl: '/assets/images/leaflet/layer.svg',
+            }
+
+            // MultiMarkerMap örneğini oluştur
+            const map = new MultiMarkerMap(mapConfig)
+          })
+        </script>
+      </div>
 
       <!-- Contact CTA Section -->
       <section

@@ -24,7 +24,7 @@ class WheelScroll {
   private containers: HTMLElement[] = []
   private isMobile: boolean = false
   private containerIdMap: Map<string, HTMLElement> = new Map()
-  private debugMode: boolean = true
+  private debugMode: boolean = false
   private scrollInfoMap: Map<HTMLElement, ScrollInfo> = new Map()
   private options: Required<WheelScrollOptions>
   // Container elementleri önbelleğe almak için yeni map
