@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <title>Holding About Sayfası</title>
+    <title>Holding Contact Sayfası</title>
 
     <!-- Project Fonts -->
     <link rel="stylesheet" href="/assets/fonts/custom/font.css" />
@@ -57,7 +57,6 @@
 
     <script type="module" src="/assets/scripts/deps/lucide-icons.js"></script>
     <script type="module" src="/assets/scripts/layout.js"></script>
-    <script type="module" src="/assets/scripts/about.js"></script>
 
     <script
       type="module"
@@ -1971,8 +1970,9 @@
       </div>
     </header>
 
+    <!-- Contact  Section -->
     <main>
-      <!-- Hero Banner -->
+      <!-- Page Hero Banner with Title -->
       <div class="relative h-96 bg-gray-950">
         <img
           src="/assets/images/gallery/main/hero-d.jpg"
@@ -1986,247 +1986,287 @@
           class="container relative mx-auto flex h-full flex-col items-center justify-center px-4 text-center"
         >
           <div class="text-white">
-            <p
-              class="mb-2 text-base font-medium uppercase tracking-wide opacity-80"
-            >
-              About Us
-            </p>
-            <h1
-              class="mb-2 text-balance text-4xl font-extrabold drop-shadow-lg md:text-5xl lg:text-6xl"
-            >
-              Who are We?
-            </h1>
+            <p class="mb-2 text-base">Contact</p>
+            <h1 class="text-5xl font-bold md:text-6xl">Get in Touch</h1>
           </div>
         </div>
       </div>
 
       <!-- Breadcrumb Navigation -->
-      <nav
-        aria-label="Breadcrumb"
+      <div
         class="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 py-2"
       >
         <div class="container mx-auto px-5">
-          <ol class="flex items-center space-x-2 text-xs text-white">
-            <li>
+          <div class="flex items-center justify-between">
+            <!-- Left side: Breadcrumb -->
+            <div class="flex items-center text-xs text-white">
               <a href="/" class="hover:underline">Home Page</a>
-            </li>
-            <li>/</li>
-            <li>
-              <a href="/about" class="hover:underline">About</a>
-            </li>
-            <li>/</li>
-            <li class="font-semibold opacity-80">Who are We?</li>
-          </ol>
-        </div>
-      </nav>
-
-      <!-- Introduction Section -->
-      <section class="px-5 py-12 sm:py-20">
-        <div class="mx-auto max-w-4xl text-center">
-          <h2
-            class="mb-6 text-3xl font-extrabold tracking-tight text-gray-950 md:text-5xl"
-          >
-            Turkey's Leader, Global Player
-          </h2>
-          <div
-            class="mx-auto max-w-3xl space-y-6 text-lg leading-relaxed text-gray-700"
-          >
-            <p>
-              Koç Holding, with its almost a century-long journey since 1926,
-              has differentiated itself from competitors by achieving numerous
-              breakthroughs in Turkey, from industrialization to globalization,
-              playing key roles with its leading positions. The Koç Group
-              established Turkey’s first joint stock company, created the
-              Republic’s first industrial endeavor and first international
-              partnership and realized the first public offering.
-            </p>
-            <p>
-              Koç Holding is Turkey’s leading investment holding company and the
-              Koç Group is Turkey's largest industrial and services group in
-              terms of revenues, exports, number of employees and market
-              capitalization on Borsa Istanbul. The Group has been a driving
-              force of the Turkish economy with total revenues that correspond
-              around 8% of Turkey’s GDP and exports that comprise around 7% of
-              Turkey’s total exports.
-            </p>
-            <p>
-              Following $11.2 billion investments in the last five years, Koç
-              Holding is the only Turkish company in Fortune Global 500. Koç
-              Holding has leading positions with strong competitive advantages
-              in energy, automotive, consumer durables and finance sectors,
-              which offer strong long-term growth potential.
-            </p>
-            <p>
-              The Koç Group manage activities according to international
-              standards of corporate governance, customer satisfaction,
-              sustainability and social responsibility. Today, as Turkey’s
-              largest group of companies, the Koç Group will continue to create
-              value for all its shareholders.
-            </p>
-          </div>
-          <!-- Vertical Divider -->
-          <div class="mt-12 flex justify-center">
-            <div class="h-14 w-[2px] rounded-full bg-primary-700"></div>
+              <span class="mx-2">/</span>
+              <a href="/contact" class="hover:underline">Contact</a>
+              <span class="mx-2">/</span>
+              <span>Get in Touch</span>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- Values Section (Wheel Scroll) -->
-      <section class="bg-gray-50 py-12 sm:py-20">
-        <div class="mx-auto max-w-7xl px-4">
-          <div class="mb-10 text-center">
-            <h2
-              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 md:text-3xl"
+      <section class="bg-gray-50 py-8 sm:py-16">
+        <div class="container mx-auto max-w-2xl md:max-w-7xl">
+          <div class="flex flex-col gap-10 md:flex-row md:gap-16">
+            <!-- Contact Information -->
+            <div
+              class="order-2 flex flex-col justify-center px-4 sm:order-none md:w-1/2"
             >
-              Our Core Values
-            </h2>
-            <p class="mx-auto max-w-2xl text-base text-gray-600 md:text-lg">
-              The values that guide our vision, culture, and every step we take
-              as Koç Holding.
-            </p>
-          </div>
-          <div class="wheel-container relative">
-            <!-- Navigation Buttons -->
-            <button
-              class="wheel-btn-left absolute left-0 top-1/2 z-10 flex -translate-y-1/2 items-center justify-center rounded-full border border-gray-300 bg-white p-2 text-primary-700 shadow transition hover:border-primary-700 hover:bg-primary-50 disabled:cursor-not-allowed disabled:opacity-20"
-              aria-label="Scroll left"
-              disabled
-            >
-              <i data-lucide="chevron-left" class="size-5"></i>
-            </button>
-            <button
-              class="wheel-btn-right absolute right-0 top-1/2 z-10 flex -translate-y-1/2 items-center justify-center rounded-full border border-gray-300 bg-white p-2 text-primary-700 shadow transition hover:border-primary-700 hover:bg-primary-50"
-              aria-label="Scroll right"
-            >
-              <i data-lucide="chevron-right" class="size-5"></i>
-            </button>
-            <!-- Scrollable Values Container -->
-            <div class="overflow-x-hidden pb-8">
-              <ul
-                class="wheel-scroll flex snap-x snap-mandatory gap-6 overflow-x-auto px-2"
+              <h2 class="mb-5 text-2xl font-semibold text-gray-900 md:text-3xl">
+                Our Contact Information
+              </h2>
+              <p class="mb-8 text-base text-gray-700">
+                You can use any of the contact channels below to reach us as
+                quickly as possible.
+                <span class="mt-1 block font-medium text-primary-700"
+                  >We are always here for you!</span
+                >
+              </p>
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <!-- Address -->
+                <div
+                  class="flex h-full flex-col items-start rounded-xl border border-primary-700 bg-white p-5 transition hover:border-primary-600 hover:shadow-md"
+                >
+                  <div
+                    class="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-primary-700"
+                  >
+                    <i data-lucide="map-pin" class="size-6 text-white"></i>
+                  </div>
+                  <span class="mb-1 text-sm font-semibold text-gray-900"
+                    >Address</span
+                  >
+                  <span class="mb-2 text-xs text-gray-600"
+                    >Nakkaştepe, Azizbey Sk. No:1, Üsküdar, Istanbul</span
+                  >
+                  <span class="text-[11px] font-medium text-primary-600"
+                    >Head Office</span
+                  >
+                </div>
+                <!-- Phone -->
+                <div
+                  class="flex h-full flex-col items-start rounded-xl border border-primary-700 bg-white p-5 transition hover:border-primary-600 hover:shadow-md"
+                >
+                  <div
+                    class="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-primary-700"
+                  >
+                    <i data-lucide="phone" class="size-6 text-white"></i>
+                  </div>
+                  <span class="mb-1 text-sm font-semibold text-gray-900"
+                    >Phone</span
+                  >
+                  <a
+                    href="tel:+902165310000"
+                    class="mb-2 text-xs text-gray-600 transition hover:text-primary-700"
+                    >+90 216 531 00 00</a
+                  >
+                  <span class="text-[11px] font-medium text-primary-600"
+                    >Weekdays 09:00 - 18:00</span
+                  >
+                </div>
+                <!-- Email -->
+                <div
+                  class="flex h-full flex-col items-start rounded-xl border border-primary-700 bg-white p-5 transition hover:border-primary-600 hover:shadow-md"
+                >
+                  <div
+                    class="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-primary-700"
+                  >
+                    <i data-lucide="mail" class="size-6 text-white"></i>
+                  </div>
+                  <span class="mb-1 text-sm font-semibold text-gray-900"
+                    >Email</span
+                  >
+                  <a
+                    href="mailto:info@koc.com.tr"
+                    class="mb-2 text-xs text-gray-600 transition hover:text-primary-700"
+                    >info@koc.com.tr</a
+                  >
+                  <span class="text-[11px] font-medium text-primary-600"
+                    >24/7 Email Support</span
+                  >
+                </div>
+                <!-- WhatsApp -->
+                <div
+                  class="flex h-full flex-col items-start rounded-xl border border-green-500 bg-white p-5 transition hover:border-primary-600 hover:shadow-md"
+                >
+                  <div
+                    class="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-white"
+                  >
+                    <svg
+                      fill="#22c55e"
+                      height="200px"
+                      width="200px"
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 308 308"
+                      xml:space="preserve"
+                      stroke="#22c55e"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <g id="XMLID_468_">
+                          <path
+                            id="XMLID_469_"
+                            d="M227.904,176.981c-0.6-0.288-23.054-11.345-27.044-12.781c-1.629-0.585-3.374-1.156-5.23-1.156 c-3.032,0-5.579,1.511-7.563,4.479c-2.243,3.334-9.033,11.271-11.131,13.642c-0.274,0.313-0.648,0.687-0.872,0.687 c-0.201,0-3.676-1.431-4.728-1.888c-24.087-10.463-42.37-35.624-44.877-39.867c-0.358-0.61-0.373-0.887-0.376-0.887 c0.088-0.323,0.898-1.135,1.316-1.554c1.223-1.21,2.548-2.805,3.83-4.348c0.607-0.731,1.215-1.463,1.812-2.153 c1.86-2.164,2.688-3.844,3.648-5.79l0.503-1.011c2.344-4.657,0.342-8.587-0.305-9.856c-0.531-1.062-10.012-23.944-11.02-26.348 c-2.424-5.801-5.627-8.502-10.078-8.502c-0.413,0,0,0-1.732,0.073c-2.109,0.089-13.594,1.601-18.672,4.802 c-5.385,3.395-14.495,14.217-14.495,33.249c0,17.129,10.87,33.302,15.537,39.453c0.116,0.155,0.329,0.47,0.638,0.922 c17.873,26.102,40.154,45.446,62.741,54.469c21.745,8.686,32.042,9.69,37.896,9.69c0.001,0,0.001,0,0.001,0 c2.46,0,4.429-0.193,6.166-0.364l1.102-0.105c7.512-0.666,24.02-9.22,27.775-19.655c2.958-8.219,3.738-17.199,1.77-20.458 C233.168,179.508,230.845,178.393,227.904,176.981z"
+                          ></path>
+                          <path
+                            id="XMLID_470_"
+                            d="M156.734,0C73.318,0,5.454,67.354,5.454,150.143c0,26.777,7.166,52.988,20.741,75.928L0.212,302.716 c-0.484,1.429-0.124,3.009,0.933,4.085C1.908,307.58,2.943,308,4,308c0.405,0,0.813-0.061,1.211-0.188l79.92-25.396 c21.87,11.685,46.588,17.853,71.604,17.853C240.143,300.27,308,232.923,308,150.143C308,67.354,240.143,0,156.734,0z M156.734,268.994c-23.539,0-46.338-6.797-65.936-19.657c-0.659-0.433-1.424-0.655-2.194-0.655c-0.407,0-0.815,0.062-1.212,0.188 l-40.035,12.726l12.924-38.129c0.418-1.234,0.209-2.595-0.561-3.647c-14.924-20.392-22.813-44.485-22.813-69.677 c0-65.543,53.754-118.867,119.826-118.867c66.064,0,119.812,53.324,119.812,118.867 C276.546,215.678,222.799,268.994,156.734,268.994z"
+                          ></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <span class="mb-1 text-sm font-semibold text-gray-900"
+                    >WhatsApp</span
+                  >
+                  <a
+                    href="https://wa.me/902165310000"
+                    target="_blank"
+                    class="mb-2 text-xs text-gray-600 transition hover:text-green-600"
+                    >+90 216 531 00 00</a
+                  >
+                  <span class="text-[11px] font-medium text-green-600"
+                    >Instant Messaging</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="order-1 sm:order-none sm:pr-4 md:w-1/2">
+              <div
+                class="border border-gray-100 bg-white p-5 sm:rounded-2xl sm:p-8"
               >
-                <!-- Value Card -->
-                <li class="w-[300px] flex-shrink-0 snap-center">
-                  <div
-                    class="flex h-full flex-col items-center rounded-xl border-b-4 border-primary-700 bg-white p-8 transition focus-within:border-primary-700 hover:border-primary-800"
+                <h3 class="mb-2 text-xl font-semibold text-gray-900">
+                  Contact Us
+                </h3>
+                <p class="mb-6 text-sm text-gray-600">
+                  Fill out the form, and our team will get back to you as soon
+                  as possible.
+                  <span class="block font-medium text-primary-700"
+                    >All fields are required.</span
                   >
-                    <div
-                      class="mb-6 flex size-14 items-center justify-center rounded-full bg-primary-50"
+                </p>
+                <form class="space-y-4">
+                  <div class="flex flex-col gap-4 sm:flex-row">
+                    <div class="w-full">
+                      <label
+                        for="name"
+                        class="mb-2 block text-xs font-medium text-gray-700"
+                      >
+                        First Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        class="w-full rounded-lg border border-gray-200 px-3 py-2 text-gray-900 outline-none ring-1 ring-transparent transition focus:border-primary-700 focus:ring-primary-500"
+                        placeholder="Enter your first name"
+                      />
+                    </div>
+                    <div class="w-full">
+                      <label
+                        for="surname"
+                        class="mb-2 block text-xs font-medium text-gray-700"
+                      >
+                        Last Name
+                      </label>
+                      <input
+                        type="text"
+                        id="surname"
+                        name="surname"
+                        required
+                        class="w-full rounded-lg border border-gray-200 px-3 py-2 text-gray-900 outline-none ring-1 ring-transparent transition focus:border-primary-700 focus:ring-primary-500"
+                        placeholder="Enter your last name"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="mb-2 block text-xs font-medium text-gray-700"
                     >
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      class="w-full rounded-lg border border-gray-200 px-3 py-2 text-gray-900 outline-none ring-1 ring-transparent transition focus:border-primary-700 focus:ring-primary-500"
+                      placeholder="example@email.com"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="topic"
+                      class="mb-2 block text-xs font-medium text-gray-700"
+                    >
+                      Subject
+                    </label>
+                    <select
+                      id="topic"
+                      name="topic"
+                      required
+                      class="w-full appearance-none rounded-lg border border-gray-200 bg-white px-3 py-2 text-gray-900 outline-none ring-1 ring-transparent transition focus:border-primary-700 focus:ring-primary-500"
+                    >
+                      <option value="" disabled selected>
+                        Select a subject
+                      </option>
+                      <option value="general">General Information</option>
+                      <option value="proposal">Collaboration / Proposal</option>
+                      <option value="support">Support Request</option>
+                      <option value="feedback">Feedback</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      for="message"
+                      class="mb-2 block text-xs font-medium text-gray-700"
+                    >
+                      Your Message
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="5"
+                      required
+                      class="w-full rounded-lg border border-gray-200 px-3 py-2 text-gray-900 outline-none ring-1 ring-transparent transition focus:border-primary-700 focus:ring-primary-500"
+                      placeholder="Write your message"
+                    ></textarea>
+                  </div>
+                  <div class="mt-8 text-xs text-gray-500">
+                    <span class="inline-flex items-center gap-1">
                       <i
-                        data-lucide="shield"
-                        class="size-7 text-primary-700"
+                        data-lucide="shield-check"
+                        class="size-4 text-primary-700"
                       ></i>
-                    </div>
-                    <h3 class="mb-3 text-xl font-bold text-gray-900">Trust</h3>
-                    <p class="text-center text-base text-gray-700">
-                      We build relationships based on trust with our customers,
-                      employees, and business partners.
-                    </p>
+                      Your information is kept confidential and will not be
+                      shared with third parties.
+                    </span>
                   </div>
-                </li>
-                <li class="w-[300px] flex-shrink-0 snap-center">
-                  <div
-                    class="flex h-full flex-col items-center rounded-xl border-b-4 border-primary-700 bg-white p-8 transition focus-within:border-primary-700 hover:border-primary-800"
+                  <button
+                    type="submit"
+                    class="w-full rounded-lg bg-primary-700 py-3 font-semibold text-white transition-opacity hover:opacity-90"
                   >
-                    <div
-                      class="mb-6 flex size-14 items-center justify-center rounded-full bg-primary-50"
-                    >
-                      <i
-                        data-lucide="lightbulb"
-                        class="size-7 text-primary-700"
-                      ></i>
-                    </div>
-                    <h3 class="mb-3 text-xl font-bold text-gray-900">
-                      Innovation
-                    </h3>
-                    <p class="text-center text-base text-gray-700">
-                      We constantly encourage innovation and develop creative
-                      solutions.
-                    </p>
-                  </div>
-                </li>
-                <li class="w-[300px] flex-shrink-0 snap-center">
-                  <div
-                    class="flex h-full flex-col items-center rounded-xl border-b-4 border-primary-700 bg-white p-8 transition focus-within:border-primary-700 hover:border-primary-800"
-                  >
-                    <div
-                      class="mb-6 flex size-14 items-center justify-center rounded-full bg-primary-50"
-                    >
-                      <i
-                        data-lucide="users"
-                        class="size-7 text-primary-700"
-                      ></i>
-                    </div>
-                    <h3 class="mb-3 text-xl font-bold text-gray-900">
-                      Collaboration
-                    </h3>
-                    <p class="text-center text-base text-gray-700">
-                      We value teamwork and believe we are stronger together.
-                    </p>
-                  </div>
-                </li>
-                <li class="w-[300px] flex-shrink-0 snap-center">
-                  <div
-                    class="flex h-full flex-col items-center rounded-xl border-b-4 border-primary-700 bg-white p-8 transition focus-within:border-primary-700 hover:border-primary-800"
-                  >
-                    <div
-                      class="mb-6 flex size-14 items-center justify-center rounded-full bg-primary-50"
-                    >
-                      <i
-                        data-lucide="target"
-                        class="size-7 text-primary-700"
-                      ></i>
-                    </div>
-                    <h3 class="mb-3 text-xl font-bold text-gray-900">
-                      Excellence
-                    </h3>
-                    <p class="text-center text-base text-gray-700">
-                      We aim for the highest quality standards and strive for
-                      continuous improvement.
-                    </p>
-                  </div>
-                </li>
-                <li class="w-[300px] flex-shrink-0 snap-center">
-                  <div
-                    class="flex h-full flex-col items-center rounded-xl border-b-4 border-primary-700 bg-white p-8 transition focus-within:border-primary-700 hover:border-primary-800"
-                  >
-                    <div
-                      class="mb-6 flex size-14 items-center justify-center rounded-full bg-primary-50"
-                    >
-                      <i
-                        data-lucide="heart"
-                        class="size-7 text-primary-700"
-                      ></i>
-                    </div>
-                    <h3 class="mb-3 text-xl font-bold text-gray-900">
-                      Customer Focus
-                    </h3>
-                    <p class="text-center text-base text-gray-700">
-                      We understand our customers' needs and strive to exceed
-                      their expectations.
-                    </p>
-                  </div>
-                </li>
-                <li class="w-[300px] flex-shrink-0 snap-center">
-                  <div
-                    class="flex h-full flex-col items-center rounded-xl border-b-4 border-primary-700 bg-white p-8 transition focus-within:border-primary-700 hover:border-primary-800"
-                  >
-                    <div
-                      class="mb-6 flex size-14 items-center justify-center rounded-full bg-primary-50"
-                    >
-                      <i data-lucide="leaf" class="size-7 text-primary-700"></i>
-                    </div>
-                    <h3 class="mb-3 text-xl font-bold text-gray-900">
-                      Sustainability
-                    </h3>
-                    <p class="text-center text-base text-gray-700">
-                      We develop business models that are environmentally
-                      friendly and sensitive to future generations.
-                    </p>
-                  </div>
-                </li>
-              </ul>
+                    Submit
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -2369,35 +2409,6 @@
               const map = new MultiMarkerMap(mapConfig)
             })
           </script>
-        </div>
-      </section>
-
-      <!-- Contact CTA Section -->
-      <section
-        class="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 py-12"
-      >
-        <div class="mx-auto max-w-7xl px-4">
-          <div
-            class="flex flex-col items-center justify-between gap-8 text-center lg:flex-row lg:text-left"
-          >
-            <div>
-              <h2 class="mb-2 text-3xl font-bold text-white drop-shadow">
-                Get in Touch With Us
-              </h2>
-              <p class="text-lg text-gray-100">
-                Our team is ready to assist you with your questions or
-                collaboration proposals.
-              </p>
-            </div>
-            <div class="flex flex-wrap gap-4">
-              <a
-                href="#"
-                class="flex min-w-[180px] items-center justify-center rounded-lg bg-white px-8 py-4 font-semibold text-primary-700 shadow transition hover:opacity-80 hover:shadow-md"
-              >
-                Contact Us
-              </a>
-            </div>
-          </div>
         </div>
       </section>
     </main>

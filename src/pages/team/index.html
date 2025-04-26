@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <title>Holding About Sayfası</title>
+    <title>Holding Team Sayfası</title>
 
     <!-- Project Fonts -->
     <link rel="stylesheet" href="/assets/fonts/custom/font.css" />
@@ -57,7 +57,6 @@
 
     <script type="module" src="/assets/scripts/deps/lucide-icons.js"></script>
     <script type="module" src="/assets/scripts/layout.js"></script>
-    <script type="module" src="/assets/scripts/about.js"></script>
 
     <script
       type="module"
@@ -1972,11 +1971,11 @@
     </header>
 
     <main>
-      <!-- Hero Banner -->
+      <!-- Page Hero Banner with Title -->
       <div class="relative h-96 bg-gray-950">
         <img
           src="/assets/images/gallery/main/hero-d.jpg"
-          alt="About Us Banner"
+          alt="Board of Directors Banner"
           class="absolute inset-0 h-full w-full object-cover opacity-60"
         />
         <div
@@ -1986,416 +1985,224 @@
           class="container relative mx-auto flex h-full flex-col items-center justify-center px-4 text-center"
         >
           <div class="text-white">
-            <p
-              class="mb-2 text-base font-medium uppercase tracking-wide opacity-80"
-            >
-              About Us
-            </p>
-            <h1
-              class="mb-2 text-balance text-4xl font-extrabold drop-shadow-lg md:text-5xl lg:text-6xl"
-            >
-              Who are We?
-            </h1>
+            <p class="mb-2 text-base">Yönetim Kurulumuz</p>
+            <h1 class="text-5xl font-bold md:text-6xl">Board of Directors</h1>
           </div>
         </div>
       </div>
 
       <!-- Breadcrumb Navigation -->
-      <nav
-        aria-label="Breadcrumb"
+      <div
         class="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 py-2"
       >
         <div class="container mx-auto px-5">
-          <ol class="flex items-center space-x-2 text-xs text-white">
-            <li>
-              <a href="/" class="hover:underline">Home Page</a>
-            </li>
-            <li>/</li>
-            <li>
-              <a href="/about" class="hover:underline">About</a>
-            </li>
-            <li>/</li>
-            <li class="font-semibold opacity-80">Who are We?</li>
-          </ol>
+          <div class="flex items-center text-xs text-white">
+            <a href="/" class="hover:underline">Ana Sayfa</a>
+            <span class="mx-2">/</span>
+            <a href="/board" class="hover:underline">Kurumsal</a>
+            <span class="mx-2">/</span>
+            <span>Yönetim Kurulumuz</span>
+          </div>
         </div>
-      </nav>
+      </div>
 
-      <!-- Introduction Section -->
-      <section class="px-5 py-12 sm:py-20">
-        <div class="mx-auto max-w-4xl text-center">
+      <!-- Yönetim Kurulu Listesi -->
+      <section class="bg-gray-50 py-12 sm:py-20">
+        <div class="container mx-auto max-w-7xl px-4">
           <h2
-            class="mb-6 text-3xl font-extrabold tracking-tight text-gray-950 md:text-5xl"
+            class="mb-10 text-center text-3xl font-bold text-gray-950 md:text-5xl"
           >
-            Turkey's Leader, Global Player
+            Our Board of Directors
           </h2>
           <div
-            class="mx-auto max-w-3xl space-y-6 text-lg leading-relaxed text-gray-700"
+            class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
           >
-            <p>
-              Koç Holding, with its almost a century-long journey since 1926,
-              has differentiated itself from competitors by achieving numerous
-              breakthroughs in Turkey, from industrialization to globalization,
-              playing key roles with its leading positions. The Koç Group
-              established Turkey’s first joint stock company, created the
-              Republic’s first industrial endeavor and first international
-              partnership and realized the first public offering.
-            </p>
-            <p>
-              Koç Holding is Turkey’s leading investment holding company and the
-              Koç Group is Turkey's largest industrial and services group in
-              terms of revenues, exports, number of employees and market
-              capitalization on Borsa Istanbul. The Group has been a driving
-              force of the Turkish economy with total revenues that correspond
-              around 8% of Turkey’s GDP and exports that comprise around 7% of
-              Turkey’s total exports.
-            </p>
-            <p>
-              Following $11.2 billion investments in the last five years, Koç
-              Holding is the only Turkish company in Fortune Global 500. Koç
-              Holding has leading positions with strong competitive advantages
-              in energy, automotive, consumer durables and finance sectors,
-              which offer strong long-term growth potential.
-            </p>
-            <p>
-              The Koç Group manage activities according to international
-              standards of corporate governance, customer satisfaction,
-              sustainability and social responsibility. Today, as Turkey’s
-              largest group of companies, the Koç Group will continue to create
-              value for all its shareholders.
-            </p>
-          </div>
-          <!-- Vertical Divider -->
-          <div class="mt-12 flex justify-center">
-            <div class="h-14 w-[2px] rounded-full bg-primary-700"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Values Section (Wheel Scroll) -->
-      <section class="bg-gray-50 py-12 sm:py-20">
-        <div class="mx-auto max-w-7xl px-4">
-          <div class="mb-10 text-center">
-            <h2
-              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 md:text-3xl"
+            <!-- Board Member 1 -->
+            <div
+              class="flex flex-col items-center rounded-lg border border-b-2 border-gray-200 border-b-primary-700 bg-white p-6 transition"
             >
-              Our Core Values
-            </h2>
-            <p class="mx-auto max-w-2xl text-base text-gray-600 md:text-lg">
-              The values that guide our vision, culture, and every step we take
-              as Koç Holding.
-            </p>
-          </div>
-          <div class="wheel-container relative">
-            <!-- Navigation Buttons -->
-            <button
-              class="wheel-btn-left absolute left-0 top-1/2 z-10 flex -translate-y-1/2 items-center justify-center rounded-full border border-gray-300 bg-white p-2 text-primary-700 shadow transition hover:border-primary-700 hover:bg-primary-50 disabled:cursor-not-allowed disabled:opacity-20"
-              aria-label="Scroll left"
-              disabled
-            >
-              <i data-lucide="chevron-left" class="size-5"></i>
-            </button>
-            <button
-              class="wheel-btn-right absolute right-0 top-1/2 z-10 flex -translate-y-1/2 items-center justify-center rounded-full border border-gray-300 bg-white p-2 text-primary-700 shadow transition hover:border-primary-700 hover:bg-primary-50"
-              aria-label="Scroll right"
-            >
-              <i data-lucide="chevron-right" class="size-5"></i>
-            </button>
-            <!-- Scrollable Values Container -->
-            <div class="overflow-x-hidden pb-8">
-              <ul
-                class="wheel-scroll flex snap-x snap-mandatory gap-6 overflow-x-auto px-2"
+              <div
+                class="mb-4 flex h-28 w-28 items-center justify-center overflow-hidden rounded-full bg-gray-200"
               >
-                <!-- Value Card -->
-                <li class="w-[300px] flex-shrink-0 snap-center">
-                  <div
-                    class="flex h-full flex-col items-center rounded-xl border-b-4 border-primary-700 bg-white p-8 transition focus-within:border-primary-700 hover:border-primary-800"
-                  >
-                    <div
-                      class="mb-6 flex size-14 items-center justify-center rounded-full bg-primary-50"
-                    >
-                      <i
-                        data-lucide="shield"
-                        class="size-7 text-primary-700"
-                      ></i>
-                    </div>
-                    <h3 class="mb-3 text-xl font-bold text-gray-900">Trust</h3>
-                    <p class="text-center text-base text-gray-700">
-                      We build relationships based on trust with our customers,
-                      employees, and business partners.
-                    </p>
-                  </div>
-                </li>
-                <li class="w-[300px] flex-shrink-0 snap-center">
-                  <div
-                    class="flex h-full flex-col items-center rounded-xl border-b-4 border-primary-700 bg-white p-8 transition focus-within:border-primary-700 hover:border-primary-800"
-                  >
-                    <div
-                      class="mb-6 flex size-14 items-center justify-center rounded-full bg-primary-50"
-                    >
-                      <i
-                        data-lucide="lightbulb"
-                        class="size-7 text-primary-700"
-                      ></i>
-                    </div>
-                    <h3 class="mb-3 text-xl font-bold text-gray-900">
-                      Innovation
-                    </h3>
-                    <p class="text-center text-base text-gray-700">
-                      We constantly encourage innovation and develop creative
-                      solutions.
-                    </p>
-                  </div>
-                </li>
-                <li class="w-[300px] flex-shrink-0 snap-center">
-                  <div
-                    class="flex h-full flex-col items-center rounded-xl border-b-4 border-primary-700 bg-white p-8 transition focus-within:border-primary-700 hover:border-primary-800"
-                  >
-                    <div
-                      class="mb-6 flex size-14 items-center justify-center rounded-full bg-primary-50"
-                    >
-                      <i
-                        data-lucide="users"
-                        class="size-7 text-primary-700"
-                      ></i>
-                    </div>
-                    <h3 class="mb-3 text-xl font-bold text-gray-900">
-                      Collaboration
-                    </h3>
-                    <p class="text-center text-base text-gray-700">
-                      We value teamwork and believe we are stronger together.
-                    </p>
-                  </div>
-                </li>
-                <li class="w-[300px] flex-shrink-0 snap-center">
-                  <div
-                    class="flex h-full flex-col items-center rounded-xl border-b-4 border-primary-700 bg-white p-8 transition focus-within:border-primary-700 hover:border-primary-800"
-                  >
-                    <div
-                      class="mb-6 flex size-14 items-center justify-center rounded-full bg-primary-50"
-                    >
-                      <i
-                        data-lucide="target"
-                        class="size-7 text-primary-700"
-                      ></i>
-                    </div>
-                    <h3 class="mb-3 text-xl font-bold text-gray-900">
-                      Excellence
-                    </h3>
-                    <p class="text-center text-base text-gray-700">
-                      We aim for the highest quality standards and strive for
-                      continuous improvement.
-                    </p>
-                  </div>
-                </li>
-                <li class="w-[300px] flex-shrink-0 snap-center">
-                  <div
-                    class="flex h-full flex-col items-center rounded-xl border-b-4 border-primary-700 bg-white p-8 transition focus-within:border-primary-700 hover:border-primary-800"
-                  >
-                    <div
-                      class="mb-6 flex size-14 items-center justify-center rounded-full bg-primary-50"
-                    >
-                      <i
-                        data-lucide="heart"
-                        class="size-7 text-primary-700"
-                      ></i>
-                    </div>
-                    <h3 class="mb-3 text-xl font-bold text-gray-900">
-                      Customer Focus
-                    </h3>
-                    <p class="text-center text-base text-gray-700">
-                      We understand our customers' needs and strive to exceed
-                      their expectations.
-                    </p>
-                  </div>
-                </li>
-                <li class="w-[300px] flex-shrink-0 snap-center">
-                  <div
-                    class="flex h-full flex-col items-center rounded-xl border-b-4 border-primary-700 bg-white p-8 transition focus-within:border-primary-700 hover:border-primary-800"
-                  >
-                    <div
-                      class="mb-6 flex size-14 items-center justify-center rounded-full bg-primary-50"
-                    >
-                      <i data-lucide="leaf" class="size-7 text-primary-700"></i>
-                    </div>
-                    <h3 class="mb-3 text-xl font-bold text-gray-900">
-                      Sustainability
-                    </h3>
-                    <p class="text-center text-base text-gray-700">
-                      We develop business models that are environmentally
-                      friendly and sensitive to future generations.
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Map Section -->
-      <section class="bg-white py-12">
-        <div class="container mx-auto px-4">
-          <div class="mb-8 text-center">
-            <h2
-              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 md:text-3xl"
-            >
-              Our Locations
-            </h2>
-            <p class="mx-auto max-w-2xl text-base text-gray-600 md:text-lg">
-              We operate globally with offices in Istanbul and Dubai.
-            </p>
-          </div>
-          <div
-            id="location-map"
-            class="relative mb-8 h-[320px] w-full overflow-hidden rounded-lg border border-gray-200 shadow-sm sm:h-[480px]"
-            data-layer="Light"
-          >
-            <div class="map-container"></div>
-          </div>
-          <script>
-            document.addEventListener('DOMContentLoaded', () => {
-              const locations = {
-                istanbul: {
-                  coordinate: '41.0082, 28.9784',
-                  popupContent: `
-                    <div class="flex w-full max-w-xs sm:max-w-sm md:max-w-md bg-primary-700 rounded-xl border border-primary-700 overflow-hidden flex-row sm:flex-col">
-                      <!-- Görsel -->
-                      <div class="flex-shrink-0 w-20 h-44 sm:w-full sm:h-32 bg-gray-200">
-                        <img
-                          src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
-                          alt="Istanbul"
-                          class="w-full h-full object-cover"
-                        />
-                      </div>
-                      <!-- İçerik -->
-                      <div class="flex flex-col justify-center p-3 sm:p-5 w-full">
-                        <h3 class="text-base sm:text-lg font-bold text-white mb-1">İstanbul Ofisi</h3>
-                        <p class="text-xs text-primary-100 mb-2">Türkiye'nin ekonomik ve kültürel başkenti</p>
-                        <div class="flex items-start gap-2 text-xs text-primary-50 mb-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="white">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                          </svg>
-                          <span class="leading-tight">Nakkaştepe, Azizbey Sk. No:1</span>
-                        </div>
-                        <div class="flex items-center gap-2 text-xs text-primary-50 mb-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="white">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                          </svg>
-                          <a href="tel:+902165310000" class="!text-white hover:underline font-medium">+90 216 531 00 00</a>
-                        </div>
-                        <div class="flex mt-2">
-                          <a
-                            href="https://maps.google.com/?q=41.0082,28.9784"
-                            target="_blank"
-                            class="inline-flex items-center gap-2 text-xs font-semibold bg-white hover:bg-primary-100 text-primary-700 px-3 py-1.5 rounded-full transition"
-                          >
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A2 2 0 013 15.382V6a2 2 0 012-2h14a2 2 0 012 2v9.382a2 2 0 01-1.553 1.894L15 20v-2a2 2 0 00-2-2H9z" />
-                            </svg>
-                            Haritada Aç
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  `,
-                  tooltip: 'Istanbul Office',
-                },
-
-                dubai: {
-                  coordinate: '25.276987, 55.296249',
-                  popupContent: `
-                    <div class="flex w-full max-w-xs sm:max-w-sm md:max-w-md bg-primary-700 rounded-xl border border-primary-700 overflow-hidden flex-row sm:flex-col">
-                      <div class="flex-shrink-0 w-20 h-44 sm:w-full sm:h-32 bg-gray-200">
-                        <img
-                          src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
-                          alt="Dubai"
-                          class="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div class="flex flex-col justify-center p-3 sm:p-5 w-full">
-                        <h3 class="text-base sm:text-lg font-bold text-white mb-1">Dubai Office</h3>
-                        <p class="text-xs text-primary-100 mb-2">Orta Doğu operasyon merkezimiz</p>
-                        <div class="flex items-start gap-2 text-xs text-primary-50 mb-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="white">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                          </svg>
-                          <span class="leading-tight">Dubai Business Center, Sheikh Zayed Rd.</span>
-                        </div>
-                        <div class="flex items-center gap-2 text-xs text-primary-50 mb-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="white">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                          </svg>
-                              <a href="tel:+971400000000" class="!text-white hover:underline font-medium">+971 4 000 0000</a>
-                        </div>
-                        <div class="flex mt-2">
-                          <a
-                            href="https://maps.google.com/?q=25.276987,55.296249"
-                            target="_blank"
-                            class="inline-flex items-center gap-2 text-xs font-semibold bg-white hover:bg-primary-100 text-primary-700 px-3 py-1.5 rounded-full transition"
-                          >
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A2 2 0 013 15.382V6a2 2 0 012-2h14a2 2 0 012 2v9.382a2 2 0 01-1.553 1.894L15 20v-2a2 2 0 00-2-2H9z" />
-                            </svg>
-                            Haritada Aç
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  `,
-                  tooltip: 'Dubai Office',
-                },
-              }
-
-              const mapConfig = {
-                containerId: 'location-map',
-                markers: [locations.istanbul, locations.dubai],
-                defaultIcon: {
-                  iconUrl: '/assets/images/leaflet/marker.png',
-                  iconSize: [24, 24],
-                  iconAnchor: [12, 24],
-                  shadowUrl: '/assets/images/leaflet/shadow.svg',
-                  shadowSize: [41, 24],
-                  shadowAnchor: [12, 22],
-                },
-                fitBounds: true,
-                zoomInIconUrl: '/assets/images/leaflet/plus.svg',
-                zoomOutIconUrl: '/assets/images/leaflet/minus.svg',
-                layerControlToggleIconUrl: '/assets/images/leaflet/layer.svg',
-              }
-
-              // MultiMarkerMap örneğini oluştur
-              const map = new MultiMarkerMap(mapConfig)
-            })
-          </script>
-        </div>
-      </section>
-
-      <!-- Contact CTA Section -->
-      <section
-        class="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 py-12"
-      >
-        <div class="mx-auto max-w-7xl px-4">
-          <div
-            class="flex flex-col items-center justify-between gap-8 text-center lg:flex-row lg:text-left"
-          >
-            <div>
-              <h2 class="mb-2 text-3xl font-bold text-white drop-shadow">
-                Get in Touch With Us
-              </h2>
-              <p class="text-lg text-gray-100">
-                Our team is ready to assist you with your questions or
-                collaboration proposals.
+                <img
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  alt="Okan Ay"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="mb-1 text-lg font-semibold text-gray-900">Okan Ay</h3>
+              <span class="mb-2 text-sm font-medium text-primary-700">
+                Chairman of the Board
+              </span>
+              <p class="text-center text-xs text-gray-600">
+                Shapes our company's vision with over 20 years of industry
+                experience.
               </p>
             </div>
-            <div class="flex flex-wrap gap-4">
-              <a
-                href="#"
-                class="flex min-w-[180px] items-center justify-center rounded-lg bg-white px-8 py-4 font-semibold text-primary-700 shadow transition hover:opacity-80 hover:shadow-md"
+            <!-- Board Member 2 -->
+            <div
+              class="flex flex-col items-center rounded-lg border border-b-2 border-gray-200 border-b-primary-700 bg-white p-6 transition"
+            >
+              <div
+                class="mb-4 flex h-28 w-28 items-center justify-center overflow-hidden rounded-full bg-gray-200"
               >
-                Contact Us
-              </a>
+                <img
+                  src="https://randomuser.me/api/portraits/women/44.jpg"
+                  alt="Elif Demir"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="mb-1 text-lg font-semibold text-gray-900">
+                Elif Demir
+              </h3>
+              <span class="mb-2 text-sm font-medium text-primary-700">
+                Vice Chairman of the Board
+              </span>
+              <p class="text-center text-xs text-gray-600">
+                Leads in strategic planning and innovation.
+              </p>
+            </div>
+            <!-- Board Member 3 -->
+            <div
+              class="flex flex-col items-center rounded-lg border border-b-2 border-gray-200 border-b-primary-700 bg-white p-6 transition"
+            >
+              <div
+                class="mb-4 flex h-28 w-28 items-center justify-center overflow-hidden rounded-full bg-gray-200"
+              >
+                <img
+                  src="https://randomuser.me/api/portraits/men/64.jpg"
+                  alt="Mehmet Kaya"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="mb-1 text-lg font-semibold text-gray-900">
+                Mehmet Kaya
+              </h3>
+              <span class="mb-2 text-sm font-medium text-primary-700">
+                Independent Member
+              </span>
+              <p class="text-center text-xs text-gray-600">
+                Has international experience in finance and auditing.
+              </p>
+            </div>
+            <!-- Board Member 4 -->
+            <div
+              class="flex flex-col items-center rounded-lg border border-b-2 border-gray-200 border-b-primary-700 bg-white p-6 transition"
+            >
+              <div
+                class="mb-4 flex h-28 w-28 items-center justify-center overflow-hidden rounded-full bg-gray-200"
+              >
+                <img
+                  src="https://randomuser.me/api/portraits/women/68.jpg"
+                  alt="Zeynep Aksoy"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="mb-1 text-lg font-semibold text-gray-900">
+                Zeynep Aksoy
+              </h3>
+              <span class="mb-2 text-sm font-medium text-primary-700">
+                Member
+              </span>
+              <p class="text-center text-xs text-gray-600">
+                Actively participates in human resources and sustainability
+                projects.
+              </p>
+            </div>
+            <!-- Board Member 5 -->
+            <div
+              class="flex flex-col items-center rounded-lg border border-b-2 border-gray-200 border-b-primary-700 bg-white p-6 transition"
+            >
+              <div
+                class="mb-4 flex h-28 w-28 items-center justify-center overflow-hidden rounded-full bg-gray-200"
+              >
+                <img
+                  src="https://randomuser.me/api/portraits/men/10.jpg"
+                  alt="Ali Rıza Şahin"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="mb-1 text-lg font-semibold text-gray-900">
+                Ali Rıza Şahin
+              </h3>
+              <span class="mb-2 text-sm font-medium text-primary-700">
+                Member
+              </span>
+              <p class="text-center text-xs text-gray-600">
+                Specializes in operational excellence and digital
+                transformation.
+              </p>
+            </div>
+            <!-- Board Member 6 -->
+            <div
+              class="flex flex-col items-center rounded-lg border border-b-2 border-gray-200 border-b-primary-700 bg-white p-6 transition"
+            >
+              <div
+                class="mb-4 flex h-28 w-28 items-center justify-center overflow-hidden rounded-full bg-gray-200"
+              >
+                <img
+                  src="https://randomuser.me/api/portraits/women/51.jpg"
+                  alt="Selin Yıldız"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="mb-1 text-lg font-semibold text-gray-900">
+                Selin Yıldız
+              </h3>
+              <span class="mb-2 text-sm font-medium text-primary-700">
+                Member
+              </span>
+              <p class="text-center text-xs text-gray-600">
+                Leads innovative projects in marketing and customer experience.
+              </p>
+            </div>
+            <!-- Board Member 7 -->
+            <div
+              class="flex flex-col items-center rounded-lg border border-b-2 border-gray-200 border-b-primary-700 bg-white p-6 transition"
+            >
+              <div
+                class="mb-4 flex h-28 w-28 items-center justify-center overflow-hidden rounded-full bg-gray-200"
+              >
+                <img
+                  src="https://randomuser.me/api/portraits/men/24.jpg"
+                  alt="Burak Erdem"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="mb-1 text-lg font-semibold text-gray-900">
+                Burak Erdem
+              </h3>
+              <span class="mb-2 text-sm font-medium text-primary-700">
+                Member
+              </span>
+              <p class="text-center text-xs text-gray-600">
+                Provides leadership in information technology and innovation
+                processes.
+              </p>
+            </div>
+            <!-- Board Member 8 -->
+            <div
+              class="flex flex-col items-center rounded-lg border border-b-2 border-gray-200 border-b-primary-700 bg-white p-6 transition"
+            >
+              <div
+                class="mb-4 flex h-28 w-28 items-center justify-center overflow-hidden rounded-full bg-gray-200"
+              >
+                <img
+                  src="https://randomuser.me/api/portraits/women/19.jpg"
+                  alt="Ayşe Korkmaz"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="mb-1 text-lg font-semibold text-gray-900">
+                Ayşe Korkmaz
+              </h3>
+              <span class="mb-2 text-sm font-medium text-primary-700">
+                Member
+              </span>
+              <p class="text-center text-xs text-gray-600">
+                Actively involved in corporate communication and social
+                responsibility projects.
+              </p>
             </div>
           </div>
         </div>

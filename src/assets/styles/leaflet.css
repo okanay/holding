@@ -544,123 +544,124 @@ svg.leaflet-image-layer.leaflet-interactive path {
   background-clip: padding-box;
 }
 
-/* popup */
+@media print {
+  /* Prevent printers from removing background-images of controls. */
+  .leaflet-control {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* CUSTOM */
 
 .leaflet-popup {
   position: absolute;
-  text-align: center;
-  margin-bottom: 20px;
-}
-.leaflet-popup-content-wrapper {
-  padding: 1px;
   text-align: left;
-  border-radius: 12px;
+  margin-bottom: 12px;
+  /* Mobilde daha az boşluk */
+  z-index: 1000;
 }
+
+.leaflet-popup-content-wrapper {
+  padding: 0;
+  border-radius: 16px;
+  background: transparent; /* Arka planı HTML'den alıyoruz */
+  box-shadow: none; /* Gölgeyi kaldır */
+  border: none;
+}
+
 .leaflet-popup-content {
-  margin: 13px 24px 13px 20px;
-  line-height: 1.3;
-  font-size: 13px;
-  font-size: 1.08333em;
-  min-height: 1px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  min-width: 0;
+  min-height: 0;
+  line-height: 1.4;
+  font-size: 1rem;
+  /* Responsive için genişlik kısıtlaması yok, HTML'den kontrol */
 }
-.leaflet-popup-content p {
-  margin: 17px 0;
-  margin: 1.3em 0;
-}
+
 .leaflet-popup-tip-container {
-  width: 40px;
-  height: 20px;
+  width: 32px;
+  height: 16px;
   position: absolute;
   left: 50%;
   margin-top: -1px;
-  margin-left: -20px;
-  overflow: hidden;
+  margin-left: -16px;
+  overflow: visible;
   pointer-events: none;
 }
+
 .leaflet-popup-tip {
-  width: 17px;
-  height: 17px;
-  padding: 1px;
-
-  margin: -10px auto 0;
-  pointer-events: auto;
-
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
+  width: 18px;
+  height: 18px;
+  margin: -9px auto 0;
+  background: var(--primary-700, #1d4ed8); /* Tailwind primary-700 fallback */
+  border-radius: 4px 0 0 0;
+  box-shadow: none;
+  border: none;
   transform: rotate(45deg);
+  pointer-events: auto;
 }
-.leaflet-popup-content-wrapper,
-.leaflet-popup-tip {
-  background: white;
-  color: #333;
-  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
-}
+
+/* Kapatma butonu */
 .leaflet-container a.leaflet-popup-close-button {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 8px;
+  right: 8px;
   border: none;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+  font-size: 22px;
   text-align: center;
-  width: 24px;
-  height: 24px;
-  font:
-    16px/24px Tahoma,
-    Verdana,
-    sans-serif;
-  color: #757575;
-  text-decoration: none;
-  background: transparent;
-}
-.leaflet-container a.leaflet-popup-close-button:hover,
-.leaflet-container a.leaflet-popup-close-button:focus {
-  color: #585858;
-}
-.leaflet-popup-scrolled {
-  overflow: auto;
+  z-index: 10;
+  transition: background 0.2s;
+  padding: 0;
+  line-height: 1; /* Satır yüksekliğini sıfırlayarak dikey ortalamayı garanti altına alır */
 }
 
-.leaflet-oldie .leaflet-popup-content-wrapper {
-  -ms-zoom: 1;
-}
-.leaflet-oldie .leaflet-popup-tip {
-  width: 24px;
-  margin: 0 auto;
-
-  -ms-filter: 'progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)';
-  filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678);
-}
-
-.leaflet-oldie .leaflet-control-zoom,
-.leaflet-oldie .leaflet-control-layers,
-.leaflet-oldie .leaflet-popup-content-wrapper,
-.leaflet-oldie .leaflet-popup-tip {
-  border: 0.5px solid rgb(var(--gray-300));
-}
-
-/* div icon */
-
-.leaflet-div-icon {
-  background: #fff;
-  border: 0.5px solid rgb(var(--gray-300));
-}
-
-/* Tooltip */
-/* Base styles for the element that has a tooltip */
-.leaflet-tooltip {
+.leaflet-container a.leaflet-popup-close-button span {
   position: absolute;
-  padding: 6px;
-  background-color: #fff;
-  border: 0.5px solid rgb(var(--gray-300));
-  border-radius: 3px;
-  color: #222;
-  white-space: nowrap;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-48%, -58%);
+  font-size: inherit;
+  line-height: 1;
+  color: #fff;
   user-select: none;
   pointer-events: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.leaflet-container a.leaflet-popup-close-button:hover,
+.leaflet-container a.leaflet-popup-close-button:focus {
+  background: rgba(0, 0, 0, 0.22);
+  color: #fff;
+}
+
+/* Scroll durumunda */
+.leaflet-popup-scrolled {
+  overflow: auto;
+  border-radius: 16px;
+}
+
+.leaflet-tooltip {
+  padding: 4px 10px;
+  background: #1d4ed8; /* Tailwind primary-700 */
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: none;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1001;
 }
 .leaflet-tooltip.leaflet-interactive {
   cursor: pointer;
@@ -670,65 +671,5 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-tooltip-bottom:before,
 .leaflet-tooltip-left:before,
 .leaflet-tooltip-right:before {
-  position: absolute;
-  pointer-events: none;
-  border: 6px solid transparent;
-  background: transparent;
-  content: '';
-}
-
-/* Directions */
-
-.leaflet-tooltip-bottom {
-  margin-top: 6px;
-}
-.leaflet-tooltip-top {
-  margin-top: -6px;
-}
-.leaflet-tooltip-bottom:before,
-.leaflet-tooltip-top:before {
-  left: 50%;
-  margin-left: -6px;
-}
-.leaflet-tooltip-top:before {
-  bottom: 0;
-  margin-bottom: -12px;
-  border-top-color: #fff;
-}
-.leaflet-tooltip-bottom:before {
-  top: 0;
-  margin-top: -12px;
-  margin-left: -6px;
-  border-bottom-color: #fff;
-}
-.leaflet-tooltip-left {
-  margin-left: -6px;
-}
-.leaflet-tooltip-right {
-  margin-left: 6px;
-}
-.leaflet-tooltip-left:before,
-.leaflet-tooltip-right:before {
-  top: 50%;
-  margin-top: -6px;
-}
-.leaflet-tooltip-left:before {
-  right: 0;
-  margin-right: -12px;
-  border-left-color: #fff;
-}
-.leaflet-tooltip-right:before {
-  left: 0;
-  margin-left: -12px;
-  border-right-color: #fff;
-}
-
-/* Printing */
-
-@media print {
-  /* Prevent printers from removing background-images of controls. */
-  .leaflet-control {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
+  display: none; /* Ok işaretini kaldırmak için */
 }

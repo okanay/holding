@@ -60,6 +60,21 @@ app.get('/about', c => {
   return c.html(html.text())
 })
 
+app.get('/contact', c => {
+  const html = Bun.file('./dist/pages/contact/index.html')
+  return c.html(html.text())
+})
+
+app.get('/press-example', c => {
+  const html = Bun.file('./dist/pages/press-example/index.html')
+  return c.html(html.text())
+})
+
+app.get('/team', c => {
+  const html = Bun.file('./dist/pages/team/index.html')
+  return c.html(html.text())
+})
+
 const secret = 'LHOUwjBFGyori7tltMnRQ2YtanvObPZOenCowk/Cq90='
 
 app.post('/github-push-event', async c => {
